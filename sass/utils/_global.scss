@@ -32,6 +32,14 @@ a:hover::before {
 	transform: scaleX(1);
 }
 
+ul li a {
+	color: #000;
+}
+
+.active-page {
+	color: var(--accent-color);
+}
+
 input {
 	padding: 0.75rem;
 	border: none;

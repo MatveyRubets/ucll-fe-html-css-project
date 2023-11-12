@@ -46,6 +46,14 @@ a:hover::before {
   transform: scaleX(1);
 }
 
+ul li a {
+  color: #000;
+}
+
+.active-page {
+  color: var(--accent-color);
+}
+
 input {
   padding: 0.75rem;
   border: none;
@@ -297,9 +305,6 @@ body {
   display: flex;
   align-items: center;
 }
-.header__list-item a {
-  color: black;
-}
 .header__list-menu {
   display: none;
   cursor: pointer;
@@ -412,7 +417,7 @@ body {
   padding: 3rem 0;
 }
 .benefits__heading {
-  color: white;
+  color: #fff;
   padding-bottom: 2rem;
   text-align: center;
 }
@@ -422,7 +427,7 @@ body {
   gap: 2rem;
 }
 .benefits__cards-item {
-  color: white;
+  color: #fff;
   padding: 1.5rem 0.5rem;
   display: flex;
   flex-direction: column;
@@ -440,7 +445,7 @@ body {
     gap: 2rem;
   }
   .benefits__cards-item {
-    color: white;
+    color: #fff;
     padding: 1.5rem 0.5rem;
   }
 }
@@ -623,14 +628,11 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   align-items: center;
-  border-top: 2px solid black;
+  border-top: 2px solid #000;
 }
 .footer__list {
   display: flex;
   gap: 1rem;
-}
-.footer__list-item a {
-  color: black;
 }
 
 .pricing {
@@ -663,7 +665,7 @@ body {
   margin-top: 2rem;
 }
 .pricing__block-card:hover {
-  scale: 1.01;
+  transform: scale(1.01);
   transition: var(--speed) var(--duration);
 }
 

@@ -30,7 +30,7 @@
 		}
 
 		&-card:hover {
-			scale: 1.01;
+			transform: scale(1.01);
 
 			transition: var(--speed) var(--duration);
 		}

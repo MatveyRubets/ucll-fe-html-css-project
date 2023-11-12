@@ -2,7 +2,7 @@
 	background: var(--accent-color);
 	padding: 3rem 0;
 	&__heading {
-		color: white;
+		color: #fff;
 		padding-bottom: 2rem;
 		text-align: center;
 	}
@@ -12,7 +12,7 @@
 		justify-content: space-between;
 		gap: 2rem;
 		&-item {
-			color: white;
+			color: #fff;
 			padding: 1.5rem 0.5rem;
 			display: flex;
 			flex-direction: column;
@@ -32,7 +32,7 @@
 			flex-wrap: wrap;
 			gap: 2rem;
 			&-item {
-				color: white;
+				color: #fff;
 				padding: 1.5rem 0.5rem;
 			}
 		}
