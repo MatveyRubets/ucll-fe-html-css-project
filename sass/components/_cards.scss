@@ -1,0 +1,21 @@
+.cards {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4rem;
+	padding: 3rem;
+	background: var(--accent-color);
+	border-radius: 2rem;
+	box-shadow: 6px 10px 223px 7px rgba(0, 163, 255, 0.44);
+	-webkit-box-shadow: 6px 10px 223px 7px rgba(0, 163, 255, 0.44);
+	-moz-box-shadow: 6px 10px 223px 7px rgba(0, 163, 255, 0.44);
+}
+
+.card img {
+	border-radius: 0.5rem;
+	max-width: 250px;
+	box-shadow: 6px 10px 23px 7px rgba(0, 0, 0, 0.44);
+	-webkit-box-shadow: 6px 10px 23px 7px rgba(0, 0, 0, 0.44);
+	-moz-box-shadow: 6px 10px 23px 7px rgba(0, 0, 0, 0.44);
+}

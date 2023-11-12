@@ -1,0 +1,17 @@
+// Container var
+
+.container {
+	padding: 0 200px;
+}
+
+@media screen and (max-width: 992px) {
+	.container {
+		padding: 0 80px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		padding: 0 40px;
+	}
+}

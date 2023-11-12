@@ -1,0 +1,47 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+	padding: 0.25rem 1rem;
+	border-radius: 0.5rem;
+	margin-left: 200px;
+	margin-right: 200px;
+
+	&__list {
+		gap: 2.25rem;
+		display: flex;
+		align-items: center;
+		&-menu {
+			display: none;
+			cursor: pointer;
+			img {
+				width: 35px;
+				height: 35px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.header {
+		margin-left: 80px;
+		margin-right: 80px;
+		&__list {
+			&-item {
+				display: none;
+			}
+
+			&-menu {
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.header {
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+}

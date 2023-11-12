@@ -1,0 +1,251 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	position: relative;
+	text-decoration: none;
+}
+
+a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	border-radius: 4px;
+	background-color: #18272f;
+	bottom: -5px;
+	left: 0;
+	transform-origin: right;
+	transform: scaleX(0);
+	transition: transform var(--duration) var(--speed);
+}
+
+a:hover::before {
+	transform-origin: left;
+	transform: scaleX(1);
+}
+
+a:visited {
+	color: black;
+}
+
+input {
+	padding: 0.75rem;
+	border: none;
+	width: 300px;
+	border-bottom: 1px solid black;
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	background: repeating-linear-gradient(
+			to bottom,
+			transparent 0 2px,
+			rgba(0, 0, 0, 0.043) 4px 8px
+		)
+		50%/2px 100% no-repeat;
+}
+
+.split {
+	width: 50%;
+}
+
+.logo {
+	width: 40px;
+	height: 40px;
+}
+
+.main__button {
+	align-items: center;
+	background-color: var(--button-color);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 0.25rem;
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+		Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 250ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+}
+
+.main__button:hover,
+.main__button:focus {
+	border-color: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+	color: rgba(228, 228, 228, 0.65);
+}
+
+.main__button:hover {
+	transform: translateY(-1px);
+}
+
+.main__button:active {
+	background-color: #f0f0f1;
+	border-color: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+	color: rgba(0, 0, 0, 0.65);
+	transform: translateY(0);
+}
+
+.title {
+	font-size: 60px;
+}
+
+@media screen and (max-width: 576px) {
+	.title {
+		font-size: 48px;
+	}
+}
+
+.upper-text {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.main-text {
+	font-size: 42px;
+}
+
+.description {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.card-heading {
+	font-size: 26px;
+}
+
+.headline {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	gap: 0.5rem;
+	margin-top: 6rem;
+	margin-bottom: 4rem;
+}
+
+.card-headline {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.medium-text {
+	font-size: 22px;
+}
+
+.accordion {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.5rem;
+	gap: 0.5rem;
+	padding-left: 1.25rem;
+}
+
+.accordion-item {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	transition: 0.4s;
+	border-radius: 0.5rem;
+}
+
+.active {
+	background-color: #ccc;
+}
+
+.panel {
+	border-radius: 0.5rem;
+	padding: 0 1rem;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+
+.accent-color {
+	background: #121fcf;
+	background: linear-gradient(to right, #121fcf 0%, #00cfcf 100%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	right: 2rem;
+	top: 60px;
+	width: 300px;
+	visibility: hidden;
+
+	li {
+		padding: 0.7rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.dropdown-menu {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.dropdown-menu {
+		left: 2rem;
+		width: unset;
+	}
+}
+
+.dropdown-menu.open {
+	visibility: visible;
+}
+
+.emoji {
+	font-size: 35px;
+}
+
+.glass-card {
+	background: rgba(255, 255, 255, 0.27);
+	border-radius: 1.5rem;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(9.7px);
+	-webkit-backdrop-filter: blur(9.7px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}

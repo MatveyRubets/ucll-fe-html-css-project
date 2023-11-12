@@ -1,0 +1,40 @@
+.pricing {
+	&__upper {
+		color: var(--accent-color);
+	}
+
+	&__block {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+		&-card {
+			backdrop-filter: blur(7px);
+			-webkit-backdrop-filter: blur(7px);
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			border-radius: 0.5rem;
+			gap: 1rem;
+			padding: 1rem;
+			background: #e2e2e2;
+			display: flex;
+			flex-direction: column;
+			max-width: 300px;
+			&-upper {
+				color: var(--accent-color);
+			}
+			&-features {
+				&-icon {
+					width: 20px;
+					height: 20px;
+				}
+			}
+			&-button {
+				margin-top: 2rem;
+			}
+		}
+
+		&-card:hover {
+			scale: 1.01;
+			transition: var(--speed) var(--duration);
+		}
+	}
+}
