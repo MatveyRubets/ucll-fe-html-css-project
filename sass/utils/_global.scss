@@ -19,7 +19,7 @@ a::before {
 	width: 100%;
 	height: 3px;
 	border-radius: 4px;
-	background-color: #18272f;
+	background-color: #449ece;
 	bottom: -5px;
 	left: 0;
 	transform-origin: right;
@@ -30,10 +30,6 @@ a::before {
 a:hover::before {
 	transform-origin: left;
 	transform: scaleX(1);
-}
-
-a:visited {
-	color: black;
 }
 
 input {
@@ -161,6 +157,12 @@ body {
 
 .medium-text {
 	font-size: 22px;
+}
+
+@media screen and (max-width: 576px) {
+	.medium-text {
+		font-size: 16px;
+	}
 }
 
 .accordion {
