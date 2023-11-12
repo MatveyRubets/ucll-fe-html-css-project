@@ -1,7 +1,7 @@
 .about {
-	// height: calc(100vh - 1rem - 50px);
 	display: flex;
 	flex-direction: column;
+	padding-bottom: 6rem;
 
 	&__left {
 		display: flex;
@@ -14,7 +14,6 @@
 
 	&__right {
 		display: flex;
-		// justify-content: space-between;
 		align-items: center;
 		&-accordion {
 			display: flex;

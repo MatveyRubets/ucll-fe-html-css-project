@@ -50,7 +50,7 @@ input {
   padding: 0.75rem;
   border: none;
   width: 300px;
-  border-bottom: 1px solid black;
+  border-radius: 0.75rem;
 }
 
 textarea:focus,
@@ -60,7 +60,7 @@ input:focus {
 
 body {
   font-family: Helvetica, sans-serif;
-  background: repeating-linear-gradient(to bottom, transparent 0 2px, rgba(0, 0, 0, 0.043) 4px 8px) 50%/2px 100% no-repeat;
+  background-image: linear-gradient(to right, rgb(228, 241, 255), rgb(204, 251, 241));
 }
 
 .split {
@@ -193,7 +193,7 @@ body {
 }
 
 .accordion-item {
-  background-color: #eee;
+  background-color: var(--accent-color);
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -203,6 +203,7 @@ body {
   outline: none;
   transition: 0.4s;
   border-radius: 0.5rem;
+  color: #fff;
 }
 
 .active {
@@ -212,7 +213,6 @@ body {
 .panel {
   border-radius: 0.5rem;
   padding: 0 1rem;
-  background-color: white;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -534,6 +534,7 @@ body {
 .about {
   display: flex;
   flex-direction: column;
+  padding-bottom: 6rem;
 }
 .about__left {
   display: flex;
@@ -632,6 +633,9 @@ body {
   color: black;
 }
 
+.pricing {
+  padding-bottom: 6rem;
+}
 .pricing__upper {
   color: var(--accent-color);
 }
@@ -642,13 +646,8 @@ body {
   gap: 1.5rem;
 }
 .pricing__block-card {
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 0.5rem;
   gap: 1rem;
   padding: 1rem;
-  background: #f9f9f9;
   display: flex;
   flex-direction: column;
   max-width: 300px;

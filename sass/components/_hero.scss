@@ -1,6 +1,7 @@
 .hero {
 	height: calc(100vh - 1rem - 50px);
 	display: flex;
+
 	&__left {
 		display: flex;
 		flex-direction: column;
