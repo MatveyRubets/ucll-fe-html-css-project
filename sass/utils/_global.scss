@@ -149,6 +149,19 @@ body {
 	margin-bottom: 4rem;
 }
 
+@media screen and (max-width: 992px) {
+	.headline {
+		margin-top: 4rem;
+		margin-bottom: 3rem;
+	}
+}
+@media screen and (max-width: 576px) {
+	.headline {
+		margin-top: 3rem;
+		margin-bottom: 2rem;
+	}
+}
+
 .card-headline {
 	display: flex;
 	align-items: center;
@@ -213,6 +226,7 @@ body {
 	top: 60px;
 	width: 300px;
 	visibility: hidden;
+	background: #fff;
 
 	li {
 		padding: 0.7rem;
@@ -232,6 +246,8 @@ body {
 	.dropdown-menu {
 		left: 2rem;
 		width: unset;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	}
 }
 

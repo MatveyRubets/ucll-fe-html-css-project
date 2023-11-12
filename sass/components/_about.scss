@@ -40,10 +40,6 @@
 		display: flex;
 		flex-direction: column;
 
-		&__heading {
-			margin-right: 3rem;
-		}
-
 		&__left {
 			&-tablet {
 				display: block;
@@ -61,6 +57,17 @@
 			}
 			&-heading {
 				padding-left: 0.1rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.about {
+		&__right {
+			&-img {
+				max-width: 250px;
+				border-radius: 1.5rem;
 			}
 		}
 	}

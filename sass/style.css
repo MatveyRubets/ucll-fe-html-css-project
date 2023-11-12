@@ -157,6 +157,18 @@ body {
   margin-bottom: 4rem;
 }
 
+@media screen and (max-width: 992px) {
+  .headline {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .headline {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+}
 .card-headline {
   display: flex;
   align-items: center;
@@ -221,6 +233,7 @@ body {
   top: 60px;
   width: 300px;
   visibility: hidden;
+  background: #fff;
 }
 .dropdown-menu li {
   padding: 0.7rem;
@@ -238,6 +251,8 @@ body {
   .dropdown-menu {
     left: 2rem;
     width: unset;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   }
 }
 .dropdown-menu.open {
@@ -339,7 +354,7 @@ body {
   -webkit-box-shadow: 6px 10px 223px 7px rgba(0, 163, 255, 0.44);
   -moz-box-shadow: 6px 10px 223px 7px rgba(0, 163, 255, 0.44);
   border-radius: 1.25rem;
-  max-width: 250px;
+  max-width: 450px;
   max-height: 450px;
 }
 
@@ -363,6 +378,10 @@ body {
   .hero__right {
     display: none;
   }
+  .hero__right-img {
+    max-width: 350px;
+    max-height: 450px;
+  }
 }
 @media screen and (max-width: 576px) {
   .hero__left {
@@ -382,6 +401,7 @@ body {
   }
   .hero__left-tablet .hero__right-img {
     height: 250px;
+    max-width: 200px;
   }
   .hero__left-tablet-block {
     flex-direction: column;
@@ -546,9 +566,6 @@ body {
     display: flex;
     flex-direction: column;
   }
-  .about__heading {
-    margin-right: 3rem;
-  }
   .about__left-tablet {
     display: block;
   }
@@ -564,6 +581,12 @@ body {
   }
   .about__right-heading {
     padding-left: 0.1rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .about__right-img {
+    max-width: 250px;
+    border-radius: 1.5rem;
   }
 }
 .cards {
@@ -625,7 +648,7 @@ body {
   border-radius: 0.5rem;
   gap: 1rem;
   padding: 1rem;
-  background: #e2e2e2;
+  background: #f9f9f9;
   display: flex;
   flex-direction: column;
   max-width: 300px;
