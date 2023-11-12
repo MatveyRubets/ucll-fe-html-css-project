@@ -62,6 +62,12 @@
 	.hero {
 		&__left {
 			width: 100%;
+			justify-content: center;
+			gap: 2rem;
+			&-heading {
+				font-size: 30px;
+			}
+
 			&-content {
 				display: none;
 			}
@@ -69,6 +75,10 @@
 			&-tablet {
 				display: flex;
 				gap: 3rem;
+
+				.hero__right-img {
+					height: 300px;
+				}
 
 				&-block {
 					flex-direction: column;

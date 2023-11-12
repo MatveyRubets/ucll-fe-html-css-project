@@ -363,6 +363,11 @@ body {
 @media screen and (max-width: 576px) {
   .hero__left {
     width: 100%;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .hero__left-heading {
+    font-size: 30px;
   }
   .hero__left-content {
     display: none;
@@ -370,6 +375,9 @@ body {
   .hero__left-tablet {
     display: flex;
     gap: 3rem;
+  }
+  .hero__left-tablet .hero__right-img {
+    height: 300px;
   }
   .hero__left-tablet-block {
     flex-direction: column;
