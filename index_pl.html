@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,37 +9,37 @@
 	<body>
 		<header class="header glass-card">
 			<a href="./">
-				<img class="logo" src="./assets/img/back.png" alt="Spine Logotype" />
+				<img class="logo" src="./assets/icons/logo.png" alt="Spine Logotype" />
 			</a>
 			<nav>
 				<ul class="header__list" id="myHeaderList">
 					<li class="header__list-item">
-						<a href="./about.html">About</a>
+						<a href="./about_pl.html">O mnie</a>
 					</li>
 					<li class="header__list-item">
-						<a href="./testimonials.html">Testimonials</a>
+						<a href="./testimonials.html">Recenzja</a>
 					</li>
 					<li class="header__list-item">
-						<a href="./pricing.html">Pricing</a>
-					</li>
-					<li class="header__list-item">
-						<a href="./sitespec.html">Sitespec</a>
+						<a href="./pricing.html">Сeny</a>
 					</li>
 					<li class="header__list-menu burger">
 						<img src="./assets/icons/burger.png" alt="menu button" />
 					</li>
+					<button class="btn_lng">change</button>
+
+					<select name="" id="">
+						<option value="PL">PL</option>
+						<option value="UA">UA</option>
+					</select>
 				</ul>
 
 				<ul class="dropdown-menu">
-					<li class="header__list-item"><a href="./about.html">About</a></li>
+					<li class="header__list-item"><a href="./about.html">O mnie</a></li>
 					<li class="header__list-item">
-						<a href="./testimonials.html">Testimonials</a>
+						<a href="./testimonials.html">Recenzja</a>
 					</li>
 					<li class="header__list-item">
-						<a href="./pricing.html">Pricing</a>
-					</li>
-					<li class="header__list-item">
-						<a href="./sitespec.html">Sitespec</a>
+						<a href="./pricing.html">Сeny</a>
 					</li>
 				</ul>
 			</nav>
@@ -48,7 +48,9 @@
 		<main>
 			<section class="hero container">
 				<div class="split hero__left">
-					<p class="hero__left-intro medium-text">🧑‍⚕️ Chiropractor clinic</p>
+					<p class="hero__left-intro medium-text">
+						🧑‍⚕️ Klinika fizjoterapeutyczna
+					</p>
 					<h1 class="hero__left-heading title">
 						Investing in <span class="accent-color">Health</span>
 					</h1>
@@ -61,19 +63,21 @@
 								alt="Man getting examinated by a chiropractor"
 							/>
 							<p class="hero__left-desc medium-text">
-								Discover our solutions to relieve back, head, feet pain through
-								our advanced massage techniques
+								Fizjoterapia uszkodzeń narządu ruchu, leczenie oraz profilaktyka
+								przewlekłych bólów kręgosłupa i stawów, rehabilitacja po
+								operacjach ortopedycznych.
 							</p>
 						</div>
-						<a class="main__button" href="#contactForm">make an appointment</a>
+						<a class="main__button" href="#contactForm">zarezerwuj spotkanie</a>
 					</div>
 
 					<div class="hero__left-content">
 						<p class="hero__left-desc medium-text">
-							Discover our solutions to relieve back, head, feet pain through
-							our advanced massage techniques
+							Fizjoterapia uszkodzeń narządu ruchu, leczenie oraz profilaktyka
+							przewlekłych bólów kręgosłupa i stawów, rehabilitacja po
+							operacjach ortopedycznych.
 						</p>
-						<a class="main__button" href="#contactForm">make an appointment</a>
+						<a class="main__button" href="#contactForm">zarezerwuj spotkanie</a>
 					</div>
 				</div>
 
@@ -87,23 +91,19 @@
 			</section>
 
 			<section class="benefits">
-				<h2 class="benefits__heading">1/3 of Warsaw is healed by us</h2>
+				<h2 class="benefits__heading">Uratowałem od bólu 1/3 część Warszawy</h2>
 				<ul class="benefits__cards container">
 					<li class="benefits__cards-item medium-text glass-card">
-						<p class="emoji">😃</p>
-						<p>99% Happy Rate</p>
-					</li>
-					<li class="benefits__cards-item medium-text glass-card">
-						<p class="emoji">🏋️</p>
-						<p>150+ Athletes Healed</p>
-					</li>
-					<li class="benefits__cards-item medium-text glass-card">
-						<p class="emoji">🧑‍⚕️</p>
-						<p>5+ Years Experience</p>
+						<p class="emoji">🩺</p>
+						<p>5+ lat doświadczenia w fizjoterapii</p>
 					</li>
 					<li class="benefits__cards-item medium-text glass-card">
 						<p class="emoji">🏌️</p>
-						<p>1000+ Clients Helped</p>
+						<p>99% skuteczności terapii</p>
+					</li>
+					<li class="benefits__cards-item medium-text glass-card">
+						<p class="emoji">😃</p>
+						<p>Ponad 1000 wyleczonych pacjentów</p>
 					</li>
 				</ul>
 			</section>
@@ -111,10 +111,10 @@
 			<section class="services container">
 				<div class="services__headline headline">
 					<p class="services__headline-upper upper-text">
-						The things that we offer
+						Usługi, które przedstawiam
 					</p>
 					<h1 class="services__headline-main main-text">
-						Our impeccable variety of services
+						Nasza różnorodność usług
 					</h1>
 				</div>
 				<ul class="services__list">
@@ -125,17 +125,24 @@
 								src="./assets/icons/massage.png"
 								alt="Massage icon"
 							/>
-							<h3 class="services__list-item-heading card-heading">Massage</h3>
+							<h3 class="services__list-item-heading card-heading">
+								Masaż leczniczy
+							</h3>
 						</div>
 						<p class="services__list-item-desc description">
-							Massage involves applying pressure and manipulation to the body's
-							soft tissues to enhance relaxation, reduce muscle tension, and
-							promote overall well-being. It offers physical and mental benefits
-							through therapeutic touch.
+							Masaż leczniczy - terapeutyczny rodzaj masażu klasycznego, który
+							wyróżnia się głębszymi i bardziej szczegółowymi technikami
+							oddziaływania na bolesny obszar ciała. W zależności od diagnozy
+							techniki oraz intensywność masażu leczniczego może się różnić.
+							Może być np. ściśle strefowy (masaż nóg lub karku) lub ogólny,
+							obejmujący kilka obszarów (np. masaż całych pleców). Jednocześnie
+							należy wziąć pod uwagę: nawet jeśli dwóm pacjentom przepisano
+							masaż tego samego obszaru, technika jego wykonania może się różnić
+							w zależności od diagnozy i zaleceń fizjoterapeuty.
 						</p>
 						<div class="services__list-item-more">
 							<a href="#contactForm" class="services__list-item-link"
-								>Learn more</a
+								>Dowiedz się więcej</a
 							>
 							<img
 								class="services__list-item-arrow"
@@ -152,18 +159,25 @@
 								alt="Therapy icon"
 							/>
 							<h3 class="services__list-item-heading card-heading">
-								Physical Therapy
+								Terapia wad postawy
 							</h3>
 						</div>
 						<p class="services__list-item-desc description">
-							Physical therapy focuses on restoring and improving physical
-							function and mobility through exercises, stretches, and manual
-							techniques. It addresses injuries, disabilities, and promotes
-							overall wellness, enhancing quality of life.
+							Terapia wad postawy - kompleksowy zabieg mający na celu korekcję
+							wad kręgosłupa, stawów obwodowych oraz wzmocnienie gorsetu
+							mięśniowego. W wyniku rozwoju układu kostno-mięśniowego w okresie
+							dojrzewania organizm dziecka z wysoką intesnywnością zaczyna się
+							zmieniać. Ten period oznacza przebudowę szkieletu, wydłużenie
+							mięśni, więzadeł i ścięgien. W wyniku złych nawyków dnia
+							codziennego rozkład napięcia mięśniowego zostaje zaburzony, czyli
+							niektóre mięśnie ulegają skróceniu, inne zaś rozciągnięciu. W
+							kolejnych fazach rozwoju narządu ruchu mogą powstawać takie
+							zaburzenia jak: skolioza, pogłębiona kifoza/lordoza, plecy
+							okrągłe, wklęsłe lub płaskie, asymetria łopatek i trójkątów talii.
 						</p>
 						<div class="services__list-item-more">
 							<a href="#contactForm" class="services__list-item-link"
-								>Learn more</a
+								>Dowiedz się więcej</a
 							>
 							<img
 								class="services__list-item-arrow"
@@ -180,18 +194,21 @@
 								alt="Spine icon"
 							/>
 							<h3 class="services__list-item-heading card-heading">
-								Spine Correction
+								Terapia indywidualna
 							</h3>
 						</div>
 						<p class="services__list-item-desc description">
-							Spine correction refers to the process of realigning the vertebrae
-							to improve posture, alleviate pain, and enhance overall spinal
-							health. It often involves chiropractic adjustments, exercises, and
-							ergonomic modifications for optimal alignment and function.
+							Terapia indywidualna - kompleksowy zabieg fizjoterapeutyczny,
+							który umieszcza w sobie szereg różnych metod, między innymi
+							(terapia manualna, suche igłowanie, IASTM, bańki chińskie
+							próźniowe, pinoterapia, masaż tkanek głębokich, HVLA - manipulacje
+							krótkodźwigniowe, neuromobilizacja). Uważa się za najbardziej
+							skuteczny zabieg z racji wszechstronnego działania i efektywnej
+							redukcji okolicy objętej bólem.
 						</p>
 						<div class="services__list-item-more">
 							<a href="#contactForm" class="services__list-item-link"
-								>Learn more</a
+								>Dowiedz się więcej</a
 							>
 							<img
 								class="services__list-item-arrow"
@@ -208,18 +225,57 @@
 								alt="Massage icon"
 							/>
 							<h3 class="services__list-item-heading card-heading">
-								Pain Reduction
+								Trening medyczny
 							</h3>
 						</div>
 						<p class="services__list-item-desc description">
-							Pain reduction involves methods and interventions aimed at
-							alleviating or managing discomfort. This can include medications,
-							physical therapy, relaxation techniques, and lifestyle adjustments
-							to improve overall well-being and quality of life.
+							Trening medyczny - to jeden z najważniejszych elementów
+							współczesnego leczenia kompleksowego - metoda indywidualnego
+							treningu fizycznego pacjentów. Odzwierciedla specyfikę konkretnych
+							schorzeń i pozwala prawidłowo ułożyć program treningowy oraz
+							dobrać odpowiednie obciążenie fizyczne. Umożliwia to pracę z
+							osobami z chorobami serca (np. po zawale serca), chorobami
+							ortopedycznymi (bóle pleców, skoliozy, rekonwalescencja po
+							złamaniach, zwichnięciach, naderwania więzadeł krzyżowych),
+							zaburzeniami przemiany materii (otyłość) i innymi. Jest pomostem
+							pomiędzy wychowaniem fizycznym a fizjoterapią.
 						</p>
 						<div class="services__list-item-more">
 							<a href="#contactForm" class="services__list-item-link"
-								>Learn more</a
+								>Dowiedz się więcej</a
+							>
+							<img
+								class="services__list-item-arrow"
+								src="./assets/icons/down-arrow.png"
+								alt="down arrow icon"
+							/>
+						</div>
+					</li>
+					<li class="services__list-item">
+						<div class="services__list-item-headline card-headline">
+							<img
+								class="services__list-item-icon"
+								src="./assets/icons/pain.png"
+								alt="Massage icon"
+							/>
+							<h3 class="services__list-item-heading card-heading">
+								Kinesiotaping
+							</h3>
+						</div>
+						<p class="services__list-item-desc description">
+							Kinesiotaping - to nowoczesna metoda profilaktyki i leczenia
+							chorób układu mięśniowo-szkieletowego. Polega na nałożeniu na
+							skórę specjalnych elastycznych taśm w obszarze rozwoju procesu
+							patologicznego i lokalizacji bólu. Kinesio taśmy zmniejszają
+							hipertoniczność mięśni, poprawiają mikrokrążenie krwi i płynów
+							limfatycznych, a w efekcie zmniejszają ból i stany zapalne. Taśmy
+							kinesio przyczyniają się także do poprawy ruchomości kręgosłupa i
+							stawów oraz zmniejszają ryzyko kontuzji podczas wysiłku
+							fizycznego.
+						</p>
+						<div class="services__list-item-more">
+							<a href="#contactForm" class="services__list-item-link"
+								>Dowiedz się więcej</a
 							>
 							<img
 								class="services__list-item-arrow"
@@ -229,14 +285,16 @@
 						</div>
 					</li>
 				</ul>
-				<a class="main__button" href="#contactForm">make an appointment</a>
+				<a class="main__button" href="#contactForm">zarezerwuj spotkanie</a>
 			</section>
 
 			<section class="roadmap container">
 				<div class="roadmap__headline headline">
-					<p class="roadmap__headline-upper upper-text">Patient Roadmap</p>
+					<p class="roadmap__headline-upper upper-text">
+						Sekwencja do zarejestrowania
+					</p>
 					<h2 class="roadmap__headline-main main-text">
-						Let us walk you through the whole process
+						Jak wygląda pierwsza wizyta u fizjoterapeuty?
 					</h2>
 				</div>
 
@@ -250,12 +308,14 @@
 									alt="Calendar booked icon"
 								/>
 								<h3 class="roadmap__block-text-heading card-heading">
-									Appointment
+									Zapisz się przez stronę internetową
 								</h3>
 							</div>
 							<p class="roadmap__block-text-desc description">
-								Choose convenient time for your appointment. We'll notify you
-								when the appointment is confirmed and 24h beforehand
+								Wybierz termin, który najbardziej Ci odpowiada, koniecznie
+								umieszczając swoje dane kontaktowe. Pamiętaj, że za 24 godziny
+								przed zaplanowaną wizytą będziemy kontaktować się z tobą w celu
+								potwierdzenie twojej obecności
 							</p>
 						</div>
 
@@ -281,14 +341,13 @@
 									alt="Calendar booked icon"
 								/>
 								<h3 class="roadmap__block-text-heading card-heading">
-									Consultation
+									Konsultacja
 								</h3>
 							</div>
 							<p class="roadmap__block-text-desc description">
-								Consultation involves discussion, assessment, and guidance to
-								address concerns collaboratively, fostering understanding and
-								facilitating informed decision-making for effective
-								problem-solving.
+								Konsultacja jest najważniejszą częścią całego procesu leczenia,
+								która obejmuje badanie podmiotowe oraz badanie funkcjonalne w
+								celu oceny i analizy istniejącej dolegliwości
 							</p>
 						</div>
 
@@ -314,13 +373,14 @@
 									alt="Calendar booked icon"
 								/>
 								<h3 class="roadmap__block-text-heading card-heading">
-									Proper Therapy
+									Terapia kompleksowa
 								</h3>
 							</div>
 							<p class="roadmap__block-text-desc description">
-								Proper therapy involves tailored interventions addressing
-								individual needs, fostering healing, and promoting well-being
-								through skilled and compassionate professional guidance
+								Obejmuje indywidualne podejście do pacjenta z wykorzystywaniem
+								różnorodnych metod fizjoterapeutycznych, które sprzyjają
+								szybszemu gojeniu i lepszej poprawie samopoczucia pod okiem
+								doświadczonego fizjoterapeuty
 							</p>
 						</div>
 
@@ -341,19 +401,23 @@
 
 			<section class="contact__info container" id="contactForm">
 				<div class="contact__info-container">
-					<p class="contact__info-upper upper-text">contact info</p>
-					<h2 class="main-text">Ready to rock?</h2>
+					<p class="contact__info-upper upper-text">informacje kontaktowe</p>
+					<h2 class="main-text">Gotowy do startu??</h2>
 					<form class="contact__info-form">
-						<input type="text" placeholder="John*" required />
-						<input type="text" placeholder="Doe*" required />
-						<input type="email" placeholder="johndoe@internet.com*" required />
+						<input type="text" placeholder="Dmytro*" required />
+						<input type="text" placeholder="Chubenko*" required />
+						<input
+							type="email"
+							placeholder="dmytrochubenko@internet.com*"
+							required
+						/>
 						<input type="tel" placeholder="+1(234)567-89*" required />
 						<label class="upper-text">
-							First time?
+							Pierwszy raz?
 							<input type="checkbox" />
 						</label>
 
-						<button class="main__button">Submit</button>
+						<button class="main__button">Prześlij</button>
 					</form>
 				</div>
 				<img
@@ -367,17 +431,13 @@
 		<footer class="footer container">
 			<img class="logo" src="./assets/img/back.png" alt="Spine Logotype" />
 			<ul class="footer__list">
-				<li class="footer__list-item"><a href="./about.html">About</a></li>
+				<li class="footer__list-item"><a href="./about.html">O mnie</a></li>
 				<li class="footer__list-item">
-					<a href="./testimonials.html">Testimonials</a>
+					<a href="./testimonials.html">Recenzja</a>
 				</li>
-				<li class="footer__list-item"><a href="./pricing.html">Pricing</a></li>
-				<li class="footer__list-item">
-					<a href="./sitespec.html">Sitespec</a>
-				</li>
+				<li class="footer__list-item"><a href="./pricing.html">Сeny</a></li>
 			</ul>
 		</footer>
-
-		<script src="script.js"></script>
+		<script defer src="script.js"></script>
 	</body>
 </html>

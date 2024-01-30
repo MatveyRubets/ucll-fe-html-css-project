@@ -9,11 +9,13 @@
 
 	&__cards {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		gap: 2rem;
 		&-item {
+			width: 200px;
+			height: 175px;
 			color: #fff;
-			padding: 1.5rem 0.5rem;
+			padding: 2rem 1rem;
 			display: flex;
 			flex-direction: column;
 			gap: 1rem;
@@ -27,13 +29,24 @@
 @media screen and (max-width: 992px) {
 	.benefits {
 		&__cards {
-			display: flex;
 			justify-content: space-evenly;
 			flex-wrap: wrap;
-			gap: 2rem;
 			&-item {
+				width: 150px;
+				height: 150px;
 				color: #fff;
 				padding: 1.5rem 0.5rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.benefits {
+		&__cards {
+			&-item {
+				width: 150px;
+				height: 150px;
 			}
 		}
 	}
