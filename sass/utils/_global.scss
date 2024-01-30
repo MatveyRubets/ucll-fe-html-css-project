@@ -53,7 +53,7 @@ input:focus {
 }
 
 body {
-	font-family: Helvetica, sans-serif;
+	font-family: Geneva, Tahoma, sans-serif;
 	// background: repeating-linear-gradient(
 	// 		to bottom,
 	// 		transparent 0 2px,
@@ -66,6 +66,11 @@ body {
 		rgb(228, 241, 255),
 		rgb(204, 251, 241)
 	);
+}
+h1,
+h2,
+h3 {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .split {

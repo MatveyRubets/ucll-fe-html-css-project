@@ -1,8 +1,5 @@
-const userLang = navigator.language || navigator.userLanguage;
-const supportedLanguages = ["pl", "ua"];
-
 function loadContent(language) {
-	const filename = "index_" + language + ".html";
+	const filename = language === "pl" ? "index.html" : `index_${language}.html`;
 	fetch(filename)
 		.then((response) => {
 			if (!response.ok) {
@@ -15,22 +12,19 @@ function loadContent(language) {
 		})
 		.catch((error) => {
 			console.error("Error loading language file:", error);
-			// Load another file or perform fallback action here
-			loadFallbackContent();
+			// Handle error as needed
 		});
 }
 
-function loadFallbackContent() {
-	// Load another file or perform fallback action here
-	// For example, load a default language or show an error message
-	loadContent("pl");
-}
+document
+	.getElementById("languageSelect")
+	.addEventListener("change", function () {
+		const selectedLanguage = this.value;
+		loadContent(selectedLanguage);
+	});
 
-if (supportedLanguages.includes(userLang)) {
-	loadContent(userLang);
-} else {
-	loadFallbackContent();
-}
+// Load default language when the page loads
+loadContent("pl"); // Assuming Polish is the default language
 let acc = document.getElementsByClassName("accordion-item");
 
 for (let i = 0; i < acc.length; i++) {

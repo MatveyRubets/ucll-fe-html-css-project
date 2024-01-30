@@ -67,8 +67,14 @@ input:focus {
 }
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: Geneva, Tahoma, sans-serif;
   background-image: linear-gradient(to right, rgb(228, 241, 255), rgb(204, 251, 241));
+}
+
+h1,
+h2,
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .split {
@@ -435,7 +441,7 @@ body {
 }
 .benefits__cards-item {
   width: 200px;
-  height: 175px;
+  height: 190px;
   color: #fff;
   padding: 2rem 1rem;
   display: flex;
@@ -453,7 +459,7 @@ body {
   }
   .benefits__cards-item {
     width: 150px;
-    height: 150px;
+    height: 175px;
     color: #fff;
     padding: 1.5rem 0.5rem;
   }
@@ -461,7 +467,7 @@ body {
 @media screen and (max-width: 576px) {
   .benefits__cards-item {
     width: 150px;
-    height: 150px;
+    height: 175px;
   }
 }
 .services {
