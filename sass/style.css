@@ -67,14 +67,8 @@ input:focus {
 }
 
 body {
-  font-family: Geneva, Tahoma, sans-serif;
+  font-family: "Kanit";
   background-image: linear-gradient(to right, rgb(228, 241, 255), rgb(204, 251, 241));
-}
-
-h1,
-h2,
-h3 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .split {
