@@ -42,7 +42,12 @@
 
 @media screen and (max-width: 992px) {
 	.header {
-		margin-left: 40px;
-		margin-right: 40px;
+		margin: 0;
+		padding: 0.5rem 1rem;
+		border: none;
+		border-bottom: 1px solid #414141;
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
 	}
 }

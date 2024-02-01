@@ -73,12 +73,12 @@ select {
 	/* safari */
 	-webkit-appearance: none;
 	/* other styles for aesthetics */
-	padding: 0.4rem 0.5rem;
-	background-color: #fff;
-	border: 1px solid #caced1;
+	// padding: 0.4rem 0.5rem;
+	background-color: transparent;
+	border: transparent;
 	color: #000;
 	cursor: pointer;
-	font-size: 16px;
+	font-size: 22px;
 }
 
 .split {
@@ -259,7 +259,7 @@ select {
 	display: none;
 	position: absolute;
 	right: 2rem;
-	top: 60px;
+	top: 70px;
 	width: 300px;
 	visibility: hidden;
 	background: #fff;
