@@ -5,6 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Welcome | Chubenko Rehab</title>
 		<link rel="stylesheet" href="sass/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 
 	<body>
@@ -15,7 +21,7 @@
 			<nav>
 				<ul class="header__list" id="myHeaderList">
 					<li class="header__list-item">
-						<a href="./about.html">Про мене</a>
+						<a href="./about_ua.html">Про мене</a>
 					</li>
 					<li class="header__list-item">
 						<a href="./testimonials.html">Відгуки</a>
@@ -26,6 +32,11 @@
 					<li class="header__list-menu burger">
 						<img src="./assets/icons/burger.png" alt="menu button" />
 					</li>
+
+					<select id="languageSelect" class="glass-card">
+						<option value="ua">🇺🇦</option>
+						<option value="pl">🇵🇱</option>
+					</select>
 				</ul>
 
 				<ul class="dropdown-menu">
@@ -438,5 +449,5 @@
 			</ul>
 		</footer>
 	</body>
-	<script src="script.js"></script>
+	<script defer src="script.js"></script>
 </html>

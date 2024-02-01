@@ -43,7 +43,7 @@
 
 			&-tablet {
 				display: flex;
-				gap: 3rem;
+				gap: 1.5rem;
 				flex-direction: column;
 				&-block {
 					display: flex;
@@ -68,7 +68,7 @@
 		&__left {
 			width: 100%;
 			justify-content: center;
-			gap: 2rem;
+			gap: 1.5rem;
 			&-heading {
 				font-size: 30px;
 			}
@@ -79,7 +79,7 @@
 
 			&-tablet {
 				display: flex;
-				gap: 3rem;
+				gap: 1.5rem;
 
 				.hero__right-img {
 					height: 250px;

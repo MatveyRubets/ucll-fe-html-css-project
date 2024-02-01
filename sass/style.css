@@ -67,8 +67,22 @@ input:focus {
 }
 
 body {
-  font-family: "Kanit";
+  font-family: "Rubik";
   background-image: linear-gradient(to right, rgb(228, 241, 255), rgb(204, 251, 241));
+}
+
+select {
+  -moz-appearance: none;
+       appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  padding: 0.4rem 0.5rem;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  color: #000;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .split {
@@ -379,7 +393,7 @@ body {
   }
   .hero__left-tablet {
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
     flex-direction: column;
   }
   .hero__left-tablet-block {
@@ -399,7 +413,7 @@ body {
   .hero__left {
     width: 100%;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   .hero__left-heading {
     font-size: 30px;
@@ -409,7 +423,7 @@ body {
   }
   .hero__left-tablet {
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
   }
   .hero__left-tablet .hero__right-img {
     height: 250px;

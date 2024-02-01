@@ -1,30 +1,19 @@
-function loadContent(language) {
-	const filename = language === "pl" ? "index.html" : `index_${language}.html`;
-	fetch(filename)
-		.then((response) => {
-			if (!response.ok) {
-				throw new Error("File not found or error loading language file");
-			}
-			return response.text();
-		})
-		.then((html) => {
-			document.querySelector("html").innerHTML = html;
-		})
-		.catch((error) => {
-			console.error("Error loading language file:", error);
-			// Handle error as needed
-		});
-}
+// Get the select element
+const languageSelect = document.getElementById("languageSelect");
 
-document
-	.getElementById("languageSelect")
-	.addEventListener("change", function () {
-		const selectedLanguage = this.value;
-		loadContent(selectedLanguage);
-	});
+// Add event listener to handle language change
+languageSelect.addEventListener("change", function () {
+	// Get the selected language value
+	const selectedLanguage = this.value;
 
-// Load default language when the page loads
-loadContent("pl"); // Assuming Polish is the default language
+	// Redirect to the corresponding page for the selected language
+	if (selectedLanguage === "ua") {
+		window.location.href = "index_ua.html"; // Redirect to the Ukrainian version
+	} else if (selectedLanguage === "pl") {
+		window.location.href = "index.html"; // Redirect to the Polish version
+	}
+});
+
 let acc = document.getElementsByClassName("accordion-item");
 
 for (let i = 0; i < acc.length; i++) {
@@ -42,9 +31,6 @@ for (let i = 0; i < acc.length; i++) {
 const toggleBtn = document.querySelector(".burger");
 const toggleBtnIcon = document.querySelector(".burger img");
 const dropDownMenu = document.querySelector(".dropdown-menu");
-console.log(toggleBtn);
-console.log(toggleBtnIcon);
-console.log(dropDownMenu);
 
 toggleBtn.addEventListener("click", () => {
 	console.log("object");
