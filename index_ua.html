@@ -439,21 +439,35 @@
 				<div class="contact__info-container">
 					<p class="contact__info-upper upper-text">контактна інформація</p>
 					<h2 class="main-text">Готовий до старту??</h2>
-					<form class="contact__info-form">
-						<input type="text" placeholder="Дмитро*" required />
-						<input type="text" placeholder="Чубенко*" required />
+					<form
+						action="https://formsubmit.co/rmatvey11@gmail.com"
+						method="POST"
+						class="contact__info-form"
+					>
+						<input type="text" name="Имя" placeholder="Dmytro*" required />
+						<input
+							type="text"
+							name="Фамилия"
+							placeholder="Chubenko*"
+							required
+						/>
 						<input
 							type="email"
 							placeholder="dmytrochubenko@internet.com*"
 							required
 						/>
-						<input type="tel" placeholder="+1(234)567-89*" required />
+						<input
+							type="tel"
+							name="Номер Телефона"
+							placeholder="+48-123-456-789*"
+							required
+						/>
 						<label class="upper-text">
-							Вперше?
-							<input type="checkbox" />
+							Pierwszy raz?
+							<input type="checkbox" type="checkbox" name="Первый раз" />
 						</label>
 
-						<button class="main__button">Надіслати</button>
+						<button type="submit" class="main__button">Prześlij</button>
 					</form>
 				</div>
 				<img
@@ -467,11 +481,13 @@
 		<footer class="footer container">
 			<img class="logo" src="./assets/img/back.png" alt="Spine Logotype" />
 			<ul class="footer__list">
-				<li class="footer__list-item"><a href="./about.html">Про мене</a></li>
 				<li class="footer__list-item">
-					<a href="./testimonials.html">Відгуки</a>
+					<a href="./about_ua.html">Про мене</a>
 				</li>
-				<li class="footer__list-item"><a href="./pricing.html">Ціни</a></li>
+				<li class="footer__list-item">
+					<a href="./testimonials_ua.html">Відгуки</a>
+				</li>
+				<li class="footer__list-item"><a href="./pricing_ua.html">Ціни</a></li>
 			</ul>
 		</footer>
 	</body>
