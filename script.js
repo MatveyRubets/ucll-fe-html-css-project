@@ -33,11 +33,39 @@ const toggleBtnIcon = document.querySelector(".burger img");
 const dropDownMenu = document.querySelector(".dropdown-menu");
 
 toggleBtn.addEventListener("click", () => {
-	console.log("object");
 	dropDownMenu.classList.toggle("open");
 	const isOpen = dropDownMenu.classList.contains("open");
 
 	toggleBtnIcon.classList = isOpen
 		? (toggleBtnIcon.src = "./assets/icons/close.png")
 		: (toggleBtnIcon.src = "./assets/icons/burger.png");
+});
+
+// Read more functionality
+
+document.addEventListener("DOMContentLoaded", function () {
+	const buttons = document.querySelectorAll(".read-more-btn");
+	buttons.forEach(function (button) {
+		button.addEventListener("click", function () {
+			// Directly find the short-text and full-text related to this button
+			const parentParagraph = this.parentNode;
+			const fullText = parentParagraph.querySelector(".full-text");
+			const shortText = parentParagraph.querySelector(".short-text");
+			const arrow = this.querySelector(".arrow"); // Select the arrow within the button
+
+			// Check visibility to toggle
+			if (fullText.classList.contains("hidden")) {
+				// Show full text
+				fullText.classList.remove("hidden");
+				shortText.classList.add("hidden");
+				arrow.src = "./assets/icons/up-arrow.png"; // Change to 'up' arrow
+			} else {
+				// Hide full text
+				fullText.classList.add("hidden");
+				shortText.classList.remove("hidden");
+				arrow.src = "./assets/icons/down-arrow.png"; // Change to 'down' arrow
+			}
+			this.appendChild(arrow); // Append the arrow to ensure order
+		});
+	});
 });

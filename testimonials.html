@@ -5,39 +5,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Testimonials | Chubenko Rehab</title>
 		<link rel="stylesheet" href="sass/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header class="header glass-card">
 			<a href="./">
-				<img class="logo" src="./assets/img/back.png" alt="Spine Logotype" />
+				<img class="logo" src="./assets/icons/logo.png" alt="Spine Logotype" />
 			</a>
 			<nav>
 				<ul class="header__list" id="myHeaderList">
-					<li class="header__list-item"><a href="./about.html">About</a></li>
 					<li class="header__list-item">
-						<a class="active-page" href="./testimonials.html">Testimonials</a>
+						<a href="./about.html">O mnie</a>
 					</li>
 					<li class="header__list-item">
-						<a href="./pricing.html">Pricing</a>
+						<a href="./testimonials.html">Recenzja</a>
 					</li>
 					<li class="header__list-item">
-						<a href="./sitespec.html">Sitespec</a>
+						<a href="./pricing.html">Ceny</a>
 					</li>
+					<select id="languageSelect">
+						<option value="pl">🇵🇱</option>
+						<option value="ua">🇺🇦</option>
+					</select>
 					<li class="header__list-menu burger">
 						<img src="./assets/icons/burger.png" alt="menu button" />
 					</li>
 				</ul>
 
 				<ul class="dropdown-menu">
-					<li class="header__list-item"><a href="./about.html">About</a></li>
+					<li class="header__list-item"><a href="./about.html">O mnie</a></li>
 					<li class="header__list-item">
-						<a href="./testimonials.html">Testimonials</a>
+						<a href="./testimonials.html">Recenzja</a>
 					</li>
 					<li class="header__list-item">
-						<a href="./pricing.html">Pricing</a>
-					</li>
-					<li class="header__list-item">
-						<a href="./sitespec.html">Sitespec</a>
+						<a href="./pricing.html">Ceny</a>
 					</li>
 				</ul>
 			</nav>
@@ -46,18 +52,24 @@
 		<main>
 			<section class="testimonials container">
 				<div class="testimonials__headline headline">
-					<p class="testimonials__upper upper-text">Testimonials</p>
+					<p class="testimonials__upper upper-text">Recenzja</p>
 					<h1 class="testimonials__main main-text">
-						Check out the positive reviews from some of our clients
+						Sprawdź pozytywne opinie niektórych z naszych klientów
 					</h1>
 					<p class="description">
-						Our clients praise our services for transformative impact,
-						personalized care, and expert guidance. Positive reviews highlight
-						our commitment to excellence, creating a trusting and supportive
-						client experience.
+						Nasi klienci chwalą nasze usługi za transformacyjny wpływ,
+						spersonalizowaną opiekę i wskazówki ekspertów. Pozytywne recenzje
+						podkreślają nasze zaangażowanie w doskonałość, tworząc zaufanie i
+						wsparcie doświadczenie klienta.
 					</p>
 				</div>
 				<div class="cards">
+					<div class="card">
+						<video height="440" controls>
+							<source src="assets/videos/review_1.MP4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
 					<div class="card">
 						<img src="./assets/img/review1.png" alt="Procedure review" />
 					</div>
@@ -92,14 +104,11 @@
 		<footer class="footer container">
 			<img class="logo" src="./assets/img/back.png" alt="Spine Logotype" />
 			<ul class="footer__list">
-				<li class="footer__list-item"><a href="./about.html">About</a></li>
+				<li class="footer__list-item"><a href="./about.html">O mnie</a></li>
 				<li class="footer__list-item">
-					<a class="active-page" href="./testimonials.html">Testimonials</a>
+					<a href="./testimonials.html">Recenzja</a>
 				</li>
-				<li class="footer__list-item"><a href="./pricing.html">Pricing</a></li>
-				<li class="footer__list-item">
-					<a href="./sitespec.html">Sitespec</a>
-				</li>
+				<li class="footer__list-item"><a href="./pricing.html">Ceny</a></li>
 			</ul>
 		</footer>
 

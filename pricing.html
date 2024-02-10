@@ -5,39 +5,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Pricing | Chubenko Rehab</title>
 		<link rel="stylesheet" href="sass/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header class="header glass-card">
 			<a href="./">
-				<img class="logo" src="./assets/img/back.png" alt="Spine Logotype" />
+				<img class="logo" src="./assets/icons/logo.png" alt="Spine Logotype" />
 			</a>
 			<nav>
 				<ul class="header__list" id="myHeaderList">
-					<li class="header__list-item"><a href="./about.html">About</a></li>
 					<li class="header__list-item">
-						<a href="./testimonials.html">Testimonials</a>
+						<a href="./about.html">O mnie</a>
 					</li>
 					<li class="header__list-item">
-						<a class="active-page" href="./pricing.html">Pricing</a>
+						<a href="./testimonials.html">Recenzja</a>
 					</li>
 					<li class="header__list-item">
-						<a href="./sitespec.html">Sitespec</a>
+						<a href="./pricing.html">Ceny</a>
 					</li>
+					<select id="languageSelect">
+						<option value="pl">🇵🇱</option>
+						<option value="ua">🇺🇦</option>
+					</select>
 					<li class="header__list-menu burger">
 						<img src="./assets/icons/burger.png" alt="menu button" />
 					</li>
 				</ul>
 
 				<ul class="dropdown-menu">
-					<li class="header__list-item"><a href="./about.html">About</a></li>
+					<li class="header__list-item"><a href="./about.html">O mnie</a></li>
 					<li class="header__list-item">
-						<a href="./testimonials.html">Testimonials</a>
+						<a href="./testimonials.html">Recenzja</a>
 					</li>
 					<li class="header__list-item">
-						<a href="./pricing.html">Pricing</a>
-					</li>
-					<li class="header__list-item">
-						<a href="./sitespec.html">Sitespec</a>
+						<a href="./pricing.html">Ceny</a>
 					</li>
 				</ul>
 			</nav>
@@ -46,12 +52,14 @@
 		<main>
 			<section class="pricing container">
 				<div class="pricing__headline headline">
-					<p class="pricing__upper upper-text">Pay once - Lifetime health</p>
-					<h1 class="pricing__main main-text">Choose Your Service</h1>
+					<p class="pricing__upper upper-text">
+						ZAPŁAĆ RAZ - ZDROWIE NA CAŁE ŻYCIE
+					</p>
+					<h1 class="pricing__main main-text">Wybierz swoją usługę</h1>
 				</div>
 				<div class="pricing__block">
 					<div class="pricing__block-card glass-card">
-						<p class="pricing__block-card-upper upper-text">Massage</p>
+						<p class="pricing__block-card-upper upper-text">Masaż leczniczy</p>
 						<b class="pricing__block-card-price main-text">$ 250</b>
 						<p class="description">
 							Massage involves manual manipulation of the body's soft tissues to
@@ -143,11 +151,13 @@
 							href="./index.html"
 							class="pricing__block-card-button main__button"
 						>
-							Buy Now!
+							kup teraz
 						</a>
 					</div>
 					<div class="pricing__block-card glass-card">
-						<p class="pricing__block-card-upper upper-text">4-week Intensive</p>
+						<p class="pricing__block-card-upper upper-text">
+							Terapia wad postawy
+						</p>
 						<b class="pricing__block-card-price main-text">$ 1000</b>
 						<p class="description">
 							A 4-week intensive massage program can offer benefits like
@@ -239,11 +249,13 @@
 							href="./index.html"
 							class="pricing__block-card-button main__button"
 						>
-							Buy Now!
+							kup teraz
 						</a>
 					</div>
 					<div class="pricing__block-card glass-card">
-						<p class="pricing__block-card-upper upper-text">12-week Complete</p>
+						<p class="pricing__block-card-upper upper-text">
+							Terapia indywidualna
+						</p>
 						<b class="pricing__block-card-price main-text">$ 2250</b>
 						<p class="description">
 							A 12-week complete program may offer comprehensive benefits,
@@ -335,7 +347,199 @@
 							href="./index.html"
 							class="pricing__block-card-button main__button"
 						>
-							Buy Now!
+							kup teraz
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card">
+						<p class="pricing__block-card-upper upper-text">Trening medyczny</p>
+						<b class="pricing__block-card-price main-text">$ 2250</b>
+						<p class="description">
+							A 12-week complete program may offer comprehensive benefits,
+							including sustained fitness progress, skill acquisition, and habit
+							formation. This extended duration allows for holistic development,
+							fostering long-term health and wellness.
+						</p>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Comprehensive Stress Relief
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Muscle Rehabilitation
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Chronic Pain Management
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Enhanced Blood Circulation
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Emotional Stability
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Improved Sleep Patterns
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Body-Mind Connection
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Holistic Well-being
+							</p>
+						</div>
+						<a
+							href="./index.html"
+							class="pricing__block-card-button main__button"
+						>
+							kup teraz
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card">
+						<p class="pricing__block-card-upper upper-text">Kinesiotaping</p>
+						<b class="pricing__block-card-price main-text">$ 2250</b>
+						<p class="description">
+							A 12-week complete program may offer comprehensive benefits,
+							including sustained fitness progress, skill acquisition, and habit
+							formation. This extended duration allows for holistic development,
+							fostering long-term health and wellness.
+						</p>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Comprehensive Stress Relief
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Muscle Rehabilitation
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Chronic Pain Management
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Enhanced Blood Circulation
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Emotional Stability
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Improved Sleep Patterns
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Body-Mind Connection
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Holistic Well-being
+							</p>
+						</div>
+						<a
+							href="./index.html"
+							class="pricing__block-card-button main__button"
+						>
+							kup teraz
 						</a>
 					</div>
 				</div>
@@ -345,16 +549,11 @@
 		<footer class="footer container">
 			<img class="logo" src="./assets/img/back.png" alt="Spine Logotype" />
 			<ul class="footer__list">
-				<li class="footer__list-item"><a href="./about.html">About</a></li>
+				<li class="footer__list-item"><a href="./about.html">O mnie</a></li>
 				<li class="footer__list-item">
-					<a href="./testimonials.html">Testimonials</a>
+					<a href="./testimonials.html">Recenzja</a>
 				</li>
-				<li class="footer__list-item">
-					<a class="active-page" href="./pricing.html">Pricing</a>
-				</li>
-				<li class="footer__list-item">
-					<a href="./sitespec.html">Sitespec</a>
-				</li>
+				<li class="footer__list-item"><a href="./pricing.html">Ceny</a></li>
 			</ul>
 		</footer>
 
