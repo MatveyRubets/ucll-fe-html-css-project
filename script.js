@@ -51,21 +51,17 @@ document.addEventListener("DOMContentLoaded", function () {
 			const parentParagraph = this.parentNode;
 			const fullText = parentParagraph.querySelector(".full-text");
 			const shortText = parentParagraph.querySelector(".short-text");
-			const arrow = this.querySelector(".arrow"); // Select the arrow within the button
 
 			// Check visibility to toggle
 			if (fullText.classList.contains("hidden")) {
 				// Show full text
 				fullText.classList.remove("hidden");
 				shortText.classList.add("hidden");
-				arrow.src = "./assets/icons/up-arrow.png"; // Change to 'up' arrow
 			} else {
 				// Hide full text
 				fullText.classList.add("hidden");
 				shortText.classList.remove("hidden");
-				arrow.src = "./assets/icons/down-arrow.png"; // Change to 'down' arrow
 			}
-			this.appendChild(arrow); // Append the arrow to ensure order
 		});
 	});
 });

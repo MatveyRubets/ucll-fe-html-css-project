@@ -1,11 +1,26 @@
 .hero {
 	height: calc(100vh - 1rem - 40px);
 	display: flex;
-
+	justify-content: space-evenly;
 	&__left {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
+		justify-content: center;
+		max-width: 600px;
+		&-intro,
+		&-desc {
+			font-weight: 200;
+			color: #3f3f3f;
+		}
+
+		&-intro {
+			color: var(--accent-color);
+			margin-bottom: 30px;
+		}
+
+		&-heading {
+			margin-bottom: 70px;
+		}
 
 		&-tablet {
 			display: none;
@@ -14,14 +29,14 @@
 		&-content {
 			display: flex;
 			flex-direction: column;
-			gap: 2rem;
+			gap: 70px;
 		}
 	}
 
 	&__right {
 		display: flex;
 		align-items: center;
-		justify-content: center;
+		justify-content: end;
 		&-img {
 			box-shadow: 6px 10px 223px 7px rgba(0, 163, 255, 0.44);
 			-webkit-box-shadow: 6px 10px 223px 7px rgba(0, 163, 255, 0.44);
@@ -78,9 +93,12 @@
 		&__left {
 			width: 100%;
 			justify-content: center;
-			gap: 1.5rem;
+			&-intro {
+				margin-bottom: 10px;
+			}
 			&-heading {
 				font-size: 30px;
+				margin-bottom: 50px;
 			}
 
 			&-content {

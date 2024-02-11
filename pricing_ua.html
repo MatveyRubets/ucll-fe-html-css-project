@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +28,9 @@
 					<li class="header__list-item">
 						<a href="./pricing_ua.html">Ціни</a>
 					</li>
+					<li class="header__list-item">
+						<a href="./certificates_ua.html">Сертифікати</a>
+					</li>
 					<select id="languageSelect">
 						<option value="ua">🇺🇦</option>
 						<option value="pl">🇵🇱</option>
@@ -47,6 +50,9 @@
 					<li class="header__list-item">
 						<a href="./pricing_ua.html">Ціни</a>
 					</li>
+					<li class="header__list-item">
+						<a href="./certificates_ua.html">Сертифікати</a>
+					</li>
 				</ul>
 			</nav>
 		</header>
@@ -60,20 +66,11 @@
 					<h1 class="pricing__main main-text">Оберіть свою послугу</h1>
 				</div>
 				<div class="pricing__block">
-					<a
-						href="./index_ua.html#contactForm"
-						class="pricing__block-card glass-card"
-					>
+					<div class="pricing__block-card glass-card">
 						<p class="pricing__block-card-upper upper-text">
-							Індивідуальна терапія 50 хв.
+							Фізіотерапевтична консультація
 						</p>
-						<b class="pricing__block-card-price main-text">200 zł</b>
-						<p class="description">
-							Massage involves manual manipulation of the body's soft tissues to
-							enhance relaxation, reduce muscle tension, and promote overall
-							well-being. It offers physical and mental health benefits through
-							therapeutic touch.
-						</p>
+						<b class="pricing__block-card-price main-text">150 zł</b>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -81,7 +78,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Stress Reduction
+								Cуб’єктивне обстеження (збір анамнезу хвороби)
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -91,7 +88,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Improved Circulation
+								Аналіз медичної візуалізації (рентген, МРТ, УЗД)
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -101,7 +98,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Muscle Relaxation
+								Повна функціональна діагностика
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -111,7 +108,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Pain Relief
+								Індивідуальний план лікування враховуючи потреби пацієнта
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -121,54 +118,29 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Enhanced Mood
+								Онлайн підтримка
 							</p>
 						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Better Sleep
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Increased Flexibility
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Immune System Support
-							</p>
-						</div>
-					</a>
-					<a
-						href="./index_ua.html#contactForm"
-						class="pricing__block-card glass-card"
-					>
+						<a
+							href="./index.html"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card">
 						<p class="pricing__block-card-upper upper-text">
-							Індивідуальна терапія 30 хв.
+							Індивідуальна терапія
+							<button id="duration30" class="duration-btn active" type="button">
+								30 хв
+							</button>
+							<button id="duration50" class="duration-btn" type="button">
+								50 хв
+							</button>
 						</p>
-						<b class="pricing__block-card-price main-text">140 zł</b>
-						<p class="description">
-							A 4-week intensive massage program can offer benefits like
-							improved muscle flexibility, stress reduction, enhanced
-							circulation, and targeted relief for chronic issues, promoting
-							overall physical and mental well-being.
-						</p>
+						<b id="priceTherapy" class="pricing__block-card-price main-text"
+							>140 zł</b
+						>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -176,7 +148,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Consistent Stress Reduction
+								Підходить для конкретних потреб
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -186,7 +158,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Improved Muscle Tone
+								Комплексний підхід
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -196,7 +168,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Guaranteed results
+								Підвищення мотіваційного фону
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -206,7 +178,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Chronic Pain Management
+								Ефективний контроль змін
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -216,7 +188,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Enhanced Circulation
+								Результат на довготривалу перспективу
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -226,44 +198,21 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Emotional Well-being
+								Реабілітація після операцій
 							</p>
 						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Increased Body Awareness
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Overall Physical and Mental Well-being
-							</p>
-						</div>
-					</a>
-					<a
-						href="./index_ua.html#contactForm"
-						class="pricing__block-card glass-card"
-					>
+						<a
+							href="./index.html"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card">
 						<p class="pricing__block-card-upper upper-text">
-							Лікувальний масаж 40 хв.
+							Лікувальний масаж
 						</p>
 						<b class="pricing__block-card-price main-text">160 zł</b>
-						<p class="description">
-							A 12-week complete program may offer comprehensive benefits,
-							including sustained fitness progress, skill acquisition, and habit
-							formation. This extended duration allows for holistic development,
-							fostering long-term health and wellness.
-						</p>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -271,7 +220,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Comprehensive Stress Relief
+								Покращення загального кровообігу
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -281,7 +230,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Muscle Rehabilitation
+								Стимулювання лімфатичної системи
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -291,7 +240,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Chronic Pain Management
+								Поліпшення психоемоційного стану
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -301,7 +250,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Enhanced Blood Circulation
+								Підвищення гнучкості, рухливості м’язів та суглобів
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -311,7 +260,27 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Emotional Stability
+								Ретельне пропрацювання проблемних зон
+							</p>
+						</div>
+						<a
+							href="./index.html"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card">
+						<p class="pricing__block-card-upper upper-text">Медичний тренінг</p>
+						<b class="pricing__block-card-price main-text">120 zł</b>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Покращення фізичного стану
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -321,7 +290,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Improved Sleep Patterns
+								Навчання вправам самодопомоги
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -331,7 +300,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Body-Mind Connection
+								Зменшення ризику ускладнень
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -341,24 +310,31 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Holistic Well-being
+								Збільшення м'язової сили та гнучкості
 							</p>
 						</div>
-					</a>
-					<a
-						href="./index_ua.html#contactForm"
-						class="pricing__block-card glass-card"
-					>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Відновлення функцій тіла
+							</p>
+						</div>
+						<a
+							href="./index.html"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card">
 						<p class="pricing__block-card-upper upper-text">
-							Кінезіотейпування 1 ділянка
+							Кінезіотейпування
 						</p>
 						<b class="pricing__block-card-price main-text">60-100 zł</b>
-						<p class="description">
-							A 12-week complete program may offer comprehensive benefits,
-							including sustained fitness progress, skill acquisition, and habit
-							formation. This extended duration allows for holistic development,
-							fostering long-term health and wellness.
-						</p>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -366,7 +342,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Comprehensive Stress Relief
+								Підтримка м'язово-суглобового апарату
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -376,7 +352,7 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Muscle Rehabilitation
+								Покращення функціональних результатів
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -386,7 +362,8 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Chronic Pain Management
+								Комплексна допомога при лімфатичному та післяопераційному
+								набряку
 							</p>
 						</div>
 						<div class="pricing__block-card-features card-headline">
@@ -396,149 +373,17 @@
 								alt="check-mark"
 							/>
 							<p class="pricing__block-card-features-desc description">
-								Enhanced Blood Circulation
+								Зменшення напруги та болю
 							</p>
 						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Emotional Stability
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Improved Sleep Patterns
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Body-Mind Connection
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Holistic Well-being
-							</p>
-						</div>
-					</a>
-					<a
-						href="./index_ua.html#contactForm"
-						class="pricing__block-card glass-card"
-					>
-						<p class="pricing__block-card-upper upper-text">
-							Медичний тренінг 35 хв.
-						</p>
-						<b class="pricing__block-card-price main-text">120 zł</b>
-						<p class="description">
-							A 12-week complete program may offer comprehensive benefits,
-							including sustained fitness progress, skill acquisition, and habit
-							formation. This extended duration allows for holistic development,
-							fostering long-term health and wellness.
-						</p>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Comprehensive Stress Relief
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Muscle Rehabilitation
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Chronic Pain Management
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Enhanced Blood Circulation
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Emotional Stability
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Improved Sleep Patterns
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Body-Mind Connection
-							</p>
-						</div>
-						<div class="pricing__block-card-features card-headline">
-							<img
-								class="pricing__block-card-features-icon"
-								src="./assets/icons/check-mark.png"
-								alt="check-mark"
-							/>
-							<p class="pricing__block-card-features-desc description">
-								Holistic Well-being
-							</p>
-						</div>
-					</a>
+						<a
+							href="./index.html"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
 				</div>
-				<a href="./index.html" class="pricing__block-card-button main__button">
-					записатися
-				</a>
 			</section>
 		</main>
 
@@ -552,6 +397,9 @@
 					<a href="./testimonials_ua.html">Відгуки</a>
 				</li>
 				<li class="footer__list-item"><a href="./pricing_ua.html">Ціни</a></li>
+				<li class="header__list-item">
+					<a href="./certificates_ua.html">Сертифікати</a>
+				</li>
 			</ul>
 		</footer>
 
