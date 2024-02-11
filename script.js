@@ -69,3 +69,24 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+	// Select the buttons and price display element
+	const duration30Btn = document.getElementById("duration30");
+	const duration50Btn = document.getElementById("duration50");
+	const priceDisplay = document.getElementById("priceTherapy");
+
+	// Add click event listener for the 30 min button
+	duration30Btn.addEventListener("click", function () {
+		priceDisplay.textContent = "140 zł"; // Update price
+		this.classList.add("active"); // Mark as active
+		duration50Btn.classList.remove("active"); // Remove active from the other button
+	});
+
+	// Add click event listener for the 50 min button
+	duration50Btn.addEventListener("click", function () {
+		priceDisplay.textContent = "200 zł"; // Update price
+		this.classList.add("active"); // Mark as active
+		duration30Btn.classList.remove("active"); // Remove active from the other button
+	});
+});

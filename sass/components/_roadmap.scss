@@ -18,19 +18,19 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 4rem;
+		align-items: center;
 		&-row {
-			width: 100%;
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			justify-content: space-around;
 			padding: 1rem;
+			width: 80%;
 		}
 
 		&-text {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			width: 30%;
 			gap: 1rem;
 
 			&-img {
@@ -40,18 +40,32 @@
 
 			&-heading {
 				color: #fff;
+				width: 400px;
 			}
 
 			&-desc {
 				color: var(--secondary-text-color);
+				width: 400px;
 			}
 		}
 
+		&-text,
+		&-images {
+			flex: 1; // Allows these elements to grow and take available space equally
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 1rem;
+		}
+
+		// Specific styles for the step block to prevent it from growing
 		&-step {
+			flex: 0 1 auto; // Do not grow, allow shrink, basis auto
 			display: flex;
 			align-items: center;
 			flex-direction: column;
 
+			// Style for the step description
 			&-desc {
 				font-size: 30px;
 				color: #fff;
@@ -62,6 +76,8 @@
 		}
 
 		&-images {
+			display: flex;
+			align-items: end;
 			&-image {
 				width: 250px;
 				height: 250px;
@@ -70,13 +86,43 @@
 		}
 	}
 }
+@media screen and (max-width: 1300px) {
+	.roadmap__block-row {
+		width: 100%;
+	}
+	.roadmap__block-text-headline {
+		width: 300px;
+	}
+
+	.roadmap__block-text-desc {
+		width: 300px;
+	}
+
+	.roadmap__block-images-image {
+		width: 200px;
+		height: 200px;
+	}
+}
 
 @media screen and (max-width: 992px) {
 	.roadmap {
 		&__block {
+			&-row {
+				width: 100%;
+			}
+			&-text {
+				&-headline {
+					width: 250px;
+					font-size: 12px;
+				}
+				&-desc {
+					width: 250px;
+				}
+			}
 			&-images {
 				&-image {
 					width: 200px;
+					height: 200px;
 				}
 			}
 
@@ -97,6 +143,7 @@
 	.roadmap {
 		&__block {
 			&-row {
+				width: 100%;
 				display: flex;
 				flex-direction: column;
 				gap: 2rem;

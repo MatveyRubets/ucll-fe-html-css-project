@@ -79,8 +79,15 @@ select {
 }
 
 .logo {
-	width: 40px;
-	height: 40px;
+	width: 60px;
+	height: 60px;
+}
+
+@media screen and (max-width: 1600px) {
+	.logo {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 .main__button {
@@ -95,7 +102,7 @@ select {
 	display: inline-flex;
 	font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
 		Arial, sans-serif;
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 600;
 	justify-content: center;
 	line-height: 1.25;
@@ -133,7 +140,17 @@ select {
 }
 
 .title {
-	font-size: 60px;
+	font-size: 80px;
+}
+
+@media screen and (max-width: 1600px) {
+	.title {
+		font-size: 60px;
+	}
+
+	.main__button {
+		font-size: 16px;
+	}
 }
 
 @media screen and (max-width: 576px) {
@@ -345,4 +362,26 @@ select {
 .short-text:not(.hidden) {
 	max-height: 500px; /* Arbitrary large value */
 	opacity: 1;
+}
+
+.duration-btn.active {
+	background-color: #2db5ff; /* Example active color */
+	color: white;
+}
+
+/* CSS */
+.duration-btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3px 8px;
+	font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+	border-radius: 6px;
+	color: #3d3d3d;
+	background: #fff;
+	border: none;
+	box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
 }
