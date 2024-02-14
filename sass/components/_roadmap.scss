@@ -89,23 +89,6 @@
 		}
 	}
 }
-@media screen and (max-width: 1300px) {
-	.roadmap__block-row {
-		width: 100%;
-	}
-	.roadmap__block-text-headline {
-		width: 300px;
-	}
-
-	.roadmap__block-text-desc {
-		width: 300px;
-	}
-
-	.roadmap__block-images-image {
-		width: 200px;
-		height: 200px;
-	}
-}
 
 @media screen and (max-width: 992px) {
 	.roadmap {
@@ -140,6 +123,7 @@
 			}
 
 			&-text {
+				margin-top: 20px;
 				width: 100%;
 				align-items: center;
 			}
