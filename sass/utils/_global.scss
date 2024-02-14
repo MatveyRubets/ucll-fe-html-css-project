@@ -93,6 +93,11 @@ select {
 		width: 40px;
 		height: 40px;
 	}
+
+	input {
+		width: 400px;
+		font-size: 16px;
+	}
 }
 
 .main__button {
@@ -380,7 +385,6 @@ select {
 	color: white;
 }
 
-/* CSS */
 .duration-btn {
 	display: flex;
 	flex-direction: column;
@@ -399,19 +403,22 @@ select {
 }
 
 .certificates {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(300px, 1fr)
+	); /* Creates a flexible grid layout */
+	justify-content: center; /* Centers grid items */
 	gap: 3rem;
 	padding: 2rem;
-	margin: 0 160px;
+	margin: auto; /* Center the container itself if needed */
 }
 
 .certificate {
-	width: 100%;
-	max-width: 300px;
+	width: 100%; /* Ensures the certificate scales within the grid item */
+	max-width: 300px; /* Maintains a consistent certificate width */
 }
+
 @media screen and (max-width: 992px) {
 	.certificates {
 		margin: 0 80px;
