@@ -402,29 +402,25 @@ select {
 }
 
 .certificates {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Creates a flexible grid layout */
-  justify-content: center; /* Centers grid items */
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   padding: 2rem;
-  margin: auto; /* Center the container itself if needed */
 }
 
 .certificate {
-  width: 100%; /* Ensures the certificate scales within the grid item */
-  max-width: 300px; /* Maintains a consistent certificate width */
+  max-width: 280px;
+  margin: 1rem;
 }
 
-@media screen and (max-width: 992px) {
-  .certificates {
-    margin: 0 80px;
-  }
+.certificate-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (max-width: 576px) {
-  .certificates {
-    margin: 0 40px;
-  }
-}
+
 .checkbox-wrapper-4 * {
   box-sizing: border-box;
 }
