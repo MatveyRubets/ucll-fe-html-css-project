@@ -3,10 +3,66 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Дякую | CH rehab</title>
+		<title>About me | Chubenko Rehab</title>
+		<link rel="stylesheet" href="sass/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
-		<h1>Дякую за запис</h1>
-		<h2>Найближчим часом я з вами зв'яжусь</h2>
+		<header class="header glass-card">
+			<a href="./">
+				<img class="logo" src="./assets/icons/logo.png" alt="Spine Logotype" />
+			</a>
+			<nav>
+				<ul class="header__list" id="myHeaderList">
+					<li class="header__list-item">
+						<a href="./about.html">O mnie</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./testimonials.html">Recenzja</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./pricing.html">Ceny</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./certificates.html">Certyfikaty</a>
+					</li>
+					<select id="languageSelect">
+						<option value="pl">🇵🇱</option>
+						<option value="ua">🇺🇦</option>
+					</select>
+					<li class="header__list-menu burger">
+						<img src="./assets/icons/burger.png" alt="menu button" />
+					</li>
+				</ul>
+
+				<ul class="dropdown-menu">
+					<li class="header__list-item"><a href="./about.html">O mnie</a></li>
+					<li class="header__list-item">
+						<a href="./testimonials.html">Recenzja</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./pricing.html">Ceny</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./certificates.html">Certyfikaty</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="container">
+				<div class="headline">
+					<h1 class="main-text">Дякую</h1>
+					<p class="medium-text">Ми зв'яжемося з вами найближчим часом</p>
+				</div>
+			</section>
+		</main>
+
+		<script src="script.js"></script>
 	</body>
 </html>
