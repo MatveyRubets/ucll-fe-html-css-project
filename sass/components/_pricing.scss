@@ -43,6 +43,35 @@
 		}
 	}
 }
+.quantity-btn {
+	border: none;
+	padding: 1rem 1.4rem;
+	font-size: 1rem;
+
+	cursor: pointer;
+
+	&:hover {
+		background-color: darken(#cedaed, 2%);
+	}
+}
+
+.quantity-selection {
+	border-radius: 10px;
+	// box-shadow: 8px 8px 16px rgba(163, 177, 198, 0.6),
+	// -8px -8px 16px rgba(255, 255, 255, 0.5);
+
+	.quantity-btn {
+		&:first-child {
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+		}
+
+		&:last-child {
+			border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+	}
+}
 
 @media screen and (max-width: 1600px) {
 	.pricing__headline {

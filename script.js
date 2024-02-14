@@ -67,22 +67,72 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-	// Select the buttons and price display element
+	// Select duration buttons and price display for Terapia indywidualna
 	const duration30Btn = document.getElementById("duration30");
 	const duration50Btn = document.getElementById("duration50");
-	const priceDisplay = document.getElementById("priceTherapy");
+	const priceDisplayTherapia = document.getElementById("priceTherapy");
 
-	// Add click event listener for the 30 min button
-	duration30Btn.addEventListener("click", function () {
-		priceDisplay.textContent = "140 zł"; // Update price
-		this.classList.add("active"); // Mark as active
-		duration50Btn.classList.remove("active"); // Remove active from the other button
+	// Select all quantity buttons and all card price displays
+	const quantityBtns = document.querySelectorAll(".quantity-btn");
+	const allPrices = document.querySelectorAll(".pricing__block-card-price");
+
+	// Store the base price for Terapia indywidualna and initialize currentQuantity
+	let basePriceTerapia = 140; // Default to 30min price
+	let currentQuantity = 1;
+
+	// Function to update price for Terapia indywidualna based on duration and quantity
+	const updateTerapiaPrice = () => {
+		const newPrice = basePriceTerapia * currentQuantity;
+		priceDisplayTherapia.textContent = `${newPrice} zł`;
+	};
+
+	// Function to update all card prices based on the selected quantity
+	const updateAllPrices = () => {
+		allPrices.forEach((price) => {
+			const basePrice = parseInt(price.getAttribute("data-base-price"));
+			const newPrice = basePrice * currentQuantity;
+			price.textContent = `${newPrice} zł`;
+		});
+	};
+
+	// Initialize base prices and add data-base-price attribute to each card price
+	allPrices.forEach((price) => {
+		const basePrice = parseInt(price.textContent);
+		price.setAttribute("data-base-price", basePrice);
 	});
 
-	// Add click event listener for the 50 min button
-	duration50Btn.addEventListener("click", function () {
-		priceDisplay.textContent = "200 zł"; // Update price
-		this.classList.add("active"); // Mark as active
-		duration30Btn.classList.remove("active"); // Remove active from the other button
+	// Event listeners for duration buttons
+	[duration30Btn, duration50Btn].forEach((btn) => {
+		btn.addEventListener("click", function () {
+			// Update basePriceTerapia based on the clicked button's data-price attribute
+			basePriceTerapia = parseInt(this.getAttribute("data-price"));
+
+			// Set active class on clicked button and remove from the other
+			duration30Btn.classList.toggle("active", this === duration30Btn);
+			duration50Btn.classList.toggle("active", this === duration50Btn);
+
+			// Update the Terapia indywidualna price display
+			updateTerapiaPrice();
+		});
 	});
+
+	// Event listeners for quantity buttons
+	quantityBtns.forEach((btn) => {
+		btn.addEventListener("click", function () {
+			// Update currentQuantity based on the clicked button's data-quantity attribute
+			currentQuantity = parseInt(this.getAttribute("data-quantity"));
+
+			// Update prices across all cards and for Terapia indywidualna
+			updateAllPrices();
+			updateTerapiaPrice();
+
+			// Reset active class on all quantity buttons and set it on the clicked one
+			quantityBtns.forEach((btn) => btn.classList.remove("active"));
+			this.classList.add("active");
+		});
+	});
+
+	// Initial updates
+	updateTerapiaPrice();
+	updateAllPrices();
 });

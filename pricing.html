@@ -62,6 +62,18 @@
 						ZAPŁAĆ RAZ - ZDROWIE NA CAŁE ŻYCIE
 					</p>
 					<h1 class="pricing__main main-text">Wybierz swoją usługę</h1>
+					<p class="description">Wybierz liczbę sesji</p>
+					<div class="quantity-selection">
+						<button class="quantity-btn active" type="button" data-quantity="1">
+							1
+						</button>
+						<button class="quantity-btn" type="button" data-quantity="5">
+							5
+						</button>
+						<button class="quantity-btn" type="button" data-quantity="10">
+							10
+						</button>
+					</div>
 				</div>
 				<div class="pricing__block">
 					<div class="pricing__block-card glass-card">
@@ -126,13 +138,25 @@
 							kup teraz
 						</a>
 					</div>
-					<div class="pricing__block-card glass-card">
+					<div class="pricing__block-card glass-card terapia-indywidualna">
 						<p class="pricing__block-card-upper upper-text">
 							Terapia indywidualna
-							<button id="duration30" class="duration-btn active" type="button">
+							<button
+								id="duration30"
+								class="duration-btn active"
+								type="button"
+								data-duration="30"
+								data-price="140"
+							>
 								30 min
 							</button>
-							<button id="duration50" class="duration-btn" type="button">
+							<button
+								id="duration50"
+								class="duration-btn"
+								type="button"
+								data-duration="50"
+								data-price="200"
+							>
 								50 min
 							</button>
 						</p>

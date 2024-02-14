@@ -13,6 +13,10 @@ a {
 	text-decoration: none;
 }
 
+button {
+	font-family: "Rubik";
+}
+
 nav ul li a::before {
 	content: "";
 	position: absolute;
@@ -41,10 +45,11 @@ a {
 }
 
 input {
-	padding: 0.75rem;
+	padding: 1rem;
 	border: none;
-	width: 300px;
+	width: 500px;
 	border-radius: 0.75rem;
+	font-size: 18px;
 }
 
 textarea:focus,
@@ -130,7 +135,7 @@ select {
 }
 
 .main__button:active {
-	background-color: #f0f0f1;
+	background-color: #6e6eff;
 	border-color: rgba(0, 0, 0, 0.15);
 	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
 	color: rgba(0, 0, 0, 0.65);
@@ -155,6 +160,11 @@ select {
 @media screen and (max-width: 576px) {
 	.title {
 		font-size: 48px;
+	}
+
+	input {
+		width: 320px;
+		font-size: 14px;
 	}
 }
 
@@ -254,7 +264,7 @@ select {
 }
 
 .active {
-	background-color: #ccc;
+	background-color: #2db5ff;
 }
 
 .panel {
@@ -377,7 +387,6 @@ select {
 	margin-right: 5px;
 	align-items: center;
 	padding: 3px 8px;
-	font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
 	border-radius: 6px;
 	color: #3d3d3d;
 	background: #fff;

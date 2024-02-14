@@ -371,11 +371,6 @@
 					<div class="roadmap__block-row glass-card">
 						<div class="roadmap__block-text">
 							<div class="roadmap__block-text-headline card-headline">
-								<img
-									class="roadmap__block-text-img"
-									src="./assets/icons/appointment.png"
-									alt="Calendar booked icon"
-								/>
 								<h3 class="roadmap__block-text-heading card-heading">
 									Запис через сайт
 								</h3>
@@ -403,11 +398,6 @@
 					<div class="roadmap__block-row glass-card">
 						<div class="roadmap__block-text">
 							<div class="roadmap__block-text-headline card-headline">
-								<img
-									class="roadmap__block-text-img"
-									src="./assets/icons/consultation.png"
-									alt="Calendar booked icon"
-								/>
 								<h3 class="roadmap__block-text-heading card-heading">
 									Консультація
 								</h3>
@@ -436,11 +426,6 @@
 					<div class="roadmap__block-row glass-card">
 						<div class="roadmap__block-text">
 							<div class="roadmap__block-text-headline card-headline">
-								<img
-									class="roadmap__block-text-img"
-									src="./assets/icons/therapy.png"
-									alt="Calendar booked icon"
-								/>
 								<h3 class="roadmap__block-text-heading card-heading">
 									Комплексна терапія
 								</h3>
@@ -477,19 +462,47 @@
 						method="POST"
 						class="contact__info-form"
 					>
-						<input type="text" name="Имя" placeholder="Дмитро*" required />
-						<input type="text" name="Фамилия" placeholder="Чубенко*" required />
-						<input
-							type="email"
-							placeholder="dmytrochubenko@internet.com*"
-							required
-						/>
-						<input
-							type="tel"
-							name="Номер Телефона"
-							placeholder="+380981234567*"
-							required
-						/>
+						<label class="contact__info-form-label">
+							Ім'я
+
+							<input type="text" name="Имя" placeholder="Дмитро*" required />
+						</label>
+						<label class="contact__info-form-label">
+							Прізвище
+							<input
+								type="text"
+								name="Фамилия"
+								placeholder="Чубенко*"
+								required
+							/>
+						</label>
+						<label class="contact__info-form-label">
+							Email
+
+							<input
+								type="email"
+								placeholder="dmytrochubenko@internet.com*"
+								required
+							/>
+						</label>
+						<label class="contact__info-form-label">
+							Номер телефону
+							<input
+								type="tel"
+								name="Номер Телефона"
+								placeholder="+380981234567*"
+								required
+							/>
+						</label>
+						<label class="contact__info-form-label">
+							Нік в інстаграмі
+							<input
+								type="text"
+								name="Ник Инстаграм"
+								placeholder="chubenko.rehab*"
+								required
+							/>
+						</label>
 						<div class="checkbox-wrapper-4">
 							<input class="inp-cbx" id="morning" type="checkbox" />
 							<label class="cbx" for="morning"

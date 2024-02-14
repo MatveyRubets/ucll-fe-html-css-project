@@ -384,14 +384,6 @@
 						<div class="roadmap__block-step">
 							<p class="roadmap__block-step-desc">1</p>
 						</div>
-
-						<div class="roadmap__block-images">
-							<img
-								src="./assets/img/calendly.webp"
-								alt="Calendar image"
-								class="roadmap__block-images-image"
-							/>
-						</div>
 					</div>
 
 					<div class="roadmap__block-row glass-card">
@@ -460,28 +452,49 @@
 						method="POST"
 						class="contact__info-form"
 					>
-						<input type="text" name="Имя" placeholder="Dmytro*" required />
-						<input
-							type="text"
-							name="Фамилия"
-							placeholder="Chubenko*"
-							required
-						/>
-						<input
-							type="email"
-							placeholder="dmytrochubenko@internet.com*"
-							required
-						/>
-						<input
-							type="tel"
-							name="Номер Телефона"
-							placeholder="+48-123-456-789*"
-							required
-						/>
+						<label class="contact__info-form-label">
+							Imię
+							<input type="text" name="Имя" placeholder="Dmytro*" required />
+						</label>
+						<label class="contact__info-form-label">
+							Nazwisko
+							<input
+								type="text"
+								name="Фамилия"
+								placeholder="Chubenko*"
+								required
+							/>
+						</label>
+						<label class="contact__info-form-label">
+							Email
+							<input
+								type="email"
+								placeholder="dmytrochubenko@internet.com*"
+								required
+							/>
+						</label>
+						<label class="contact__info-form-label">
+							Numer telefonu
+							<input
+								type="tel"
+								name="Номер Телефона"
+								placeholder="+48-123-456-789*"
+								required
+							/>
+						</label>
+						<label class="contact__info-form-label">
+							Pseudonim instagram
+							<input
+								type="text"
+								name="Ник Инстаграм"
+								placeholder="chubenko.rehab*"
+								required
+							/>
+						</label>
 						<div class="checkbox-wrapper-4">
 							<input
 								class="inp-cbx"
-								name="firstTime"
+								name="Первый раз"
 								id="morning"
 								type="checkbox"
 							/>

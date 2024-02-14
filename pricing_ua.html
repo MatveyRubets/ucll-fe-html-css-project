@@ -64,6 +64,18 @@
 						ЗАПЛАТИ ОДИН РАЗ - ЗДОРОВ'Я НА ВСЕ ЖИТТЯ
 					</p>
 					<h1 class="pricing__main main-text">Оберіть свою послугу</h1>
+					<p class="description">Оберіть кількість сеансів</p>
+					<div class="quantity-selection">
+						<button class="quantity-btn active" type="button" data-quantity="1">
+							1
+						</button>
+						<button class="quantity-btn" type="button" data-quantity="5">
+							5
+						</button>
+						<button class="quantity-btn" type="button" data-quantity="10">
+							10
+						</button>
+					</div>
 				</div>
 				<div class="pricing__block">
 					<div class="pricing__block-card glass-card">
@@ -131,10 +143,22 @@
 					<div class="pricing__block-card glass-card">
 						<p class="pricing__block-card-upper upper-text">
 							Індивідуальна терапія
-							<button id="duration30" class="duration-btn active" type="button">
+							<button
+								id="duration30"
+								class="duration-btn active"
+								type="button"
+								data-duration="30"
+								data-price="140"
+							>
 								30 хв
 							</button>
-							<button id="duration50" class="duration-btn" type="button">
+							<button
+								id="duration50"
+								class="duration-btn"
+								type="button"
+								data-duration="50"
+								data-price="200"
+							>
 								50 хв
 							</button>
 						</p>
