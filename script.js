@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Select all quantity buttons and all card price displays
 	const quantityBtns = document.querySelectorAll(".quantity-btn");
 	const allPrices = document.querySelectorAll(".pricing__block-card-price");
+	const allCards = document.querySelectorAll(".pricing__block-card");
 
 	// Store the base price for Terapia indywidualna and initialize currentQuantity
 	let basePriceTerapia = 140; // Default to 30min price
@@ -93,6 +94,14 @@ document.addEventListener("DOMContentLoaded", function () {
 			const newPrice = basePrice * currentQuantity;
 			price.textContent = `${newPrice} zł`;
 		});
+	};
+
+	// Function to show/hide first and last card based on selected quantity
+	const updateCardVisibility = () => {
+		// Hide first and last card for quantities 5 and 10
+		const shouldHideCards = currentQuantity === 5 || currentQuantity === 10;
+		allCards[0].style.display = shouldHideCards ? "none" : ""; // First card
+		allCards[allCards.length - 1].style.display = shouldHideCards ? "none" : ""; // Last card
 	};
 
 	// Initialize base prices and add data-base-price attribute to each card price
@@ -125,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			// Update prices across all cards and for Terapia indywidualna
 			updateAllPrices();
 			updateTerapiaPrice();
+			updateCardVisibility(); // Update card visibility based on the current quantity
 
 			// Reset active class on all quantity buttons and set it on the clicked one
 			quantityBtns.forEach((btn) => btn.classList.remove("active"));
@@ -135,4 +145,5 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Initial updates
 	updateTerapiaPrice();
 	updateAllPrices();
+	updateCardVisibility(); // Ensure the card visibility is correct on initial load
 });
