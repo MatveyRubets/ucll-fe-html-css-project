@@ -6,10 +6,17 @@
 	padding-bottom: 3rem;
 	align-items: center;
 	border-top: 2px solid #000;
+
+	&__container {
+		display: flex;
+		gap: 3rem;
+	}
+
 	&__list {
 		display: flex;
+		flex-direction: column;
 		gap: 1rem;
-		font-size: 24px;
+		font-size: 22px;
 	}
 }
 
@@ -17,6 +24,17 @@
 	.footer {
 		&__list {
 			font-size: 16px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.footer {
+		&__container {
+			gap: 1.25rem;
+		}
+		&__list {
+			font-size: 14px;
 		}
 	}
 }

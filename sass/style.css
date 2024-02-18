@@ -31,7 +31,12 @@ button {
   font-family: "Rubik";
 }
 
-nav ul li a::before {
+address {
+  font-style: normal;
+}
+
+nav ul li a::before,
+.footer__list li a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -45,7 +50,8 @@ nav ul li a::before {
   transition: transform var(--duration) var(--speed);
 }
 
-nav ul li a:hover::before {
+nav ul li a:hover::before,
+.footer__list li a:hover::before {
   transform-origin: left;
   transform: scaleX(1);
 }
@@ -94,14 +100,14 @@ select {
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
 }
 
 @media screen and (max-width: 1600px) {
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
   input {
     width: 400px;
@@ -412,6 +418,7 @@ select {
 .certificate {
   max-width: 280px;
   margin: 1rem;
+  cursor: pointer;
 }
 
 .certificate-container {
@@ -523,6 +530,40 @@ select {
     transform: scale(0.9);
   }
 }
+/* Fullscreen overlay */
+.fullscreen-overlay {
+  display: none; /* Hidden by default */
+  position: fixed; /* Sit on top of the page */
+  z-index: 999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styled image within the overlay */
+.fullscreen-overlay img {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.old-price {
+  color: #ff3232;
+  text-decoration: line-through;
+}
+
+.discount-desc {
+  color: #2db5ff;
+  font-weight: 700;
+  font-size: 18px;
+}
+
 :root {
   --title-text-color: #212121;
   --main-text-color: #6a6a6a;
@@ -969,15 +1010,28 @@ select {
   align-items: center;
   border-top: 2px solid #000;
 }
+.footer__container {
+  display: flex;
+  gap: 3rem;
+}
 .footer__list {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 @media screen and (max-width: 1600px) {
   .footer__list {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer__container {
+    gap: 1.25rem;
+  }
+  .footer__list {
+    font-size: 14px;
   }
 }
 .pricing {

@@ -79,6 +79,7 @@
 								10
 							</button>
 						</div>
+						<b class="description discount-desc hidden">10% off</b>
 					</div>
 				</div>
 
@@ -87,7 +88,9 @@
 						<p class="pricing__block-card-upper upper-text">
 							Fizjoterapeutyczna konsultacja
 						</p>
-						<b class="pricing__block-card-price main-text">150 zł</b>
+						<div>
+							<b class="pricing__block-card-price main-text">150 zł</b>
+						</div>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -167,9 +170,12 @@
 								50 min
 							</button>
 						</p>
-						<b id="priceTherapy" class="pricing__block-card-price main-text"
-							>140 zł</b
-						>
+						<div>
+							<p class="description old-price hidden">100 zl</p>
+							<b id="priceTherapy" class="pricing__block-card-price main-text"
+								>140 zł</b
+							>
+						</div>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -239,7 +245,10 @@
 					</div>
 					<div class="pricing__block-card glass-card">
 						<p class="pricing__block-card-upper upper-text">Masaż leczniczy</p>
-						<b class="pricing__block-card-price main-text">160 zł</b>
+						<div>
+							<p class="description old-price hidden">100 zl</p>
+							<b class="pricing__block-card-price main-text">160 zł</b>
+						</div>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -299,7 +308,10 @@
 					</div>
 					<div class="pricing__block-card glass-card">
 						<p class="pricing__block-card-upper upper-text">Trening medyczny</p>
-						<b class="pricing__block-card-price main-text">120 zł</b>
+						<div>
+							<p class="description old-price hidden">100 zl</p>
+							<b class="pricing__block-card-price main-text">120 zł</b>
+						</div>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -413,16 +425,30 @@
 
 		<footer class="footer container">
 			<img class="logo" src="./assets/icons/logo2.png" alt="Spine Logotype" />
-			<ul class="footer__list">
-				<li class="footer__list-item"><a href="./about.html">O mnie</a></li>
-				<li class="footer__list-item">
-					<a href="./testimonials.html">Recenzja</a>
-				</li>
-				<li class="footer__list-item"><a href="./pricing.html">Ceny</a></li>
-				<li class="header__list-item">
-					<a href="./certificates.html">Certyfikaty</a>
-				</li>
-			</ul>
+			<div class="footer__container">
+				<ul class="footer__list">
+					<li class="footer__list-item">
+						<address href">Rabsztyńska 17, lok. 1 </address>
+					</li>
+					<li class="footer__list-item">
+						<a href="mailto:dmitro.fizjo111@onet.pl">dmitro.fizjo111@onet.pl</a>
+					</li>
+					<li class="footer__list-item"><a href="https://www.instagram.com/chubenko.rehab/">Instagram</a></li>
+					<li class="header__list-item">
+						<a href="https://www.tiktok.com/@chubenko.rehab">Tiktok</a>
+					</li>
+				</ul>
+				<ul class="footer__list">
+					<li class="footer__list-item"><a href="./about.html">O mnie</a></li>
+					<li class="footer__list-item">
+						<a href="./testimonials.html">Recenzja</a>
+					</li>
+					<li class="footer__list-item"><a href="./pricing.html">Ceny</a></li>
+					<li class="header__list-item">
+						<a href="./certificates.html">Certyfikaty</a>
+					</li>
+				</ul>
+			</div>
 		</footer>
 
 		<script src="script.js"></script>
