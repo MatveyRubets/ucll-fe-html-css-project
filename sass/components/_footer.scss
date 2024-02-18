@@ -17,7 +17,7 @@
 		flex-direction: column;
 		gap: 1rem;
 		font-size: 22px;
-		width: 300px;
+		width: 112px;
 
 		&-item {
 			display: flex;
@@ -46,7 +46,7 @@
 		align-items: start;
 		&__list {
 			font-size: 14px;
-			max-width: 100%;
+			width: 100%;
 			&a {
 				cursor: pointer;
 			}

@@ -870,8 +870,8 @@ select {
 }
 .contact__info-img {
   border-radius: 1rem;
-  width: 400px;
-  height: 500px;
+  width: 353px;
+  height: 523px;
 }
 .contact__info-form {
   margin-top: 2rem;
@@ -886,12 +886,6 @@ select {
   gap: 1rem;
 }
 
-@media screen and (max-width: 1400px) {
-  .contact__info-img {
-    width: 300px;
-    height: 400px;
-  }
-}
 @media screen and (max-width: 992px) {
   .contact__info {
     display: flex;
@@ -1021,7 +1015,7 @@ select {
   flex-direction: column;
   gap: 1rem;
   font-size: 22px;
-  width: 300px;
+  width: 112px;
 }
 .footer__list-item {
   display: flex;
@@ -1045,7 +1039,7 @@ select {
   }
   .footer__list {
     font-size: 14px;
-    max-width: 100%;
+    width: 100%;
   }
   .footer__lista {
     cursor: pointer;
