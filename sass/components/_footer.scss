@@ -17,6 +17,17 @@
 		flex-direction: column;
 		gap: 1rem;
 		font-size: 22px;
+
+		&-item {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+
+		&-logo {
+			width: 18px;
+			height: 18px;
+		}
 	}
 }
 
@@ -31,11 +42,19 @@
 @media screen and (max-width: 576px) {
 	.footer {
 		&__container {
-			gap: 1.25rem;
+			flex-direction: column;
 		}
 		&__list {
 			font-size: 14px;
 			max-width: 200px;
+			&a {
+				cursor: pointer;
+			}
+
+			&-logo {
+				width: 14px;
+				height: 14px;
+			}
 		}
 	}
 }
