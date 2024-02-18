@@ -83,13 +83,35 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Function to update all card prices based on the selected quantity
 	const updateAllPrices = () => {
 		allPrices.forEach((priceEl) => {
+			const card = priceEl.closest(".pricing__block-card"); // Find the card element that contains the price element
 			const basePrice = parseInt(priceEl.getAttribute("data-base-price"), 10);
-			let finalPrice = basePrice * currentQuantity; // Calculate base price
+			const fullPrice = basePrice * currentQuantity; // Calculate the full price without discount
+			let finalPrice = fullPrice; // Initialize finalPrice with fullPrice
+
+			// Check if the discount applies
 			if ([5, 10].includes(currentQuantity)) {
-				// Check if the discount applies
 				finalPrice *= 0.9; // Apply 10% discount
 			}
-			priceEl.textContent = `${Math.round(finalPrice)} zł`; // Round and update the display
+
+			// Update the displayed price
+			priceEl.textContent = `${Math.round(finalPrice)} zł`; // Update with the potentially discounted final price
+
+			// Manage the old-price display
+			let oldPriceEl = card.querySelector(".old-price"); // Try to find an existing old-price element within the card
+			if ([5, 10].includes(currentQuantity)) {
+				// If a discount applies, show or update the old price
+				if (!oldPriceEl) {
+					// If there's no old-price element, create it
+					oldPriceEl = document.createElement("div");
+					oldPriceEl.className = "old-price";
+					priceEl.parentNode.insertBefore(oldPriceEl, priceEl); // Insert it before the current price element
+				}
+				oldPriceEl.innerHTML = `<s>${fullPrice} zł</s>`; // Set the content to the full price, crossed out
+				oldPriceEl.classList.remove("hidden"); // Ensure it's visible
+			} else if (oldPriceEl) {
+				// If no discount applies, hide the old-price element if it exists
+				oldPriceEl.classList.add("hidden");
+			}
 		});
 	};
 
@@ -114,23 +136,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Event listeners for duration buttons
 	function updateTerapiaPrice() {
-		let finalPrice = basePriceTerapia * currentQuantity; // Calculate base price
+		let finalPrice = basePriceTerapia * currentQuantity; // Calculate the price based on current settings
+		const oldPriceElement = document.querySelector(
+			".terapia-indywidualna .old-price"
+		);
+
 		if ([5, 10].includes(currentQuantity)) {
-			// Apply discount if applicable
-			finalPrice *= 0.9; // Apply 10% discount
+			// Only show old price if a discount applies
+			finalPrice *= 0.9; // Apply discount
+			if (!oldPriceElement) {
+				// If old-price element doesn't exist, create it
+				const oldPriceEl = document.createElement("div");
+				oldPriceEl.className = "old-price";
+				// Insert it in the correct place within the TERAPIA INDYWIDUALNA card
+				const priceContainer = document.querySelector(
+					".terapia-indywidualna .pricing__block-card-price"
+				).parentNode;
+				priceContainer.insertBefore(oldPriceEl, priceContainer.firstChild); // Adjust as necessary
+			}
+			// Update old-price content
+			oldPriceElement.innerHTML = `<s>${
+				basePriceTerapia * currentQuantity
+			} zł</s>`;
+			oldPriceElement.classList.remove("hidden");
+		} else {
+			// Hide old-price element if no discount applies
+			if (oldPriceElement) oldPriceElement.classList.add("hidden");
 		}
-		priceDisplayTherapia.textContent = `${Math.round(finalPrice)} zł`; // Round and update the display
+
+		// Update the displayed current price
+		document.getElementById("priceTherapy").textContent = `${Math.round(
+			finalPrice
+		)} zł`;
 	}
 
 	[duration30Btn, duration50Btn].forEach((btn) => {
-		if (btn) {
-			btn.addEventListener("click", function () {
-				basePriceTerapia = parseInt(this.getAttribute("data-price"), 10);
-				duration30Btn.classList.toggle("active", this === duration30Btn);
-				duration50Btn.classList.toggle("active", this === duration50Btn);
-				updateTerapiaPrice(); // Assuming this function now uses priceDisplayTherapia correctly
-			});
-		}
+		btn?.addEventListener("click", function () {
+			// Remove 'active' class from both buttons, then add it back to the clicked one
+			[duration30Btn, duration50Btn].forEach((button) =>
+				button.classList.remove("active")
+			);
+			this.classList.add("active");
+
+			// Update basePriceTerapia based on selected button
+			basePriceTerapia = parseInt(this.getAttribute("data-price"), 10);
+
+			// Call function to update TERAPIA INDYWIDUALNA pricing and old-price display
+			updateTerapiaPrice();
+		});
 	});
 
 	// Event listeners for quantity buttons

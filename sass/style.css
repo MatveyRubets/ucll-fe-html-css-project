@@ -1012,7 +1012,7 @@ select {
 }
 .footer__container {
   display: flex;
-  gap: 3rem;
+  gap: 5rem;
 }
 .footer__list {
   display: flex;
@@ -1032,6 +1032,7 @@ select {
   }
   .footer__list {
     font-size: 14px;
+    max-width: 200px;
   }
 }
 .pricing {

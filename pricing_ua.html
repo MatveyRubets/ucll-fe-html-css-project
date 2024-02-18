@@ -81,6 +81,7 @@
 								10
 							</button>
 						</div>
+						<b class="description discount-desc hidden">10% знижка</b>
 					</div>
 				</div>
 				<div class="pricing__block">
@@ -146,7 +147,7 @@
 							купуй зараз
 						</a>
 					</div>
-					<div class="pricing__block-card glass-card">
+					<div class="pricing__block-card glass-card terapia-indywidualna">
 						<p class="pricing__block-card-upper upper-text">
 							Індивідуальна терапія
 							<button
@@ -168,9 +169,12 @@
 								50 хв
 							</button>
 						</p>
-						<b id="priceTherapy" class="pricing__block-card-price main-text"
-							>140 zł</b
-						>
+						<div>
+							<p class="description old-price hidden">100 zl</p>
+							<b id="priceTherapy" class="pricing__block-card-price main-text"
+								>140 zł</b
+							>
+						</div>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -242,7 +246,10 @@
 						<p class="pricing__block-card-upper upper-text">
 							Лікувальний масаж
 						</p>
-						<b class="pricing__block-card-price main-text">160 zł</b>
+						<div>
+							<p class="description old-price hidden">100 zl</p>
+							<b class="pricing__block-card-price main-text">160 zł</b>
+						</div>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -302,7 +309,10 @@
 					</div>
 					<div class="pricing__block-card glass-card">
 						<p class="pricing__block-card-upper upper-text">Медичний тренінг</p>
-						<b class="pricing__block-card-price main-text">120 zł</b>
+						<div>
+							<p class="description old-price hidden">100 zl</p>
+							<b class="pricing__block-card-price main-text">120 zł</b>
+						</div>
 						<div class="pricing__block-card-features card-headline">
 							<img
 								class="pricing__block-card-features-icon"
@@ -419,18 +429,32 @@
 
 		<footer class="footer container">
 			<img class="logo" src="./assets/icons/logo2.png" alt="Spine Logotype" />
-			<ul class="footer__list">
-				<li class="footer__list-item">
-					<a href="./about_ua.html">Про мене</a>
-				</li>
-				<li class="footer__list-item">
-					<a href="./testimonials_ua.html">Відгуки</a>
-				</li>
-				<li class="footer__list-item"><a href="./pricing_ua.html">Ціни</a></li>
-				<li class="header__list-item">
-					<a href="./certificates_ua.html">Сертифікати</a>
-				</li>
-			</ul>
+			<div class="footer__container">
+				<ul class="footer__list">
+					<li class="footer__list-item">
+						<address href">ul. Rabsztyńska 17/1, 01-143, Warszawa </address>
+					</li>
+					<li class="footer__list-item">
+						<a href="mailto:dmitro.fizjo111@onet.pl">dmitro.fizjo111@onet.pl</a>
+					</li>
+					<li class="footer__list-item"><a href="https://www.instagram.com/chubenko.rehab/">Instagram</a></li>
+					<li class="header__list-item">
+						<a href="https://www.tiktok.com/@chubenko.rehab">Tiktok</a>
+					</li>
+				</ul>
+				<ul class="footer__list">
+					<li class="footer__list-item">
+						<a href="./about_ua.html">Про мене</a>
+					</li>
+					<li class="footer__list-item">
+						<a href="./testimonials_ua.html">Відгуки</a>
+					</li>
+					<li class="footer__list-item"><a href="./pricing_ua.html">Ціни</a></li>
+					<li class="header__list-item">
+						<a href="./certificates_ua.html">Сертифікати</a>
+					</li>
+				</ul>
+			</div>
 		</footer>
 
 		<script src="script.js"></script>
