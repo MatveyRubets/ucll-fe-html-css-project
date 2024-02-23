@@ -1,190 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Recenzja</title>
-		<link rel="stylesheet" href="sass/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<header class="header glass-card">
-			<a href="./index.html">
-				<img class="logo" src="./assets/icons/logo2.png" alt="Spine Logotype" />
-			</a>
-			<nav>
-				<ul class="header__list" id="myHeaderList">
-					<li class="header__list-item">
-						<a href="./about.html">O mnie</a>
-					</li>
-					<li class="header__list-item">
-						<a href="./testimonials.html">Recenzja</a>
-					</li>
-					<li class="header__list-item">
-						<a href="./pricing.html">Ceny</a>
-					</li>
-					<li class="header__list-item">
-						<a href="./certificates.html">Certyfikaty</a>
-					</li>
-					<li class="header__list-item">
-						<select id="languageSelect">
-							<option value="pl">🇵🇱</option>
-							<option value="ua">🇺🇦</option>
-						</select>
-					</li>
-					<li class="header__list-menu burger">
-						<img src="./assets/icons/burger.png" alt="menu button" />
-					</li>
-				</ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recenzja</title>
+        <link rel="stylesheet" href="sass/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header class="header glass-card">
+            <a href="./index.html">
+                <img
+                    class="logo"
+                    src="./assets/icons/logo2.png"
+                    alt="Spine Logotype"
+                />
+            </a>
+            <nav>
+                <ul class="header__list" id="myHeaderList">
+                    <li class="header__list-item">
+                        <a href="./about.html">O mnie</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="./testimonials.html">Recenzja</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="./pricing.html">Ceny</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="./certificates.html">Certyfikaty</a>
+                    </li>
+                    <li class="header__list-item">
+                        <select id="languageSelect">
+                            <option value="pl">🇵🇱</option>
+                            <option value="ua">🇺🇦</option>
+                        </select>
+                    </li>
+                    <li class="header__list-menu burger">
+                        <img
+                            src="./assets/icons/burger.png"
+                            alt="menu button"
+                        />
+                    </li>
+                </ul>
 
-				<ul class="dropdown-menu">
-					<li class="header__list-item"><a href="./about.html">O mnie</a></li>
-					<li class="header__list-item">
-						<a href="./testimonials.html">Recenzja</a>
-					</li>
-					<li class="header__list-item">
-						<a href="./pricing.html">Ceny</a>
-					</li>
-					<li class="header__list-item">
-						<a href="./certificates.html">Certyfikaty</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+                <ul class="dropdown-menu">
+                    <li class="header__list-item">
+                        <a href="./about.html">O mnie</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="./testimonials.html">Recenzja</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="./pricing.html">Ceny</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="./certificates.html">Certyfikaty</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-		<main>
-			<section class="testimonials container">
-				<div class="testimonials__headline headline">
-					<p class="testimonials__upper upper-text">Opinie</p>
-					<h1 class="testimonials__main main-text">
-						Opinie i efekty pacjentów po mojej terapii
-					</h1>
-					<p class="description">
-						Dziękuję za Waszą pozostawioną opinię na temat mojej pracy, która
-						motywuje mnie do coraz większego rozwoju i polepszeniu efektów
-						terapeutycznych.
-					</p>
-				</div>
-				<div class="cards">
-					<div class="card">
-						<video
-							height="440"
-							width="240"
-							poster="./assets/img/video-preview1.jpeg"
-							controls
-						>
-							<source src="/assets/videos/review_1.MP4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-					</div>
-					<div class="card">
-						<video
-							height="440"
-							width="240"
-							poster="./assets/img/video-preview2.jpeg"
-							controls
-						>
-							<source src="/assets/videos/review_2.mp4" type="video/mp4" />
-							Your browser does not support the video tag.
-						</video>
-					</div>
-					<div class="card">
-						<img src="./assets/img/review10.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review11.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review12.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review13.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review14.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review15.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review16.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review17.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review18.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review19.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review20.png" alt="Procedure review" />
-					</div>
-					<div class="card">
-						<img src="./assets/img/review21.png" alt="Procedure review" />
-					</div>
-				</div>
-			</section>
-		</main>
+        <main>
+            <section class="testimonials container">
+                <div class="testimonials__headline headline">
+                    <p class="testimonials__upper upper-text">Opinie</p>
+                    <h1 class="testimonials__main main-text">
+                        Opinie i efekty pacjentów po mojej terapii
+                    </h1>
+                    <p class="description">
+                        Dziękuję za Waszą pozostawioną opinię na temat mojej
+                        pracy, która motywuje mnie do coraz większego rozwoju i
+                        polepszeniu efektów terapeutycznych.
+                    </p>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <video
+                            height="440"
+                            width="240"
+                            poster="./assets/img/video-preview1.jpeg"
+                            controls
+                        >
+                            <source
+                                src="/assets/videos/review_1.MP4"
+                                type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="card">
+                        <video
+                            height="440"
+                            width="240"
+                            poster="./assets/img/video-preview2.jpeg"
+                            controls
+                        >
+                            <source
+                                src="/assets/videos/review_2.mp4"
+                                type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review10.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review11.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review12.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review13.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review14.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review15.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review16.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review17.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review18.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review19.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review20.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                    <div class="card">
+                        <img
+                            src="./assets/img/review21.png"
+                            alt="Procedure review"
+                        />
+                    </div>
+                </div>
+            </section>
+        </main>
 
-		<footer class="footer container">
-			<ul class="footer__list">
-				<li class="footer__list-item"><a href="./about.html">O mnie</a></li>
-				<li class="footer__list-item">
-					<a href="./testimonials.html">Recenzja</a>
-				</li>
-				<li class="footer__list-item"><a href="./pricing.html">Ceny</a></li>
-				<li class="footer__list-item">
-					<a href="./certificates.html">Certyfikaty</a>
-				</li>
-			</ul>
-			<a href="./index.html">
-				<img class="logo" src="./assets/icons/logo2.png" alt="Spine Logotype" />
-			</a>
-			<ul class="footer__list">
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/maps.png"
-						alt="maps icon"
-					/>
-					<a href="https://maps.app.goo.gl/7cTcmBYrcAvNVQdo9">
-						ul. Rabsztyńska 17/1, 01-143, Warszawa
-					</a>
-				</li>
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/email.png"
-						alt="email icon"
-					/>
-					<a href="mailto:dmitro.fizjo111@onet.pl">dmitro.fizjo111@onet.pl</a>
-				</li>
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/insta.png"
-						alt="instagram icon"
-					/>
-					<a href="https://www.instagram.com/chubenko.rehab/">Instagram</a>
-				</li>
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/tiktok.png"
-						alt="tiktok icon"
-					/>
-					<a href="https://www.tiktok.com/@chubenko.rehab">Tiktok</a>
-				</li>
-			</ul>
-		</footer>
+        <footer class="footer container">
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    <a href="./about.html">O mnie</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="./testimonials.html">Recenzja</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="./pricing.html">Ceny</a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="./certificates.html">Certyfikaty</a>
+                </li>
+            </ul>
+            <a href="./index.html">
+                <img
+                    class="logo"
+                    src="./assets/icons/logo2.png"
+                    alt="Spine Logotype"
+                />
+            </a>
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    <img
+                        class="footer__list-logo"
+                        src="./assets/icons/maps.png"
+                        alt="maps icon"
+                    />
+                    <a href="https://maps.app.goo.gl/7cTcmBYrcAvNVQdo9">
+                        ul. Rabsztyńska 17/1, 01-143, Warszawa
+                    </a>
+                </li>
+                <li class="footer__list-item">
+                    <img
+                        class="footer__list-logo"
+                        src="./assets/icons/email.png"
+                        alt="email icon"
+                    />
+                    <a href="mailto:dmitro.fizjo111@onet.pl"
+                        >dmitro.fizjo111@onet.pl</a
+                    >
+                </li>
+                <li class="footer__list-item">
+                    <img
+                        class="footer__list-logo"
+                        src="./assets/icons/insta.png"
+                        alt="instagram icon"
+                    />
+                    <a href="https://www.instagram.com/chubenko.rehab/"
+                        >Instagram</a
+                    >
+                </li>
+                <li class="footer__list-item">
+                    <img
+                        class="footer__list-logo"
+                        src="./assets/icons/tiktok.png"
+                        alt="tiktok icon"
+                    />
+                    <a href="https://www.tiktok.com/@chubenko.rehab">Tiktok</a>
+                </li>
+            </ul>
+        </footer>
 
-		<script src="script.js"></script>
-	</body>
+        <script src="script.js"></script>
+    </body>
 </html>
