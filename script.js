@@ -83,34 +83,31 @@ document.addEventListener("DOMContentLoaded", function () {
   // Function to update all card prices based on the selected quantity
   const updateAllPrices = () => {
     allPrices.forEach((priceEl) => {
-      const card = priceEl.closest(".pricing__block-card"); // Find the card element that contains the price element
-      const basePrice = parseInt(priceEl.getAttribute("data-base-price"), 10);
-      const fullPrice = basePrice * currentQuantity; // Calculate the full price without discount
-      let finalPrice = fullPrice; // Initialize finalPrice with fullPrice
+      // Skip update if price text contains a range (e.g., "60-100 zł")
+      if (!priceEl.textContent.includes("-")) {
+        const card = priceEl.closest(".pricing__block-card");
+        const basePrice = parseInt(priceEl.getAttribute("data-base-price"), 10);
+        const fullPrice = basePrice * currentQuantity;
+        let finalPrice = fullPrice;
 
-      // Check if the discount applies
-      if ([5, 10].includes(currentQuantity)) {
-        finalPrice *= 0.9; // Apply 10% discount
-      }
-
-      // Update the displayed price
-      priceEl.textContent = `${Math.round(finalPrice)} zł`; // Update with the potentially discounted final price
-
-      // Manage the old-price display
-      let oldPriceEl = card.querySelector(".old-price"); // Try to find an existing old-price element within the card
-      if ([5, 10].includes(currentQuantity)) {
-        // If a discount applies, show or update the old price
-        if (!oldPriceEl) {
-          // If there's no old-price element, create it
-          oldPriceEl = document.createElement("div");
-          oldPriceEl.className = "old-price";
-          priceEl.parentNode.insertBefore(oldPriceEl, priceEl); // Insert it before the current price element
+        if ([5, 10].includes(currentQuantity)) {
+          finalPrice *= 0.9;
         }
-        oldPriceEl.innerHTML = `<s>${fullPrice} zł</s>`; // Set the content to the full price, crossed out
-        oldPriceEl.classList.remove("hidden"); // Ensure it's visible
-      } else if (oldPriceEl) {
-        // If no discount applies, hide the old-price element if it exists
-        oldPriceEl.classList.add("hidden");
+
+        priceEl.textContent = `${Math.round(finalPrice)} zł`;
+
+        let oldPriceEl = card.querySelector(".old-price");
+        if ([5, 10].includes(currentQuantity)) {
+          if (!oldPriceEl) {
+            oldPriceEl = document.createElement("div");
+            oldPriceEl.className = "old-price";
+            priceEl.parentNode.insertBefore(oldPriceEl, priceEl);
+          }
+          oldPriceEl.innerHTML = `<s>${fullPrice} zł</s>`;
+          oldPriceEl.classList.remove("hidden");
+        } else if (oldPriceEl) {
+          oldPriceEl.classList.add("hidden");
+        }
       }
     });
   };
@@ -128,11 +125,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize base prices and add data-base-price attribute to each card price
   allPrices.forEach((price) => {
-    const basePrice = parseInt(price.textContent);
-    price.setAttribute("data-base-price", basePrice);
+    // Skip initialization for price ranges
+    if (!price.textContent.includes("-")) {
+      const basePrice = parseInt(price.textContent);
+      price.setAttribute("data-base-price", basePrice);
+    }
   });
-
-  const priceDisplayTherapia = document.getElementById("priceTherapy");
 
   // Event listeners for duration buttons
   function updateTerapiaPrice() {
