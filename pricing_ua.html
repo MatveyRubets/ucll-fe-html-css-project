@@ -1,597 +1,496 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk-UA">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Ціни</title>
-        <link rel="stylesheet" href="sass/style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="icon"
-            sizes="192x192"
-            href="/assets/icons/favicon-16x16.png"
-        />
-        <link
-            rel="icon"
-            sizes="256x256"
-            href="/assets/icons/favicon-32x32.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/assets/icons/apple-touch-icon.png"
-        />
-    </head>
-    <body>
-        <header class="header glass-card">
-            <a href="./index_ua.html">
-                <img
-                    class="logo"
-                    src="./assets/icons/logo2.png"
-                    alt="Spine Logotype"
-                />
-            </a>
-            <nav>
-                <ul class="header__list" id="myHeaderList">
-                    <li class="header__list-item">
-                        <a href="./about_ua.html">Про мене</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="./testimonials_ua.html">Відгуки</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="./pricing_ua.html">Ціни</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="./certificates_ua.html">Сертифікати</a>
-                    </li>
-                    <select id="languageSelect">
-                        <option value="ua">🇺🇦</option>
-                        <option value="pl">🇵🇱</option>
-                    </select>
-                    <li class="header__list-menu burger">
-                        <img
-                            src="./assets/icons/burger.png"
-                            alt="menu button"
-                        />
-                    </li>
-                </ul>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ціни</title>
+		<link rel="stylesheet" href="sass/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" sizes="192x192" href="/assets/icons/favicon-16x16.png" />
+		<link rel="icon" sizes="256x256" href="/assets/icons/favicon-32x32.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/assets/icons/apple-touch-icon.png"
+		/>
+	</head>
+	<body>
+		<header class="header glass-card">
+			<a href="./index_ua.html">
+				<img class="logo" src="./assets/icons/logo2.png" alt="Spine Logotype" />
+			</a>
+			<nav>
+				<ul class="header__list" id="myHeaderList">
+					<li class="header__list-item">
+						<a href="./about_ua.html">Про мене</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./testimonials_ua.html">Відгуки</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./pricing_ua.html">Ціни</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./certificates_ua.html">Сертифікати</a>
+					</li>
+					<select id="languageSelect">
+						<option value="ua">🇺🇦</option>
+						<option value="pl">🇵🇱</option>
+					</select>
+					<li class="header__list-menu burger">
+						<img src="./assets/icons/burger.png" alt="menu button" />
+					</li>
+				</ul>
 
-                <ul class="dropdown-menu">
-                    <li class="header__list-item">
-                        <a href="./about_ua.html">Про мене</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="./testimonials_ua.html">Відгуки</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="./pricing_ua.html">Ціни</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="./certificates_ua.html">Сертифікати</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+				<ul class="dropdown-menu">
+					<li class="header__list-item">
+						<a href="./about_ua.html">Про мене</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./testimonials_ua.html">Відгуки</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./pricing_ua.html">Ціни</a>
+					</li>
+					<li class="header__list-item">
+						<a href="./certificates_ua.html">Сертифікати</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
-        <main>
-            <section class="pricing container">
-                <div class="pricing__headline headline">
-                    <p class="pricing__upper upper-text">
-                        ЗАПЛАТИ ОДИН РАЗ - ЗДОРОВ'Я НА ВСЕ ЖИТТЯ
-                    </p>
-                    <h1 class="pricing__main main-text">
-                        Оберіть свою послугу
-                    </h1>
-                    <div class="pricing__options glass-card">
-                        <p class="description">Виберіть кількість сеансів</p>
-                        <div class="quantity-selection">
-                            <button
-                                class="quantity-btn active"
-                                type="button"
-                                data-quantity="1"
-                            >
-                                1
-                            </button>
-                            <button
-                                class="quantity-btn"
-                                type="button"
-                                data-quantity="5"
-                            >
-                                5
-                            </button>
-                            <button
-                                class="quantity-btn"
-                                type="button"
-                                data-quantity="10"
-                            >
-                                10
-                            </button>
-                        </div>
-                        <b class="description discount-desc hidden"
-                            >10% знижка</b
-                        >
-                    </div>
-                </div>
-                <div class="pricing__block">
-                    <div class="pricing__block-card glass-card">
-                        <p class="pricing__block-card-upper upper-text">
-                            Фізіотерапевтична консультація
-                        </p>
-                        <b class="pricing__block-card-price main-text"
-                            >150 zł</b
-                        >
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Cуб’єктивне обстеження (збір анамнезу хвороби)
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Аналіз медичної візуалізації (рентген, МРТ, УЗД)
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Повна функціональна діагностика
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Індивідуальний план лікування враховуючи потреби
-                                пацієнта
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Онлайн підтримка
-                            </p>
-                        </div>
-                        <a
-                            href="./index_ua.html#contactForm"
-                            class="pricing__block-card-button main__button"
-                        >
-                            купуй зараз
-                        </a>
-                    </div>
-                    <div
-                        class="pricing__block-card glass-card terapia-indywidualna"
-                    >
-                        <p class="pricing__block-card-upper upper-text">
-                            Індивідуальна терапія
-                            <button
-                                id="duration30"
-                                class="duration-btn active"
-                                type="button"
-                                data-duration="30"
-                                data-price="140"
-                            >
-                                30 хв
-                            </button>
-                            <button
-                                id="duration50"
-                                class="duration-btn"
-                                type="button"
-                                data-duration="50"
-                                data-price="200"
-                            >
-                                50 хв
-                            </button>
-                        </p>
-                        <div>
-                            <p class="description old-price hidden">100 zl</p>
-                            <b
-                                id="priceTherapy"
-                                class="pricing__block-card-price main-text"
-                                >140 zł</b
-                            >
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Підходить для конкретних потреб
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Комплексний підхід
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Підвищення мотіваційного фону
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Ефективний контроль змін
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Результат на довготривалу перспективу
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Реабілітація після операцій
-                            </p>
-                        </div>
-                        <a
-                            href="./index_ua.html#contactForm"
-                            class="pricing__block-card-button main__button"
-                        >
-                            купуй зараз
-                        </a>
-                    </div>
-                    <div class="pricing__block-card glass-card">
-                        <p class="pricing__block-card-upper upper-text">
-                            Лікувальний масаж
-                        </p>
-                        <div>
-                            <p class="description old-price hidden">100 zl</p>
-                            <b class="pricing__block-card-price main-text"
-                                >160 zł</b
-                            >
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Покращення загального кровообігу
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Стимулювання лімфатичної системи
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Поліпшення психоемоційного стану
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Підвищення гнучкості, рухливості м’язів та
-                                суглобів
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Ретельне пропрацювання проблемних зон
-                            </p>
-                        </div>
-                        <a
-                            href="./index_ua.html#contactForm"
-                            class="pricing__block-card-button main__button"
-                        >
-                            купуй зараз
-                        </a>
-                    </div>
-                    <div class="pricing__block-card glass-card">
-                        <p class="pricing__block-card-upper upper-text">
-                            Медичний тренінг
-                        </p>
-                        <div>
-                            <p class="description old-price hidden">100 zl</p>
-                            <b class="pricing__block-card-price main-text"
-                                >120 zł</b
-                            >
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Покращення фізичного стану
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Навчання вправам самодопомоги
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Зменшення ризику ускладнень
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Збільшення м'язової сили та гнучкості
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Відновлення функцій тіла
-                            </p>
-                        </div>
-                        <a
-                            href="./index_ua.html#contactForm"
-                            class="pricing__block-card-button main__button"
-                        >
-                            купуй зараз
-                        </a>
-                    </div>
-                    <div class="pricing__block-card glass-card">
-                        <p class="pricing__block-card-upper upper-text">
-                            Кінезіотейпування
-                        </p>
-                        <b class="pricing__block-card-price main-text"
-                            >60-100 zł</b
-                        >
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Підтримка м'язово-суглобового апарату
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Покращення функціональних результатів
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Комплексна допомога при лімфатичному та
-                                післяопераційному набряку
-                            </p>
-                        </div>
-                        <div class="pricing__block-card-features card-headline">
-                            <img
-                                class="pricing__block-card-features-icon"
-                                src="./assets/icons/check-mark.png"
-                                alt="check-mark"
-                            />
-                            <p
-                                class="pricing__block-card-features-desc description"
-                            >
-                                Зменшення напруги та болю
-                            </p>
-                        </div>
-                        <a
-                            href="./index_ua.html#contactForm"
-                            class="pricing__block-card-button main__button"
-                        >
-                            купуй зараз
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </main>
+		<main>
+			<section class="pricing container">
+				<div class="pricing__headline headline">
+					<p class="pricing__upper upper-text">
+						ЗАПЛАТИ ОДИН РАЗ - ЗДОРОВ'Я НА ВСЕ ЖИТТЯ
+					</p>
+					<h1 class="pricing__main main-text">Оберіть свою послугу</h1>
+					<div class="pricing__options glass-card">
+						<p class="description">Виберіть кількість сеансів</p>
+						<div class="quantity-selection">
+							<button
+								class="quantity-btn active"
+								type="button"
+								data-quantity="1"
+							>
+								1
+							</button>
+							<button class="quantity-btn" type="button" data-quantity="5">
+								5
+							</button>
+							<button class="quantity-btn" type="button" data-quantity="10">
+								10
+							</button>
+						</div>
+						<b class="description discount-desc hidden">10% знижка</b>
+					</div>
+				</div>
+				<div class="pricing__block">
+					<div class="pricing__block-card glass-card">
+						<p class="pricing__block-card-upper upper-text">
+							Фізіотерапевтична консультація
+						</p>
+						<b class="pricing__block-card-price main-text">150 zł</b>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Cуб’єктивне обстеження (збір анамнезу хвороби)
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Аналіз медичної візуалізації (рентген, МРТ, УЗД)
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Повна функціональна діагностика
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Індивідуальний план лікування враховуючи потреби пацієнта
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Онлайн підтримка
+							</p>
+						</div>
+						<a
+							href="./index_ua.html#contactForm"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card terapia-indywidualna">
+						<p class="pricing__block-card-upper upper-text">
+							Індивідуальна терапія
+							<button
+								id="duration30"
+								class="duration-btn active"
+								type="button"
+								data-duration="30"
+								data-price="160"
+							>
+								30 хв
+							</button>
+							<button
+								id="duration50"
+								class="duration-btn"
+								type="button"
+								data-duration="50"
+								data-price="220"
+							>
+								50 хв
+							</button>
+						</p>
+						<div>
+							<p class="description old-price hidden">100 zl</p>
+							<b id="priceTherapy" class="pricing__block-card-price main-text"
+								>160 zł</b
+							>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Підходить для конкретних потреб
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Комплексний підхід
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Підвищення мотіваційного фону
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Ефективний контроль змін
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Результат на довготривалу перспективу
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Реабілітація після операцій
+							</p>
+						</div>
+						<a
+							href="./index_ua.html#contactForm"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card">
+						<p class="pricing__block-card-upper upper-text">
+							Лікувальний масаж
+						</p>
+						<div>
+							<p class="description old-price hidden">100 zl</p>
+							<b class="pricing__block-card-price main-text">180 zł</b>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Покращення загального кровообігу
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Стимулювання лімфатичної системи
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Поліпшення психоемоційного стану
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Підвищення гнучкості, рухливості м’язів та суглобів
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Ретельне пропрацювання проблемних зон
+							</p>
+						</div>
+						<a
+							href="./index_ua.html#contactForm"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card">
+						<p class="pricing__block-card-upper upper-text">Медичний тренінг</p>
+						<div>
+							<p class="description old-price hidden">100 zl</p>
+							<b class="pricing__block-card-price main-text">140 zł</b>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Покращення фізичного стану
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Навчання вправам самодопомоги
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Зменшення ризику ускладнень
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Збільшення м'язової сили та гнучкості
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Відновлення функцій тіла
+							</p>
+						</div>
+						<a
+							href="./index_ua.html#contactForm"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
+					<div class="pricing__block-card glass-card">
+						<p class="pricing__block-card-upper upper-text">
+							Кінезіотейпування
+						</p>
+						<b class="pricing__block-card-price main-text">60-100 zł</b>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Підтримка м'язово-суглобового апарату
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Покращення функціональних результатів
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Комплексна допомога при лімфатичному та післяопераційному
+								набряку
+							</p>
+						</div>
+						<div class="pricing__block-card-features card-headline">
+							<img
+								class="pricing__block-card-features-icon"
+								src="./assets/icons/check-mark.png"
+								alt="check-mark"
+							/>
+							<p class="pricing__block-card-features-desc description">
+								Зменшення напруги та болю
+							</p>
+						</div>
+						<a
+							href="./index_ua.html#contactForm"
+							class="pricing__block-card-button main__button"
+						>
+							купуй зараз
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
 
-        <footer class="footer container">
-            <ul class="footer__list">
-                <li class="footer__list-item">
-                    <a href="./about_ua.html">Про мене</a>
-                </li>
-                <li class="footer__list-item">
-                    <a href="./testimonials_ua.html">Відгуки</a>
-                </li>
-                <li class="footer__list-item">
-                    <a href="./pricing_ua.html">Ціни</a>
-                </li>
-                <li class="footer__list-item">
-                    <a href="./certificates_ua.html">Сертифікати</a>
-                </li>
-            </ul>
+		<footer class="footer container">
+			<ul class="footer__list">
+				<li class="footer__list-item">
+					<a href="./about_ua.html">Про мене</a>
+				</li>
+				<li class="footer__list-item">
+					<a href="./testimonials_ua.html">Відгуки</a>
+				</li>
+				<li class="footer__list-item">
+					<a href="./pricing_ua.html">Ціни</a>
+				</li>
+				<li class="footer__list-item">
+					<a href="./certificates_ua.html">Сертифікати</a>
+				</li>
+			</ul>
 
-            <a href="./index_ua.html">
-                <img
-                    class="logo"
-                    src="./assets/icons/logo2.png"
-                    alt="Spine Logotype"
-                />
-            </a>
-            <ul class="footer__list">
-                <li class="footer__list-item">
-                    <img
-                        class="footer__list-logo"
-                        src="./assets/icons/maps.png"
-                        alt="maps icon"
-                    />
-                    <a href="https://maps.app.goo.gl/7cTcmBYrcAvNVQdo9">
-                        ul. Rabsztyńska 17/1, 01-143, Warszawa
-                    </a>
-                </li>
-                <li class="footer__list-item">
-                    <img
-                        class="footer__list-logo"
-                        src="./assets/icons/email.png"
-                        alt="email icon"
-                    />
-                    <a href="mailto:dmitro.fizjo111@onet.pl"
-                        >dmitro.fizjo111@onet.pl</a
-                    >
-                </li>
-                <li class="footer__list-item">
-                    <img
-                        class="footer__list-logo"
-                        src="./assets/icons/insta.png"
-                        alt="instagram icon"
-                    />
-                    <a href="https://www.instagram.com/chubenko.rehab/"
-                        >Instagram</a
-                    >
-                </li>
-                <li class="footer__list-item">
-                    <img
-                        class="footer__list-logo"
-                        src="./assets/icons/tiktok.png"
-                        alt="tiktok icon"
-                    />
-                    <a href="https://www.tiktok.com/@chubenko.rehab">Tiktok</a>
-                </li>
-            </ul>
-        </footer>
+			<a href="./index_ua.html">
+				<img class="logo" src="./assets/icons/logo2.png" alt="Spine Logotype" />
+			</a>
+			<ul class="footer__list">
+				<li class="footer__list-item">
+					<img
+						class="footer__list-logo"
+						src="./assets/icons/maps.png"
+						alt="maps icon"
+					/>
+					<a href="https://maps.app.goo.gl/7cTcmBYrcAvNVQdo9">
+						ul. Rabsztyńska 17/1, 01-143, Warszawa
+					</a>
+				</li>
+				<li class="footer__list-item">
+					<img
+						class="footer__list-logo"
+						src="./assets/icons/email.png"
+						alt="email icon"
+					/>
+					<a href="mailto:dmitro.fizjo111@onet.pl">dmitro.fizjo111@onet.pl</a>
+				</li>
+				<li class="footer__list-item">
+					<img
+						class="footer__list-logo"
+						src="./assets/icons/insta.png"
+						alt="instagram icon"
+					/>
+					<a href="https://www.instagram.com/chubenko.rehab/">Instagram</a>
+				</li>
+				<li class="footer__list-item">
+					<img
+						class="footer__list-logo"
+						src="./assets/icons/tiktok.png"
+						alt="tiktok icon"
+					/>
+					<a href="https://www.tiktok.com/@chubenko.rehab">Tiktok</a>
+				</li>
+			</ul>
+		</footer>
 
-        <script src="script.js"></script>
-    </body>
+		<script src="script.js"></script>
+	</body>
 </html>
