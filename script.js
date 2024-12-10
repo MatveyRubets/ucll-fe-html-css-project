@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	const allCards = document.querySelectorAll(".pricing__block-card");
 
 	// Store the base price for Terapia indywidualna and initialize currentQuantity
-	let basePriceTerapia = 140; // Default to 30min price
+	let basePriceTerapia = 180; // Default to 30min price
 	let currentQuantity = 1;
 
 	// Function to update all card prices based on the selected quantity
