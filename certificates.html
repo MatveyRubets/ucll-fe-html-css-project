@@ -18,6 +18,7 @@
 			sizes="180x180"
 			href="/assets/icons/apple-touch-icon.png"
 		/>
+		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="header glass-card">
@@ -75,6 +76,7 @@
 				<div class="glass-card certificates">
 					<div class="certificate-container first-certificate">
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-4.jpeg"
 							alt="certificate"
@@ -82,16 +84,19 @@
 					</div>
 					<div class="certificate-container">
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-13.jpeg"
 							alt="certificate"
 						/>
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-1.jpeg"
 							alt="certificate"
 						/>
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-11.jpeg"
 							alt="certificate"
@@ -100,16 +105,19 @@
 					<div class="certificate-container">
 						<!-- Repeat for the rest of the certificates -->
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-10.jpeg"
 							alt="certificate"
 						/>
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-5.jpeg"
 							alt="certificate"
 						/>
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-6.jpeg"
 							alt="certificate"
@@ -117,16 +125,19 @@
 					</div>
 					<div class="certificate-container">
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-7.jpeg"
 							alt="certificate"
 						/>
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-8.jpeg"
 							alt="certificate"
 						/>
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-9.jpeg"
 							alt="certificate"
@@ -135,16 +146,19 @@
 					</div>
 					<div class="certificate-container">
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-2.jpeg"
 							alt="certificate"
 						/>
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-3.jpeg"
 							alt="certificate"
 						/>
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-12.jpg"
 							alt="certificate"
@@ -152,6 +166,7 @@
 					</div>
 					<div class="certificate-container">
 						<img
+						 data-aos="fade-up"
 							class="certificate"
 							src="./assets/img/CERTYFIKAT-14.jpeg"
 							alt="certificate"
@@ -218,5 +233,12 @@
 		</footer>
 
 		<script src="script.js"></script>
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+		<script>
+		AOS.init({
+			duration: 1000, // animation duration
+			once: true      // only animate once
+		});
+		</script>
 	</body>
 </html>

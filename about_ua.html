@@ -18,6 +18,7 @@
 			sizes="180x180"
 			href="/assets/icons/apple-touch-icon.png"
 		/>
+		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="header glass-card">
@@ -70,13 +71,13 @@
 					<h1 class="about__right-heading main-text">Дмитро Чубенко</h1>
 				</div>
 				<div class="about__left">
-					<div class="about__right">
+					<div  class="about__right">
 						<img
 							class="about__right-img"
 							src="./assets/img/dima.jpeg"
 							alt="Man getting examinated by a chiropractor"
 						/>
-						<div class="about__right-accordion accordion">
+						<div data-aos="fade-up" class="about__right-accordion accordion">
 							<button class="accordion-item medium-text">Місія</button>
 							<div class="panel">
 								<p>
@@ -170,5 +171,12 @@
 		</footer>
 
 		<script src="script.js"></script>
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+		<script>
+		AOS.init({
+			duration: 1000, // animation duration
+			once: true      // only animate once
+		});
+		</script>
 	</body>
 </html>

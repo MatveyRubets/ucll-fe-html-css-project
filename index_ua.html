@@ -18,6 +18,7 @@
 			sizes="180x180"
 			href="/assets/icons/apple-touch-icon.png"
 		/>
+		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 	</head>
 
 	<body>
@@ -67,7 +68,7 @@
 
 		<main>
 			<section class="hero container">
-				<div class="split hero__left">
+				<div data-aos="fade-right" class="split hero__left">
 					<p class="hero__left-intro medium-text">Фізіотерапевтичний кабінет</p>
 					<h1 class="hero__left-heading title">
 						Investing in <span class="accent-color">Health</span>
@@ -112,7 +113,7 @@
 				<h2 class="benefits__heading">
 					Вилікував від болю 1/3 частину Варшави
 				</h2>
-				<ul class="benefits__cards container">
+				<ul data-aos="fade-up" class="benefits__cards container">
 					<li class="benefits__cards-item medium-text glass-card">
 						<svg
 							width="73"
@@ -195,7 +196,7 @@
 						Різноманітність моїх послуг
 					</h1>
 				</div>
-				<ul class="services__list">
+				<ul data-aos="fade-up" class="services__list">
 					<li class="services__list-item glass-card">
 						<div class="services__list-item-headline card-headline">
 							<h3 class="services__list-item-heading card-heading">
@@ -407,7 +408,7 @@
 				</div>
 
 				<div class="roadmap__block">
-					<div class="roadmap__block-row glass-card">
+					<div data-aos="fade-up" class="roadmap__block-row glass-card">
 						<div class="roadmap__block-text">
 							<div class="roadmap__block-text-headline card-headline">
 								<h3 class="roadmap__block-text-heading card-heading">
@@ -437,7 +438,7 @@
 						</div>
 					</div>
 
-					<div class="roadmap__block-row glass-card">
+					<div data-aos="fade-up" class="roadmap__block-row glass-card">
 						<div class="roadmap__block-text">
 							<div class="roadmap__block-text-headline card-headline">
 								<h3 class="roadmap__block-text-heading card-heading">
@@ -464,7 +465,7 @@
 						</div>
 					</div>
 
-					<div class="roadmap__block-row glass-card">
+					<div data-aos="fade-up" class="roadmap__block-row glass-card">
 						<div class="roadmap__block-text">
 							<div class="roadmap__block-text-headline card-headline">
 								<h3 class="roadmap__block-text-heading card-heading">
@@ -495,7 +496,7 @@
 			</section>
 
 			<section class="contact__info container" id="contactForm">
-				<div class="contact__info-container">
+				<div data-aos="fade-right" class="contact__info-container">
 					<p class="contact__info-upper upper-text">контактна інформація</p>
 					<h2 class="main-text">Бажаєш записатися?</h2>
 					<form
@@ -637,5 +638,13 @@
 			</ul>
 		</footer>
 		<script defer src="script.js"></script>
+		<script src="https://web3forms.com/client/script.js" async defer></script>
+		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+		<script>
+		AOS.init({
+			duration: 1000, // animation duration
+			once: true      // only animate once
+		});
+		</script>
 	</body>
 </html>

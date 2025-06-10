@@ -26,6 +26,7 @@
             sizes="180x180"
             href="/assets/icons/apple-touch-icon.png"
         />
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     </head>
     <body>
         <header class="header glass-card">
@@ -92,7 +93,7 @@
                     </p>
                 </div>
                 <div class="cards">
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <video
                             height="440"
                             width="240"
@@ -106,7 +107,7 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <video
                             height="440"
                             width="240"
@@ -120,73 +121,73 @@
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review10.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review11.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review12.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review13.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review14.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review15.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review16.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review17.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review18.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review19.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review20.png"
                             alt="Procedure review"
                         />
                     </div>
-                    <div class="card">
+                    <div  data-aos="fade-up" class="card">
                         <img
                             src="./assets/img/review21.PNG"
                             alt="Procedure review"
@@ -262,5 +263,12 @@
         </footer>
 
         <script src="script.js"></script>
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+		<script>
+		AOS.init({
+			duration: 1000, // animation duration
+			once: true      // only animate once
+		});
+		</script>
     </body>
 </html>
