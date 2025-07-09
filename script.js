@@ -44,26 +44,70 @@ toggleBtn.addEventListener("click", () => {
 // Read more functionality
 
 document.addEventListener("DOMContentLoaded", function () {
-	const buttons = document.querySelectorAll(".read-more-btn");
-	buttons.forEach(function (button) {
-		button.addEventListener("click", function () {
-			// Directly find the short-text and full-text related to this button
-			const parentParagraph = this.parentNode;
-			const fullText = parentParagraph.querySelector(".full-text");
-			const shortText = parentParagraph.querySelector(".short-text");
+	// const buttons = document.querySelectorAll(".read-more-btn");
+document.querySelectorAll('.read-more-btn').forEach(button => {
+	button.addEventListener('click', () => {
+		const container = button.closest('.services__list-item');
+		const shortText = container.querySelector('.short-text');
+		const fullText = container.querySelector('.full-text');
+		const isExpanded = fullText.classList.contains('active-service');
 
-			// Check visibility to toggle
-			if (fullText.classList.contains("hidden")) {
-				// Show full text
-				fullText.classList.remove("hidden");
-				shortText.classList.add("hidden");
-			} else {
-				// Hide full text
-				fullText.classList.add("hidden");
-				shortText.classList.remove("hidden");
-			}
-		});
+		if (isExpanded) {
+			fullText.classList.remove('active-service');
+			shortText.classList.add('active-service');
+
+		} else {
+			shortText.classList.remove('active-service');
+			fullText.classList.add('active-service');
+		}
 	});
+});
+
+
+
+
+	const slider = document.querySelector('.slider');
+	const track = document.querySelector('.slider-track');
+	const cards = document.querySelectorAll('.slider-track .card');
+	const prevBtn = document.querySelector('.slider-btn--prev');
+	const nextBtn = document.querySelector('.slider-btn--next');
+	let currentIndex = 0;
+	const visibleCards = 3; // Change this value for more/less visible cards
+
+	function updateSlider() {
+		const cardWidth = cards[0].offsetWidth + 16; // 16px margin, adjust if needed
+		track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+	}
+
+	prevBtn.addEventListener('click', function () {
+		if (currentIndex > 0) {
+			currentIndex--;
+			updateSlider();
+		}
+	});
+
+	nextBtn.addEventListener('click', function () {
+		if (currentIndex < cards.length - visibleCards) {
+			currentIndex++;
+			updateSlider();
+		}
+	});
+
+	// Optional: swipe support for mobile
+	let startX = 0;
+	slider.addEventListener('touchstart', function (e) {
+		startX = e.touches[0].clientX;
+	});
+	slider.addEventListener('touchend', function (e) {
+		let endX = e.changedTouches[0].clientX;
+		if (endX < startX - 30) nextBtn.click();
+		if (endX > startX + 30) prevBtn.click();
+	});
+
+	// Responsive: update on resize
+	window.addEventListener('resize', updateSlider);
+
+	updateSlider();
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -253,3 +297,20 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
+
+document.getElementById('openModalBtn').onclick = function() {
+                    document.getElementById('aboutModal').style.display = 'block';
+					document.body.style.overflow = 'hidden';
+                };
+                document.getElementById('closeModalBtn').onclick = function() {
+                    document.getElementById('aboutModal').style.display = 'none';
+					document.body.style.overflow = '';
+
+                };
+                window.onclick = function(event) {
+                    var modal = document.getElementById('aboutModal');
+                    if (event.target == modal) {
+                        modal.style.display = 'none';
+                    }
+                };
