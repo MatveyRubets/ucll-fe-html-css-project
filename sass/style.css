@@ -357,9 +357,9 @@ select {
 	text-align: left;
 }
 
-/* .hidden {
+.hidden {
 	display: none;
-} */
+}
 
 .arrow {
 	width: 15px;
@@ -416,21 +416,6 @@ select {
 	opacity: 1;
 }
 
-
-
-/* .full-text.hidden,
-.short-text.hidden {
-	max-height: 0; 
-	opacity: 0;
-}
-
-.full-text:not(.hidden),
-.short-text:not(.hidden) {
-	max-height: 500px;
-	opacity: 1;
-	transition: opacity 0.3s ease;
-
-} */
 
 .duration-btn.active {
 	background-color: #2db5ff; /* Example active color */

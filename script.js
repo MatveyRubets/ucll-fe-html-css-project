@@ -278,6 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	updateCardVisibility();
 });
 
+
 document.addEventListener("DOMContentLoaded", function () {
 	const certificates = document.querySelectorAll(".certificate");
 
