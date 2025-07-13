@@ -111,172 +111,156 @@ document.querySelectorAll('.read-more-btn').forEach(button => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-	// Select duration buttons and price display for Terapia indywidualna
-	const duration30Btn = document.getElementById("duration30");
-	const duration50Btn = document.getElementById("duration50");
-
-	// Select all quantity buttons and all card price displays
+	let currentQuantity = 1;
 	const quantityBtns = document.querySelectorAll(".quantity-btn");
-	const allPrices = document.querySelectorAll(".pricing__block-card-price");
 	const allCards = document.querySelectorAll(".pricing__block-card");
 
-	// Store the base price for Terapia indywidualna and initialize currentQuantity
-	let basePriceTerapia = 180; // Default to 30min price
-	let currentQuantity = 1;
+	// Helper: updates price for a single card
+	function updateCardPrice(card) {
+		const priceEl = card.querySelector(".pricing__block-card-price");
+		const durationBtn = card.querySelector(".duration-btn.active");
+		const oldPriceEl = card.querySelector(".old-price");
 
-	// Function to update all card prices based on the selected quantity
-	const updateAllPrices = () => {
-		allPrices.forEach((priceEl) => {
-			// Skip update if price text contains a range (e.g., "60-100 zł")
-			if (!priceEl.textContent.includes("-")) {
-				const card = priceEl.closest(".pricing__block-card");
-				const basePrice = parseInt(priceEl.getAttribute("data-base-price"), 10);
-				const fullPrice = basePrice * currentQuantity;
-				let finalPrice = fullPrice;
+		if (!priceEl || priceEl.textContent.includes("-")) return;
 
-				if ([5, 10].includes(currentQuantity)) {
-					finalPrice *= 0.9;
-				}
+		let basePrice;
 
-				priceEl.textContent = `${Math.round(finalPrice)} zł`;
-
-				let oldPriceEl = card.querySelector(".old-price");
-				if ([5, 10].includes(currentQuantity)) {
-					if (!oldPriceEl) {
-						oldPriceEl = document.createElement("div");
-						oldPriceEl.className = "old-price";
-						priceEl.parentNode.insertBefore(oldPriceEl, priceEl);
-					}
-					oldPriceEl.innerHTML = `<s>${fullPrice} zł</s>`;
-					oldPriceEl.classList.remove("hidden");
-				} else if (oldPriceEl) {
-					oldPriceEl.classList.add("hidden");
-				}
-			}
-		});
-	};
-
-	// Function to show/hide first and last card based on selected quantity
-	const updateCardVisibility = () => {
-		const shouldHideCards = currentQuantity === 5 || currentQuantity === 10;
-		if (allCards[0]) {
-			allCards[0].style.display = shouldHideCards ? "none" : "";
-			allCards[allCards.length - 1].style.display = shouldHideCards
-				? "none"
-				: "";
-		}
-	};
-
-	// Initialize base prices and add data-base-price attribute to each card price
-	allPrices.forEach((price) => {
-		// Skip initialization for price ranges
-		if (!price.textContent.includes("-")) {
-			const basePrice = parseInt(price.textContent);
-			price.setAttribute("data-base-price", basePrice);
-		}
-	});
-
-	// Event listeners for duration buttons
-	function updateTerapiaPrice() {
-		let finalPrice = basePriceTerapia * currentQuantity; // Calculate the price based on current settings
-		const oldPriceElement = document.querySelector(
-			".terapia-indywidualna .old-price"
-		);
-
-		if ([5, 10].includes(currentQuantity)) {
-			// Only show old price if a discount applies
-			finalPrice *= 0.9; // Apply discount
-			if (!oldPriceElement) {
-				// If old-price element doesn't exist, create it
-				const oldPriceEl = document.createElement("div");
-				oldPriceEl.className = "old-price";
-				// Insert it in the correct place within the TERAPIA INDYWIDUALNA card
-				const priceContainer = document.querySelector(
-					".terapia-indywidualna .pricing__block-card-price"
-				).parentNode;
-				priceContainer.insertBefore(oldPriceEl, priceContainer.firstChild); // Adjust as necessary
-			}
-			// Update old-price content
-			oldPriceElement.innerHTML = `<s>${
-				basePriceTerapia * currentQuantity
-			} zł</s>`;
-			oldPriceElement.classList.remove("hidden");
+		// Priority 1: use active duration button if available
+		if (durationBtn) {
+			basePrice = parseInt(durationBtn.getAttribute("data-price"), 10);
+			priceEl.setAttribute("data-base-price", basePrice);
 		} else {
-			// Hide old-price element if no discount applies
-			if (oldPriceElement) oldPriceElement.classList.add("hidden");
+			const existing = priceEl.getAttribute("data-base-price");
+			if (existing) {
+				basePrice = parseInt(existing, 10);
+			} else {
+				const match = priceEl.textContent.match(/(\d+)\s*zł/);
+				basePrice = match ? parseInt(match[1], 10) : 0;
+				priceEl.setAttribute("data-base-price", basePrice);
+			}
 		}
 
-		// Update the displayed current price
-		document.getElementById("priceTherapy").textContent = `${Math.round(
-			finalPrice
-		)} zł`;
+		priceEl.setAttribute("data-base-price", basePrice);
+
+		let fullPrice = basePrice * currentQuantity;
+		let finalPrice = fullPrice;
+		let showOldPrice = false;
+
+		// Special logic for "masaj" card
+		if (
+			priceEl.classList.contains("pricing__block-card-price-masaj") &&
+			(currentQuantity === 5 || currentQuantity === 10)
+		) {
+			const paidQuantity = currentQuantity === 5 ? 4 : 9;
+			finalPrice = basePrice * paidQuantity;
+			showOldPrice = true;
+		} else if (currentQuantity === 5) {
+			finalPrice = fullPrice * 0.95; // 5% discount for 5-pack
+			showOldPrice = true;
+		} else if (currentQuantity === 10) {
+			finalPrice = fullPrice * 0.9; // 10% discount for 10-pack
+			showOldPrice = true;
+		}
+
+		priceEl.textContent = `${Math.round(finalPrice)} zł`;
+
+		// Show/hide old price
+		if (oldPriceEl) {
+			if (showOldPrice) {
+				oldPriceEl.innerHTML = `<s>${fullPrice} zł</s>`;
+				oldPriceEl.classList.remove("hidden");
+			} else {
+				oldPriceEl.classList.add("hidden");
+			}
+		}
 	}
 
-	[duration30Btn, duration50Btn].forEach((btn) => {
-		btn?.addEventListener("click", function () {
-			// Remove 'active' class from both buttons, then add it back to the clicked one
-			[duration30Btn, duration50Btn].forEach((button) =>
-				button.classList.remove("active")
-			);
-			this.classList.add("active");
+	function updateAllCardPrices() {
+		allCards.forEach((card) => {
+			updateCardPrice(card);
+		});
+	}
 
-			// Update basePriceTerapia based on selected button
-			basePriceTerapia = parseInt(this.getAttribute("data-price"), 10);
+	allCards.forEach((card) => {
+		const durationBtns = card.querySelectorAll(".duration-btn");
+		const priceEl = card.querySelector(".pricing__block-card-price");
 
-			// Call function to update TERAPIA INDYWIDUALNA pricing and old-price display
-			updateTerapiaPrice();
+		const activeBtn = card.querySelector(".duration-btn.active");
+		if (priceEl && activeBtn && !priceEl.textContent.includes("-")) {
+			const basePrice = parseInt(activeBtn.getAttribute("data-price"), 10);
+			priceEl.setAttribute("data-base-price", basePrice);
+		}
+
+		durationBtns.forEach((btn) => {
+			btn.addEventListener("click", function () {
+				durationBtns.forEach((b) => b.classList.remove("active"));
+				this.classList.add("active");
+				updateCardPrice(card);
+			});
 		});
 	});
 
-	// Event listeners for quantity buttons
-	// Inside your DOMContentLoaded event listener, within the quantity button click event handler:
 	quantityBtns.forEach((btn) => {
 		btn.addEventListener("click", function () {
-			currentQuantity = parseInt(this.getAttribute("data-quantity"));
+			currentQuantity = parseInt(this.getAttribute("data-quantity"), 10);
 
-			// Since you're handling discounts differently now:
-			// Update the displayed prices without applying the discount directly in the calculation
-			const fullPrice = basePriceTerapia * currentQuantity; // Calculate full price
+			quantityBtns.forEach((b) => b.classList.remove("active"));
+			this.classList.add("active");
 
-			// Optionally handle displaying discounted prices in a separate element if applicable
+			const hasDiscount = [5, 10].includes(currentQuantity);
 
-			// Now, manage visibility of discount descriptions and old prices based on the current quantity
-			const hasDiscount = currentQuantity === 5 || currentQuantity === 10;
 			document.querySelectorAll(".discount-desc").forEach((desc) => {
-				desc.classList.toggle("hidden", !hasDiscount);
-			});
-			document.querySelectorAll(".old-price").forEach((oldPrice) => {
 				if (hasDiscount) {
-					oldPrice.innerHTML = `<s>${fullPrice} zł</s>`;
-					oldPrice.classList.remove("hidden");
+					if (window.location.pathname.includes("pricing_ua.html")) {
+						desc.textContent = currentQuantity === 5 ? "5% знижки" : "10% знижки";
+					} else {
+						desc.textContent = currentQuantity === 5 ? "5% zniżki" : "10% zniżki";
+					}
+					desc.classList.remove("hidden");
 				} else {
-					oldPrice.classList.add("hidden");
+					desc.classList.add("hidden");
 				}
 			});
 
-			currentQuantity = parseInt(this.getAttribute("data-quantity"), 10);
+			document.querySelectorAll(".discount-desc-masaj").forEach((desc) => {
+				if (hasDiscount && currentQuantity === 5) {
+					desc.textContent = window.location.pathname.includes("pricing_ua.html") ? "4+1 безкоштовно" : "4+1 gratis";
+					desc.classList.remove("hidden");
+				} else if (hasDiscount && currentQuantity === 10) {
+					desc.textContent = window.location.pathname.includes("pricing_ua.html") ? "9+1 безкоштовно" : "9+1 gratis";
+					desc.classList.remove("hidden");
+				} else {
+					desc.classList.add("hidden");
+				}
+			});
 
-			// Make the 30-minute button active
-			duration30Btn.classList.add("active");
-			if (duration50Btn) {
-				duration50Btn.classList.remove("active");
-			}
+			allCards.forEach((card) => {
+				const durationBtns = card.querySelectorAll(".duration-btn");
+				const defaultBtn = Array.from(durationBtns).find(
+					(btn) => btn.getAttribute("data-duration") === "30"
+				);
+				if (defaultBtn) {
+					durationBtns.forEach((btn) => btn.classList.remove("active"));
+					defaultBtn.classList.add("active");
+				}
+			});
 
-			// Set basePriceTerapia to the 30-minute session price
-			basePriceTerapia = parseInt(duration30Btn.getAttribute("data-price"), 10);
-
-			// Proceed with updating all card prices and visibility as before
-			updateAllPrices();
+			updateAllCardPrices();
 			updateCardVisibility();
-			quantityBtns.forEach((btn) => btn.classList.remove("active"));
-			this.classList.add("active");
 		});
 	});
 
-	// Initial updates
-	updateAllPrices();
+	function updateCardVisibility() {
+		const shouldHide = [5, 10].includes(currentQuantity);
+		document.querySelectorAll('.hide-on-multi').forEach(card => {
+			card.style.display = shouldHide ? "none" : "";
+		});
+	}
+
+	updateAllCardPrices();
 	updateCardVisibility();
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
