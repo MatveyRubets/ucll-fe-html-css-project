@@ -527,7 +527,6 @@ select {
 .certificate--horizontal {
     max-width: 450px;
     max-height: 280px;
-	rotate: -90deg;
 }
 
 .certificate-container {
@@ -647,21 +646,21 @@ select {
 .fullscreen-overlay {
 	display: none;
 	position: fixed;
-	z-index: 999;
 	inset: 0; /* shorthand for top/left/right/bottom = 0 */
 	background-color: rgba(0, 0, 0, 0.6);
 	overflow: hidden; 
 	padding: 40px 20px;
 	box-sizing: border-box;
+	z-index: 1003;
 }
 
 /* Styled image within the overlay */
 .fullscreen-overlay img {
-	margin: auto;
+	margin: 0 auto;
 	display: block;
 	position: relative;
 	cursor: pointer;
-	
+	object-fit: contain;
 }
 
 .old-price {
@@ -782,7 +781,7 @@ select {
 	}
 
 	.fullscreen-overlay img {
-		max-width: 350px;
+		max-width: 300px;
 	}
 	
 }
