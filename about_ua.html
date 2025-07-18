@@ -18,7 +18,7 @@
 			sizes="180x180"
 			href="/assets/icons/apple-touch-icon.png"
 		/>
-		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+		<!-- <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
 	</head>
 	<body>
 		<header class="header glass-card">
@@ -61,152 +61,101 @@
                     <p class="about__right-upper upper-text">Про нас</p>
                     <h1 class="about__right-heading main-text">Спеціалісти Physioteca</h1>
                 </div>
-                <div class="about__left">
-                    <img
-                        class="about__right-img"
-                        src="./assets/img/dima.jpeg"
-                        alt="Man getting examinated by a chiropractor"
-                    />
-                    <div class="about-card">
-                        <div class="about-card-info">
-                            <h2 class="about__name card-heading">Дмитро Чубенко</h2>
-                            <p class="about__desc description">Засновник | мг-т фізіотерапії та реабілітації</p>
+                <div class="about__team">
+                    <div class="about__left">
+                        <img
+                            class="about__right-img"
+                            src="./assets/img/dima.jpeg"
+                            alt="Man getting examinated by a chiropractor"
+                        />
+                        <div class="about-card">
+                            <div class="about-card-info">
+                                <h2 class="about__name card-heading">Дмитро Чубенко</h2>
+                                <p class="about__desc description">Засновник | мг-т фізіотерапії</p>
+                            </div>
+                            <button
+                                class="about__modal-btn"
+                                data-img="./assets/img/dima.jpeg"
+                                data-mission="Моє головне призначення – допомагати людям. Після моєї терапії, ви відчуєте справжнє полегшення та забудете про біль на дуже довго, тому що найкращою інвестицією - є інвестиція в здоров'я"
+                                data-title="Магістер фізіотерапії з вищою медичною освітою та досвідом роботи більше 5 років."
+                                data-experience='[
+                                    "Досвід отримував в більшості лікарень міста Варшави, Польща у відділеннях ортопедії, кардіології, пульмонології, неврології та дитячої педiатрії. На 4 курсі університету стажувався в іспанській лікарні Nurservicio в місті Мадрид. Весь час доповнюю рівень своїх знань за допомогою додаткових конференцій, семінарів та курсів у галузі фізіотерапії."
+                                ]'
+                                data-certificates='[
+                                    "./assets/img/CERTYFIKAT-4.jpeg",
+                                    "./assets/img/CERTYFIKAT-13.jpeg",
+                                    "./assets/img/CERTYFIKAT-1.jpeg",
+                                    "./assets/img/CERTYFIKAT-11.jpeg",
+                                    "./assets/img/CERTYFIKAT-10.jpeg",
+                                    "./assets/img/CERTYFIKAT-5.jpeg",
+                                    "./assets/img/CERTYFIKAT-6.jpeg",
+                                    "./assets/img/CERTYFIKAT-7.jpeg",
+                                    "./assets/img/CERTYFIKAT-8.jpeg",
+                                    "./assets/img/CERTYFIKAT-9.jpeg",
+                                    "./assets/img/CERTYFIKAT-2.jpeg",
+                                    "./assets/img/CERTYFIKAT-3.jpeg",
+                                    "./assets/img/CERTYFIKAT-12.jpg",
+                                    "./assets/img/CERTYFIKAT-14.jpeg"
+                                ]'
+                            >
+                                <img width="20" src="./assets/icons/down-arrow.png" alt="">
+                            </button>
                         </div>
-                        <button id="openModalBtn" class="about__modal-btn"><img width="20" src="./assets/icons/down-arrow.png" alt=""></button>
+                    </div>
+                    <div class="about__left">
+                        <img
+                            class="about__right-img"
+                            src="./assets/img/olga.jpeg"
+                            alt="Man getting examinated by a chiropractor"
+                        />
+                        <div class="about-card">
+                            <div class="about-card-info">
+                                <h2 class="about__name card-heading">Ольга Мілянець</h2>
+                                <p class="about__desc description">Дипломований масажист</p>
+                            </div>
+                        <button
+                            class="about__modal-btn"
+                            data-name="Olga"
+                            data-img="./assets/img/olga.jpeg"
+                            data-mission="Професійно допомагати людям знімати напругу, відновлювати сили та покращувати самопочуття через якісний, індивідуально підібраний масаж. Прагну створювати атмосферу довіри, турботи й комфорту, де кожен клієнт відчуває реальний результат і підтримку."
+                            data-title="Бакалавр фізичної реабілітації, спеціаліст з масажу"
+                            data-experience='[
+                                "Проведення загального та оздоровчого масажу з виїздом до клієнтів у місті Львів.",
+                                "Реабілітаційна робота з інклюзивними дітьми: проведення масажів і спеціальних вправ, співпраця з педагогами та батьками.",
+                                "Інструктор дитячої гімнастики у спортивно-оздоровчому клубі «Omia».",
+                                "Проходження практики у центрі реабілітації First-Step (Ґура-Кальварія, Польща) в межах навчання у поліцеальній школі Cosinus: робота з пацієнтами під наглядом досвідчених фахівців, ознайомлення з сучасними реабілітаційними та масажними методиками в польському медичному середовищі."
+                            ]'
+                            data-certificates='[
+                                {"src":"./assets/img/olga1.png","orientation":"vertical"},
+                                {"src":"./assets/img/olga2.png","orientation":"vertical"},
+                                {"src":"./assets/img/olga3.png","orientation":"horizontal"}
+                            ]'
+                        >
+                            <img width="20" src="./assets/icons/down-arrow.png" alt="">
+                        </button>
+                        </div>
                     </div>
                 </div>
-
                 <!-- Modal Structure -->
                 <div id="aboutModal" class="fullscreen-overlay" style="display:none;">
                     <div class="modal-content glass-card">
                         <div class="about-modal">
-                            <img
-                                class="about-modal-img"
-                                src="./assets/img/dima.jpeg"
-                                alt="Man getting examinated by a chiropractor"
-                            />
+                            <img id="modalImg" class="about-modal-img" src="" alt="" />
                             <div class="about-modal-text">
-                                <h3>Місія</h3>
-                                <p>
-                                    Моє головне призначення – допомагати людям. Після моєї терапії, ви відчуєте справжнє полегшення та забудете про біль на дуже довго, тому що найкращою інвестицією - є інвестиція в здоров'я
-                                </p>
+                                <h4>Місія</h4>
+                                <p id="modalMission"></p>
                                 <h4>Титул</h4>
-                                <p>
-                                    Магістер фізіотерапії з вищою медичною освітою та досвідом роботи більше 5 років.
-                                </p>
+                                <p id="modalTitle"></p>
                                 <h4>Досвід</h4>
-                                <p>
-                                    Досвід отримував в більшості лікарень міста Варшави, Польща у відділеннях ортопедії, кардіології, пульмонології, неврології та дитячої педiатрії. На 4 курсі університету стажувався в іспанській лікарні Nurservicio в місті Мадрид. Весь час доповнюю рівень своїх знань за допомогою додаткових конференцій, семінарів та курсів у галузі фізіотерапії.
-                                </p>
+                                <ul id="modalExperience"></ul>
                             </div>
                             <span id="closeModalBtn" class="modal-close about__modal-btn" style="cursor:pointer;">&times;</span>
                         </div>
                         <section class="testimonials">
                             <div class="testimonials__headline headline">
-                                <h1 class="testimonials__main card-heading">
-                                    Сертифікати
-                                </h1>
+                                <h1 class="testimonials__main card-heading">Сертифікати</h1>
                             </div>
-                            <div class="glass-card certificates">
-                                <div class="certificate-container first-certificate">
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-4.jpeg"
-                                        alt="certificate"
-                                    />
-                                </div>
-                                <div class="certificate-container">
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-13.jpeg"
-                                        alt="certificate"
-                                    />
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-1.jpeg"
-                                        alt="certificate"
-                                    />
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-11.jpeg"
-                                        alt="certificate"
-                                    />
-                                </div>
-                                <div class="certificate-container">
-                                    <!-- Repeat for the rest of the certificates -->
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-10.jpeg"
-                                        alt="certificate"
-                                    />
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-5.jpeg"
-                                        alt="certificate"
-                                    />
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-6.jpeg"
-                                        alt="certificate"
-                                    />
-                                </div>
-                                <div class="certificate-container">
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-7.jpeg"
-                                        alt="certificate"
-                                    />
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-8.jpeg"
-                                        alt="certificate"
-                                    />
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-9.jpeg"
-                                        alt="certificate"
-                                    />
-                                    <!-- Add or remove certificates as needed -->
-                                </div>
-                                <div class="certificate-container">
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-2.jpeg"
-                                        alt="certificate"
-                                    />
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-3.jpeg"
-                                        alt="certificate"
-                                    />
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-12.jpg"
-                                        alt="certificate"
-                                    />
-                                </div>
-                                <div class="certificate-container">
-                                    <img
-                                    data-aos="fade-up"
-                                        class="certificate"
-                                        src="./assets/img/CERTYFIKAT-14.jpeg"
-                                        alt="certificate"
-                                    />
-                                </div>
-                            </div>
+                            <div id="modalCertificates" class="glass-card certificates"></div>
                         </section>
                     </div>
                 </div>

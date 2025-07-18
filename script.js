@@ -284,18 +284,68 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.getElementById('openModalBtn').onclick = function() {
-                    document.getElementById('aboutModal').style.display = 'block';
-					document.body.style.overflow = 'hidden';
-                };
-                document.getElementById('closeModalBtn').onclick = function() {
-                    document.getElementById('aboutModal').style.display = 'none';
-					document.body.style.overflow = '';
+document.querySelectorAll('.about__modal-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const modal = document.getElementById('aboutModal');
+        document.getElementById('modalImg').src = btn.dataset.img;
+        document.getElementById('modalImg').alt = btn.dataset.name;
+        document.getElementById('modalMission').textContent = btn.dataset.mission;
+        document.getElementById('modalTitle').textContent = btn.dataset.title;
+        const experienceList = JSON.parse(btn.dataset.experience);
+        const modalExperience = document.getElementById('modalExperience');
+        modalExperience.innerHTML = '';
+        experienceList.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            modalExperience.appendChild(li);
+        });
 
-                };
-                window.onclick = function(event) {
-                    var modal = document.getElementById('aboutModal');
-                    if (event.target == modal) {
-                        modal.style.display = 'none';
-                    }
-                };
+        // Certificates
+        let certificates = [];
+        try {
+            certificates = JSON.parse(btn.dataset.certificates || "[]");
+        } catch (e) {
+            // fallback for old format
+            certificates = (JSON.parse(btn.dataset.certificates || "[]")).map(src => ({src, orientation: "vertical"}));
+        }
+        const modalCertificates = document.getElementById('modalCertificates');
+        modalCertificates.innerHTML = '';
+        certificates.forEach(cert => {
+            const img = document.createElement('img');
+            img.className = 'certificate';
+            img.src = cert.src || cert;
+            img.alt = 'certificate';
+            img.setAttribute('data-aos', 'fade-up');
+            if (cert.orientation === "horizontal") {
+                img.classList.add('certificate--horizontal');
+            }
+            modalCertificates.appendChild(img);
+        });
+
+        // Re-attach click event to new certificates
+        modalCertificates.querySelectorAll('.certificate').forEach((certificate) => {
+            certificate.addEventListener("click", function () {
+                const src = this.src;
+                const overlay = document.createElement("div");
+                overlay.classList.add("fullscreen-overlay");
+                overlay.innerHTML = `<img src="${src}" alt="Full Screen Certificate">`;
+                document.body.appendChild(overlay);
+                overlay.style.display = "flex";
+
+                overlay.addEventListener("click", function () {
+                    document.body.removeChild(overlay);
+                });
+            });
+        });
+
+        modal.style.display = 'block';
+    });
+});
+document.getElementById('closeModalBtn').onclick = function() {
+    document.getElementById('aboutModal').style.display = 'none';
+};
+document.getElementById('aboutModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.style.display = 'none';
+    }
+});

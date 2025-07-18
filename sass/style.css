@@ -508,17 +508,26 @@ select {
 }
 
 .certificates {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: 1rem;
 	padding: 2rem;
 }
 
 .certificate {
-	max-width: 280px;
-	margin: 1rem;
-	cursor: pointer;
+    max-width: 240px;
+    max-height: 350px;
+    object-fit: contain;
+    margin: 0.5rem;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.certificate--horizontal {
+    max-width: 450px;
+    max-height: 280px;
+	rotate: -90deg;
 }
 
 .certificate-container {
@@ -623,6 +632,10 @@ select {
 	.checkbox-wrapper-4 .cbx {
 		width: 100%;
 		display: inline-block;
+	}
+
+	.certificates {
+		grid-template-columns: 1fr;
 	}
 }
 @keyframes wave-4 {
@@ -1126,6 +1139,14 @@ select {
 	align-items: center;
 	margin-bottom: 16rem;
 }
+#aboutModal {
+	z-index: 1002;
+}
+.about__team {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
 .about__left {
 	display: flex;
 	flex-direction: column;
@@ -1142,6 +1163,7 @@ select {
 }
 .about__right-img {
 	max-width: 350px;
+	max-height: 430px;
 	border-radius: 1.5rem;
 }
 .about__right-upper {
@@ -1248,7 +1270,10 @@ select {
 	.about {
 		display: flex;
 		flex-direction: column;
-		padding: 0 200px;
+	}
+	.about__team {
+		justify-content: center;
+		align-items: center;
 	}
 	.about__heading {
 		margin-top: 2rem;
