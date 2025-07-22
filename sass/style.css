@@ -145,10 +145,6 @@ select {
 }
 
 @media screen and (max-width: 1600px) {
-	.logo {
-		width: 130px;
-		height: 110px;
-	}
 	input {
 		width: 400px;
 		font-size: 16px;
@@ -652,6 +648,7 @@ select {
 	padding: 40px 20px;
 	box-sizing: border-box;
 	z-index: 1003;
+	overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Styled image within the overlay */
@@ -928,11 +925,6 @@ select {
 		display: flex;
 		gap: 1.5rem;
 		flex-direction: column;
-	}
-	.hero__left-tablet-block {
-		display: flex;
-		align-items: center;
-		gap: 2rem;
 	}
 	.hero__right {
 		display: none;
@@ -1228,6 +1220,7 @@ select {
 	gap: 2rem;
 	transform: translateY(35%);
 	overflow-y: auto;
+	overflow-x: hidden; /* Prevent horizontal scroll */
 	max-height: 60vh; /* LIMIT height */
 	flex-direction: column;
 	position: relative;
