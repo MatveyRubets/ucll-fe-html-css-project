@@ -1156,6 +1156,7 @@ select {
 	max-width: 350px;
 	max-height: 430px;
 	border-radius: 1.5rem;
+	object-fit: cover;
 }
 .about__right-upper {
 	color: var(--accent-color);
@@ -1238,6 +1239,7 @@ select {
 
 .about-modal-img {
 	max-width: 400px;
+	max-height: 500px;
 	border-radius: 2%;
 	margin: 0;
 }
