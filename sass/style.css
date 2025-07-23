@@ -1153,7 +1153,7 @@ select {
 	display: flex;
 }
 .about__right-img {
-	max-width: 350px;
+	width: 350px;
 	max-height: 430px;
 	border-radius: 1.5rem;
 	object-fit: cover;
