@@ -1,685 +1,728 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Centrum PHYSIOTECA</title>
-		<link rel="stylesheet" href="sass/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="icon" sizes="192x192" href="/assets/icons/favicon-16x16.png" />
-		<link rel="icon" sizes="256x256" href="/assets/icons/favicon-32x32.png" />
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="/assets/icons/apple-touch-icon.png"
-		/>
-		<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-	</head>
-	<body>
-		<header class="header glass-card">
-			<a href="./index.html">
-				<img class="logo" src="./assets/icons/logo.svg" alt="Spine Logotype" />
-			</a>
-			<nav>
-				<ul class="header__list" id="myHeaderList">
-					<li class="header__list-item">
-						<a href="./about.html">Zespół</a>
-					</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centrum PHYSIOTECA</title>
+    <link rel="stylesheet" href="sass/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" sizes="192x192" href="/assets/icons/favicon-16x16.png" />
+    <link rel="icon" sizes="256x256" href="/assets/icons/favicon-32x32.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header glass-card">
+      <a href="./index.html">
+        <img class="logo" src="./assets/icons/logo.svg" alt="Spine Logotype" />
+      </a>
+      <nav>
+        <ul class="header__list" id="myHeaderList">
+          <li class="header__list-item">
+            <a href="./about.html">Zespół</a>
+          </li>
 
-					<li class="header__list-item">
-						<a href="./pricing.html">Ceny</a>
-					</li>
+          <li class="header__list-item">
+            <a href="./pricing.html">Ceny</a>
+          </li>
 
-					<select id="languageSelect">
-						<option value="pl">🇵🇱</option>
-						<option value="ua">🇺🇦</option>
-					</select>
-					<li class="header__list-menu burger">
-						<img src="./assets/icons/burger.png" alt="menu button" />
-					</li>
-				</ul>
+          <select id="languageSelect">
+            <option value="pl">🇵🇱</option>
+            <option value="ua">🇺🇦</option>
+          </select>
+          <li class="header__list-menu burger">
+            <img src="./assets/icons/burger.png" alt="menu button" />
+          </li>
+        </ul>
 
-				<ul class="dropdown-menu">
-					<li class="header__list-item">
-						<a href="./about.html">Zespół</a>
-					</li>
+        <ul class="dropdown-menu">
+          <li class="header__list-item">
+            <a href="./about.html">Zespół</a>
+          </li>
 
-					<li class="header__list-item">
-						<a href="./pricing.html">Ceny</a>
-					</li>
+          <li class="header__list-item">
+            <a href="./pricing.html">Ceny</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-				</ul>
-			</nav>
-		</header>
+    <main>
+      <section class="hero container">
+        <div data-aos="fade-right" class="split hero__left">
+          <p class="hero__left-intro medium-text">
+            Centrum fizjoterapii i rehabilitacji
+          </p>
+          <h1 class="hero__left-heading title">
+            <span class="accent-color">PHYSIOTECA</span>
+          </h1>
 
-		<main>
-			<section class="hero container">
-				<div data-aos="fade-right" class="split hero__left">
-					<p class="hero__left-intro medium-text">Centrum fizjoterapii i rehabilitacji</p>
-					<h1 class="hero__left-heading title">
-						<span class="accent-color">PHYSIOTECA</span>
-					</h1>
+          <div class="hero__left-tablet">
+            <div class="hero__left-tablet-block">
+              <img
+                class="hero__right-img"
+                src="./assets/img/front_dima.JPG"
+                alt="Man getting examinated by a chiropractor"
+              />
+              <p class="hero__left-desc medium-text">
+                Fizjoterapia narządu ruchu – leczenie i profilaktyka
+                przewlekłych bólów kręgosłupa i stawów, rehabilitacja po urazach
+                ortopedycznych
+              </p>
+            </div>
+            <a class="main__button" href="#contactForm">zarezerwuj termin</a>
+          </div>
 
-					<div class="hero__left-tablet">
-						<div class="hero__left-tablet-block">
-							<img
-								class="hero__right-img"
-								src="./assets/img/front_dima.JPG"
-								alt="Man getting examinated by a chiropractor"
-							/>
-							<p class="hero__left-desc medium-text">
-								Fizjoterapia narządu ruchu – leczenie i profilaktyka przewlekłych bólów kręgosłupa i stawów, rehabilitacja po urazach ortopedycznych
-							</p>
-						</div>
-						<a class="main__button" href="#contactForm">zarezerwuj termin</a>
-					</div>
+          <div class="hero__left-content">
+            <p class="hero__left-desc medium-text">
+              Fizjoterapia uszkodzeń narządu ruchu, leczenie oraz profilaktyka
+              przewlekłych bólów kręgosłupa i stawów, rehabilitacja po
+              operacjach ortopedycznych.
+            </p>
+            <a class="main__button" href="#contactForm">zarezerwuj termin</a>
+          </div>
+        </div>
 
-					<div class="hero__left-content">
-						<p class="hero__left-desc medium-text">
-							Fizjoterapia uszkodzeń narządu ruchu, leczenie oraz profilaktyka
-							przewlekłych bólów kręgosłupa i stawów, rehabilitacja po
-							operacjach ortopedycznych.
-						</p>
-						<a class="main__button" href="#contactForm">zarezerwuj termin</a>
-					</div>
-				</div>
+        <div class="split hero__right">
+          <img
+            class="hero__right-img"
+            src="./assets/img/front_dima.JPG"
+            alt="Man getting examinated by a chiropractor"
+          />
+        </div>
+      </section>
 
-				<div class="split hero__right">
-					<img
-						class="hero__right-img"
-						src="./assets/img/front_dima.JPG"
-						alt="Man getting examinated by a chiropractor"
-					/>
-				</div>
-			</section>
+      <section class="benefits">
+        <h2 class="benefits__heading">Pomagamy odzyskać życie bez bólu</h2>
+        <ul data-aos="fade-up" class="benefits__cards container">
+          <li class="benefits__cards-item medium-text glass-card">
+            <svg
+              width="73"
+              height="83"
+              viewBox="0 0 73 83"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2_202)">
+                <path
+                  d="M36.5 41.5C42.0317 41.5 47.3368 39.3138 51.2482 35.4225C55.1597 31.5311 57.3571 26.2532 57.3571 20.75C57.3571 15.2468 55.1597 9.96891 51.2482 6.07753C47.3368 2.18615 42.0317 0 36.5 0C30.9683 0 25.6632 2.18615 21.7518 6.07753C17.8403 9.96891 15.6429 15.2468 15.6429 20.75C15.6429 26.2532 17.8403 31.5311 21.7518 35.4225C25.6632 39.3138 30.9683 41.5 36.5 41.5ZM20.8571 50.4484C8.79911 53.9662 0 65.0545 0 78.1853C0 80.8439 2.16719 83 4.83951 83H68.1605C70.8328 83 73 80.8439 73 78.1853C73 65.0545 64.2009 53.9662 52.1429 50.4484V58.6836C56.6402 59.8346 59.9643 63.9035 59.9643 68.7344V75.2188C59.9643 76.6453 58.7911 77.8125 57.3571 77.8125H54.75C53.3161 77.8125 52.1429 76.6453 52.1429 75.2188C52.1429 73.7922 53.3161 72.625 54.75 72.625V68.7344C54.75 65.865 52.4199 63.5469 49.5357 63.5469C46.6516 63.5469 44.3214 65.865 44.3214 68.7344V72.625C45.7554 72.625 46.9286 73.7922 46.9286 75.2188C46.9286 76.6453 45.7554 77.8125 44.3214 77.8125H41.7143C40.2804 77.8125 39.1071 76.6453 39.1071 75.2188V68.7344C39.1071 63.9035 42.4313 59.8346 46.9286 58.6836V49.4271C45.9509 49.3299 44.9569 49.2812 43.9467 49.2812H29.0533C28.0431 49.2812 27.0491 49.3299 26.0714 49.4271V60.0291C29.8355 61.1477 32.5893 64.6168 32.5893 68.7344C32.5893 73.7436 28.4993 77.8125 23.4643 77.8125C18.4292 77.8125 14.3393 73.7436 14.3393 68.7344C14.3393 64.6168 17.0931 61.1477 20.8571 60.0291V50.4484ZM23.4643 72.625C24.5015 72.625 25.4962 72.2151 26.2296 71.4855C26.963 70.7558 27.375 69.7662 27.375 68.7344C27.375 67.7025 26.963 66.7129 26.2296 65.9833C25.4962 65.2537 24.5015 64.8438 23.4643 64.8438C22.4271 64.8438 21.4324 65.2537 20.699 65.9833C19.9656 66.7129 19.5536 67.7025 19.5536 68.7344C19.5536 69.7662 19.9656 70.7558 20.699 71.4855C21.4324 72.2151 22.4271 72.625 23.4643 72.625Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2_202">
+                  <rect width="73" height="83" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
 
-			<section class="benefits">
-				<h2 class="benefits__heading">
-					Pomagamy odzyskać życie bez bólu
-				</h2>
-				<ul data-aos="fade-up" class="benefits__cards container">
-					<li class="benefits__cards-item medium-text glass-card">
-						<svg
-							width="73"
-							height="83"
-							viewBox="0 0 73 83"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<g clip-path="url(#clip0_2_202)">
-								<path
-									d="M36.5 41.5C42.0317 41.5 47.3368 39.3138 51.2482 35.4225C55.1597 31.5311 57.3571 26.2532 57.3571 20.75C57.3571 15.2468 55.1597 9.96891 51.2482 6.07753C47.3368 2.18615 42.0317 0 36.5 0C30.9683 0 25.6632 2.18615 21.7518 6.07753C17.8403 9.96891 15.6429 15.2468 15.6429 20.75C15.6429 26.2532 17.8403 31.5311 21.7518 35.4225C25.6632 39.3138 30.9683 41.5 36.5 41.5ZM20.8571 50.4484C8.79911 53.9662 0 65.0545 0 78.1853C0 80.8439 2.16719 83 4.83951 83H68.1605C70.8328 83 73 80.8439 73 78.1853C73 65.0545 64.2009 53.9662 52.1429 50.4484V58.6836C56.6402 59.8346 59.9643 63.9035 59.9643 68.7344V75.2188C59.9643 76.6453 58.7911 77.8125 57.3571 77.8125H54.75C53.3161 77.8125 52.1429 76.6453 52.1429 75.2188C52.1429 73.7922 53.3161 72.625 54.75 72.625V68.7344C54.75 65.865 52.4199 63.5469 49.5357 63.5469C46.6516 63.5469 44.3214 65.865 44.3214 68.7344V72.625C45.7554 72.625 46.9286 73.7922 46.9286 75.2188C46.9286 76.6453 45.7554 77.8125 44.3214 77.8125H41.7143C40.2804 77.8125 39.1071 76.6453 39.1071 75.2188V68.7344C39.1071 63.9035 42.4313 59.8346 46.9286 58.6836V49.4271C45.9509 49.3299 44.9569 49.2812 43.9467 49.2812H29.0533C28.0431 49.2812 27.0491 49.3299 26.0714 49.4271V60.0291C29.8355 61.1477 32.5893 64.6168 32.5893 68.7344C32.5893 73.7436 28.4993 77.8125 23.4643 77.8125C18.4292 77.8125 14.3393 73.7436 14.3393 68.7344C14.3393 64.6168 17.0931 61.1477 20.8571 60.0291V50.4484ZM23.4643 72.625C24.5015 72.625 25.4962 72.2151 26.2296 71.4855C26.963 70.7558 27.375 69.7662 27.375 68.7344C27.375 67.7025 26.963 66.7129 26.2296 65.9833C25.4962 65.2537 24.5015 64.8438 23.4643 64.8438C22.4271 64.8438 21.4324 65.2537 20.699 65.9833C19.9656 66.7129 19.5536 67.7025 19.5536 68.7344C19.5536 69.7662 19.9656 70.7558 20.699 71.4855C21.4324 72.2151 22.4271 72.625 23.4643 72.625Z"
-									fill="white"
-								/>
-							</g>
-							<defs>
-								<clipPath id="clip0_2_202">
-									<rect width="73" height="83" fill="white" />
-								</clipPath>
-							</defs>
-						</svg>
+            <p>Doświadczone specjaliści fizjoterapii i masażu</p>
+          </li>
+          <li class="benefits__cards-item medium-text glass-card">
+            <svg
+              width="105"
+              height="105"
+              viewBox="0 0 105 105"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.625 61.25L40.6569 51.2181C41.4773 50.3979 42.5899 49.9372 43.75 49.9372C44.9101 49.9372 46.0227 50.3979 46.8431 51.2181L53.7819 58.1569C54.6023 58.9771 55.7149 59.4378 56.875 59.4378C58.0351 59.4378 59.1477 58.9771 59.9681 58.1569L74.375 43.75M74.375 43.75V54.6875M74.375 43.75H63.4375"
+                stroke="white"
+                stroke-width="6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M96.25 52.5C96.25 73.1238 96.25 83.4356 89.8406 89.8406C83.44 96.25 73.1238 96.25 52.5 96.25C31.8762 96.25 21.5644 96.25 15.155 89.8406C8.75 83.44 8.75 73.1238 8.75 52.5C8.75 31.8762 8.75 21.5644 15.155 15.155C21.5687 8.75 31.8762 8.75 52.5 8.75C73.1238 8.75 83.4356 8.75 89.8406 15.155C94.1019 19.4162 95.5281 25.4056 96.0094 35"
+                stroke="white"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+            </svg>
 
-						<p>Doświadczone specjaliści fizjoterapii i masażu </p>
-					</li>
-					<li class="benefits__cards-item medium-text glass-card">
-						<svg
-							width="105"
-							height="105"
-							viewBox="0 0 105 105"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M30.625 61.25L40.6569 51.2181C41.4773 50.3979 42.5899 49.9372 43.75 49.9372C44.9101 49.9372 46.0227 50.3979 46.8431 51.2181L53.7819 58.1569C54.6023 58.9771 55.7149 59.4378 56.875 59.4378C58.0351 59.4378 59.1477 58.9771 59.9681 58.1569L74.375 43.75M74.375 43.75V54.6875M74.375 43.75H63.4375"
-								stroke="white"
-								stroke-width="6"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-							<path
-								d="M96.25 52.5C96.25 73.1238 96.25 83.4356 89.8406 89.8406C83.44 96.25 73.1238 96.25 52.5 96.25C31.8762 96.25 21.5644 96.25 15.155 89.8406C8.75 83.44 8.75 73.1238 8.75 52.5C8.75 31.8762 8.75 21.5644 15.155 15.155C21.5687 8.75 31.8762 8.75 52.5 8.75C73.1238 8.75 83.4356 8.75 89.8406 15.155C94.1019 19.4162 95.5281 25.4056 96.0094 35"
-								stroke="white"
-								stroke-width="6"
-								stroke-linecap="round"
-							/>
-						</svg>
+            <p>98% skuteczności zabiegów</p>
+          </li>
+          <li class="benefits__cards-item medium-text glass-card">
+            <svg
+              width="90"
+              height="90"
+              viewBox="0 0 90 90"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2_204)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M45 7.5C65.7112 7.5 82.5 24.2888 82.5 45C82.5 65.7112 65.7112 82.5 45 82.5C24.2888 82.5 7.5 65.7112 7.5 45C7.5 24.2888 24.2888 7.5 45 7.5ZM52.44 53.4375C50.4525 55.1925 47.8537 56.25 45 56.25C42.2593 56.2549 39.6121 55.2542 37.56 53.4375C36.8141 52.7791 35.8372 52.444 34.8442 52.5059C33.8512 52.5678 32.9234 53.0216 32.265 53.7675C31.6066 54.5134 31.2715 55.4903 31.3334 56.4833C31.3953 57.4764 31.8491 58.4041 32.595 59.0625C36.0186 62.0878 40.4312 63.7552 45 63.75C49.569 63.7563 53.982 62.0887 57.405 59.0625C58.1509 58.4041 58.6047 57.4764 58.6666 56.4833C58.7285 55.4903 58.3934 54.5134 57.735 53.7675C57.0766 53.0216 56.1488 52.5678 55.1558 52.5059C54.1628 52.444 53.1859 52.7791 52.44 53.4375ZM31.875 30C27.7987 30 24.5325 32.55 22.8975 35.82C22.4677 36.6755 22.3814 37.663 22.6563 38.5802C22.9311 39.4973 23.5464 40.2745 24.3759 40.7526C25.2055 41.2306 26.1864 41.3733 27.1178 41.1513C28.0491 40.9294 28.8603 40.3596 29.385 39.5587L29.6025 39.18C30.21 37.965 31.14 37.5 31.875 37.5C32.5125 37.5 33.3075 37.8563 33.9038 38.76L34.1475 39.18C34.5977 40.0612 35.3779 40.7288 36.3181 41.0372C37.2583 41.3456 38.2824 41.27 39.167 40.8266C40.0517 40.3833 40.7253 39.6083 41.041 38.6705C41.3567 37.7327 41.289 36.7081 40.8525 35.82C39.2138 32.55 35.9513 30 31.875 30ZM58.125 30C54.0487 30 50.7862 32.55 49.1475 35.82C48.7177 36.6755 48.6314 37.663 48.9063 38.5802C49.1811 39.4973 49.7964 40.2745 50.6259 40.7526C51.4555 41.2306 52.4364 41.3733 53.3678 41.1513C54.2991 40.9294 55.1103 40.3596 55.635 39.5587L55.8525 39.18C56.46 37.965 57.39 37.5 58.125 37.5C58.7625 37.5 59.5575 37.8563 60.1538 38.76L60.3975 39.18C60.6158 39.6242 60.9198 40.0207 61.2921 40.3468C61.6644 40.6729 62.0975 40.9221 62.5666 41.08C63.0356 41.2379 63.5313 41.3014 64.025 41.2668C64.5186 41.2322 65.0006 41.1003 65.4431 40.8786C65.8855 40.6568 66.2797 40.3497 66.6029 39.9749C66.9261 39.6002 67.1719 39.1651 67.3262 38.6948C67.4804 38.2246 67.5401 37.7285 67.5017 37.2351C67.4633 36.7417 67.3276 36.2607 67.1025 35.82C65.4675 32.55 62.2013 30 58.125 30Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2_204">
+                  <rect width="90" height="90" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
 
-						<p>98% skuteczności zabiegów </p>
-					</li>
-					<li class="benefits__cards-item medium-text glass-card">
-						<svg
-							width="90"
-							height="90"
-							viewBox="0 0 90 90"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<g clip-path="url(#clip0_2_204)">
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M45 7.5C65.7112 7.5 82.5 24.2888 82.5 45C82.5 65.7112 65.7112 82.5 45 82.5C24.2888 82.5 7.5 65.7112 7.5 45C7.5 24.2888 24.2888 7.5 45 7.5ZM52.44 53.4375C50.4525 55.1925 47.8537 56.25 45 56.25C42.2593 56.2549 39.6121 55.2542 37.56 53.4375C36.8141 52.7791 35.8372 52.444 34.8442 52.5059C33.8512 52.5678 32.9234 53.0216 32.265 53.7675C31.6066 54.5134 31.2715 55.4903 31.3334 56.4833C31.3953 57.4764 31.8491 58.4041 32.595 59.0625C36.0186 62.0878 40.4312 63.7552 45 63.75C49.569 63.7563 53.982 62.0887 57.405 59.0625C58.1509 58.4041 58.6047 57.4764 58.6666 56.4833C58.7285 55.4903 58.3934 54.5134 57.735 53.7675C57.0766 53.0216 56.1488 52.5678 55.1558 52.5059C54.1628 52.444 53.1859 52.7791 52.44 53.4375ZM31.875 30C27.7987 30 24.5325 32.55 22.8975 35.82C22.4677 36.6755 22.3814 37.663 22.6563 38.5802C22.9311 39.4973 23.5464 40.2745 24.3759 40.7526C25.2055 41.2306 26.1864 41.3733 27.1178 41.1513C28.0491 40.9294 28.8603 40.3596 29.385 39.5587L29.6025 39.18C30.21 37.965 31.14 37.5 31.875 37.5C32.5125 37.5 33.3075 37.8563 33.9038 38.76L34.1475 39.18C34.5977 40.0612 35.3779 40.7288 36.3181 41.0372C37.2583 41.3456 38.2824 41.27 39.167 40.8266C40.0517 40.3833 40.7253 39.6083 41.041 38.6705C41.3567 37.7327 41.289 36.7081 40.8525 35.82C39.2138 32.55 35.9513 30 31.875 30ZM58.125 30C54.0487 30 50.7862 32.55 49.1475 35.82C48.7177 36.6755 48.6314 37.663 48.9063 38.5802C49.1811 39.4973 49.7964 40.2745 50.6259 40.7526C51.4555 41.2306 52.4364 41.3733 53.3678 41.1513C54.2991 40.9294 55.1103 40.3596 55.635 39.5587L55.8525 39.18C56.46 37.965 57.39 37.5 58.125 37.5C58.7625 37.5 59.5575 37.8563 60.1538 38.76L60.3975 39.18C60.6158 39.6242 60.9198 40.0207 61.2921 40.3468C61.6644 40.6729 62.0975 40.9221 62.5666 41.08C63.0356 41.2379 63.5313 41.3014 64.025 41.2668C64.5186 41.2322 65.0006 41.1003 65.4431 40.8786C65.8855 40.6568 66.2797 40.3497 66.6029 39.9749C66.9261 39.6002 67.1719 39.1651 67.3262 38.6948C67.4804 38.2246 67.5401 37.7285 67.5017 37.2351C67.4633 36.7417 67.3276 36.2607 67.1025 35.82C65.4675 32.55 62.2013 30 58.125 30Z"
-									fill="white"
-								/>
-							</g>
-							<defs>
-								<clipPath id="clip0_2_204">
-									<rect width="90" height="90" fill="white" />
-								</clipPath>
-							</defs>
-						</svg>
+            <p>Ponad 1000 wyleczonych pacjentów</p>
+          </li>
+        </ul>
+      </section>
 
-						<p>Ponad 1000 wyleczonych pacjentów</p>
-					</li>
-				</ul>
-			</section>
+      <section class="services container">
+        <div class="services__headline headline">
+          <p class="services__headline-upper upper-text">Usługi</p>
+          <h1 class="services__headline-main main-text">
+            Różnorodność naszych usług
+          </h1>
+        </div>
+        <ul data-aos="fade-up" class="services__list">
+          <!-- Masaż leczniczy -->
+          <li class="services__list-item glass-card">
+            <div class="services__list-item-headline card-headline">
+              <h3 class="services__list-item-heading card-heading">
+                Masaż leczniczy
+              </h3>
+              <img
+                class="services__list-item-icon"
+                src="./assets/icons/massage.png"
+                alt="Massage icon"
+              />
+            </div>
+            <div class="short-text active-service">
+              Masaż leczniczy - terapeutyczny rodzaj masażu klasycznego...
+            </div>
+            <div class="full-text">
+              Masaż leczniczy - terapeutyczny rodzaj masażu klasycznego, który
+              wyróżnia się głębszymi i bardziej szczegółowymi technikami
+              oddziaływania na bolesny obszar ciała. W zależności od diagnozy
+              techniki oraz intensywność masażu leczniczego może się różnić.
+              Może być np. ściśle strefowy (masaż nóg lub karku) lub ogólny,
+              obejmujący kilka obszarów (np. masaż całych pleców). Jednocześnie
+              należy wziąć pod uwagę: nawet jeśli dwóm pacjentom przepisano
+              masaż tego samego obszaru, technika jego wykonania może się różnić
+              w zależności od diagnozy i zaleceń fizjoterapeuty.
+            </div>
+            <button class="read-more-btn">Czytaj więcej</button>
+          </li>
 
-			<section class="services container">
-				<div class="services__headline headline">
-					<p class="services__headline-upper upper-text">Usługi</p>
-					<h1 class="services__headline-main main-text">
-						Różnorodność naszych usług
-					</h1>
-				</div>
-				<ul data-aos="fade-up" class="services__list">
-					<!-- Masaż leczniczy -->
-					<li class="services__list-item glass-card">
-						<div class="services__list-item-headline card-headline">
-							<h3 class="services__list-item-heading card-heading">
-								Masaż leczniczy
-							</h3>
-							<img
-								class="services__list-item-icon"
-								src="./assets/icons/massage.png"
-								alt="Massage icon"
-							/>
-						</div>
-							<div class="short-text active-service">Masaż leczniczy - terapeutyczny rodzaj masażu klasycznego...</div>
-							<div class="full-text">Masaż leczniczy - terapeutyczny rodzaj masażu klasycznego, który wyróżnia się głębszymi i bardziej szczegółowymi technikami oddziaływania na bolesny obszar ciała. W zależności od diagnozy techniki oraz intensywność masażu leczniczego może się różnić. Może być np. ściśle strefowy (masaż nóg lub karku) lub ogólny, obejmujący kilka obszarów (np. masaż całych pleców). Jednocześnie należy wziąć pod uwagę: nawet jeśli dwóm pacjentom przepisano masaż tego samego obszaru, technika jego wykonania może się różnić w zależności od diagnozy i zaleceń fizjoterapeuty.</div>
-						<button class="read-more-btn">Czytaj więcej</button>
+          <!-- Terapia wad postawy -->
+          <li class="services__list-item glass-card">
+            <div class="services__list-item-headline card-headline">
+              <h3 class="services__list-item-heading card-heading">
+                Terapia wad postawy
+              </h3>
+              <img
+                class="services__list-item-icon"
+                src="./assets/icons/spine.png"
+                alt="Spine icon"
+              />
+            </div>
 
-					</li>
+            <div class="short-text active-service">
+              Terapia wad postawy - kompleksowy zabieg mający na celu korekcję
+              wad kręgosłupa...
+            </div>
+            <div class="full-text">
+              Terapia wad postawy - kompleksowy zabieg mający na celu korekcję
+              wad kręgosłupa, stawów obwodowych oraz wzmocnienie gorsetu
+              mięśniowego. W wyniku rozwoju układu kostno-mięśniowego w okresie
+              dojrzewania organizm dziecka z wysoką intesnywnością zaczyna się
+              zmieniać. Ten period oznacza przebudowę szkieletu, wydłużenie
+              mięśni, więzadeł i ścięgien. W wyniku złych nawyków dnia
+              codziennego rozkład napięcia mięśniowego zostaje zaburzony, czyli
+              niektóre mięśnie ulegają skróceniu, inne zaś rozciągnięciu. W
+              kolejnych fazach rozwoju narządu ruchu mogą powstawać takie
+              zaburzenia jak: skolioza, pogłębiona kifoza/lordoza, plecy
+              okrągłe, wklęsłe lub płaskie, asymetria łopatek i trójkątów talii.
+            </div>
 
-					<!-- Terapia wad postawy -->
-					<li class="services__list-item glass-card">
-						<div class="services__list-item-headline card-headline">
-							<h3 class="services__list-item-heading card-heading">
-								Terapia wad postawy
-							</h3>
-							<img
-								class="services__list-item-icon"
-								src="./assets/icons/spine.png"
-								alt="Spine icon"
-							/>
-						</div>
-						
-							<div class="short-text active-service"
-								>Terapia wad postawy - kompleksowy zabieg mający na celu
-								korekcję wad kręgosłupa...</div
-							>
-							<div class="full-text"
-								>Terapia wad postawy - kompleksowy zabieg mający na celu
-								korekcję wad kręgosłupa, stawów obwodowych oraz wzmocnienie
-								gorsetu mięśniowego. W wyniku rozwoju układu kostno-mięśniowego
-								w okresie dojrzewania organizm dziecka z wysoką intesnywnością
-								zaczyna się zmieniać. Ten period oznacza przebudowę szkieletu,
-								wydłużenie mięśni, więzadeł i ścięgien. W wyniku złych nawyków
-								dnia codziennego rozkład napięcia mięśniowego zostaje zaburzony,
-								czyli niektóre mięśnie ulegają skróceniu, inne zaś
-								rozciągnięciu. W kolejnych fazach rozwoju narządu ruchu mogą
-								powstawać takie zaburzenia jak: skolioza, pogłębiona
-								kifoza/lordoza, plecy okrągłe, wklęsłe lub płaskie, asymetria
-								łopatek i trójkątów talii.</div
-							>
-						
-						<button class="read-more-btn">Czytaj więcej</button>
-					</li>
+            <button class="read-more-btn">Czytaj więcej</button>
+          </li>
 
-					<!-- Terapia indywidualna -->
-					<li class="services__list-item glass-card">
-						<div class="services__list-item-headline card-headline">
-							<h3 class="services__list-item-heading card-heading">
-								Terapia indywidualna
-							</h3>
-							<img
-								class="services__list-item-icon"
-								src="./assets/icons/therapy.png"
-								alt="Therapy icon"
-							/>
-						</div>
-						
-							<div class="short-text active-service"
-								>Terapia indywidualna - kompleksowy zabieg
-								fizjoterapeutyczny...</div
-							>
-							<div class="full-text"
-								>Terapia indywidualna - kompleksowy zabieg fizjoterapeutyczny,
-								który umieszcza w sobie szereg różnych metod, między innymi
-								(terapia manualna, suche igłowanie, IASTM, bańki chińskie
-								próźniowe, pinoterapia, masaż tkanek głębokich, HVLA -
-								manipulacje krótkodźwigniowe, neuromobilizacja). Uważa się za
-								najbardziej skuteczny zabieg z racji wszechstronnego działania i
-								efektywnej redukcji okolicy objętej bólem.
-							</div>
-						
-						<button class="read-more-btn">Czytaj więcej</button>
-					</li>
+          <!-- Terapia indywidualna -->
+          <li class="services__list-item glass-card">
+            <div class="services__list-item-headline card-headline">
+              <h3 class="services__list-item-heading card-heading">
+                Terapia indywidualna
+              </h3>
+              <img
+                class="services__list-item-icon"
+                src="./assets/icons/therapy.png"
+                alt="Therapy icon"
+              />
+            </div>
 
-					<!-- Trening medyczny -->
-					<li class="services__list-item glass-card">
-						<div class="services__list-item-headline card-headline">
-							<h3 class="services__list-item-heading card-heading">
-								Trening medyczny
-							</h3>
-							<img
-								class="services__list-item-icon"
-								src="./assets/icons/med-ex.png"
-								alt="Massage icon"
-							/>
-						</div>
-						
-							<div class="short-text active-service"
-								>Trening medyczny - to jeden z najważniejszych elementów
-								współczesnego leczenia kompleksowego...</div
-							>
-							<div class="full-text"
-								>Trening medyczny - to jeden z najważniejszych elementów
-								współczesnego leczenia kompleksowego - metoda indywidualnego
-								treningu fizycznego pacjentów. Odzwierciedla specyfikę
-								konkretnych schorzeń i pozwala prawidłowo ułożyć program
-								treningowy oraz dobrać odpowiednie obciążenie fizyczne.
-								Umożliwia to pracę z osobami z chorobami serca (np. po zawale
-								serca), chorobami ortopedycznymi (bóle pleców, skoliozy,
-								rekonwalescencja po złamaniach, zwichnięciach, naderwania
-								więzadeł krzyżowych), zaburzeniami przemiany materii (otyłość) i
-								innymi. Jest pomostem pomiędzy wychowaniem fizycznym a
-								fizjoterapią.
-							</div>
-						
-						<button class="read-more-btn">Czytaj więcej</button>
-					</li>
+            <div class="short-text active-service">
+              Terapia indywidualna - kompleksowy zabieg fizjoterapeutyczny...
+            </div>
+            <div class="full-text">
+              Terapia indywidualna - kompleksowy zabieg fizjoterapeutyczny,
+              który umieszcza w sobie szereg różnych metod, między innymi
+              (terapia manualna, suche igłowanie, IASTM, bańki chińskie
+              próźniowe, pinoterapia, masaż tkanek głębokich, HVLA - manipulacje
+              krótkodźwigniowe, neuromobilizacja). Uważa się za najbardziej
+              skuteczny zabieg z racji wszechstronnego działania i efektywnej
+              redukcji okolicy objętej bólem.
+            </div>
 
-					<!-- Kinesiotaping -->
-					<li class="services__list-item glass-card">
-						<div class="services__list-item-headline card-headline">
-							<h3 class="services__list-item-heading card-heading">
-								Kinesiotaping
-							</h3>
-							<img
-								class="services__list-item-icon"
-								src="./assets/icons/kinesio.png"
-								alt="Massage icon"
-							/>
-						</div>
-						
-							<div class="short-text active-service"
-								>Kinesiotaping - to nowoczesna metoda profilaktyki i leczenia
-								chorób układu mięśniowo-szkieletowego. Polega na nałożeniu na
-								skórę...</div
-							>
-							<div class="full-text"
-								>Kinesiotaping - to nowoczesna metoda profilaktyki i leczenia
-								chorób układu mięśniowo-szkieletowego. Polega na nałożeniu na
-								skórę specjalnych elastycznych taśm w obszarze rozwoju procesu
-								patologicznego i lokalizacji bólu. Kinesio taśmy zmniejszają
-								hipertoniczność mięśni, poprawiają mikrokrążenie krwi i płynów
-								limfatycznych, a w efekcie zmniejszają ból i stany zapalne.
-								Taśmy kinesio przyczyniają się także do poprawy ruchomości
-								kręgosłupa i stawów oraz zmniejszają ryzyko kontuzji podczas
-								wysiłku fizycznego.
-							</div>
-						
-						<button class="read-more-btn">Czytaj więcej</button>
-					</li>
+            <button class="read-more-btn">Czytaj więcej</button>
+          </li>
 
-					<!-- TR – THERAPY -->
-					<li class="services__list-item glass-card">
-						<div class="services__list-item-headline card-headline">
-							<h3 class="services__list-item-heading card-heading">
-								TR - THERAPY
-							</h3>
-							<img
-								class="services__list-item-icon"
-								src="./assets/icons/tr.png"
-								alt="tr icon"
-							/>
-						</div>
-						
-							<div class="short-text active-service"
-								>TR – THERAPY to terapia radiofalowa ukierunkowana, która
-								przenosi fale elektromagnetyczną o...</div
-							>
-							<div class="full-text"
-								>TR – THERAPY to terapia radiofalowa ukierunkowana, która
-								przenosi fale elektromagnetyczną o częstotliwości radiowej przez
-								tkanki jednocześnie wywołując ich przegrzanie. Specjalna głowica
-								pozwala szybko zredukować dolegliwości bólowe, zmniejszyć obrzęk
-								oraz przyspieszyć regenerację uszkodzonych tkanek, co pozwala w
-								krótkim czasie powrócić do treningów po przebytym urazie lub
-								kontuzji. Przed podjęciem leczenia z użyciem fali radiowej
-								niezbędna jest konsultacja z fizjoterapeutą oraz wykluczenie
-								przeciwwskazań takich jak: choroba nowotworowa, ciąża,
-								rozrusznik serca, zaburzenia krzepliwości krwi, zmiany skórne
-								oraz implanty w obszarze zabiegowym.
-							</div>
-						
-						<button class="read-more-btn">Czytaj więcej</button>
-					</li>
-				</ul>
+          <!-- Trening medyczny -->
+          <li class="services__list-item glass-card">
+            <div class="services__list-item-headline card-headline">
+              <h3 class="services__list-item-heading card-heading">
+                Trening medyczny
+              </h3>
+              <img
+                class="services__list-item-icon"
+                src="./assets/icons/med-ex.png"
+                alt="Massage icon"
+              />
+            </div>
 
-				<a class="main__button" href="#contactForm">zarezerwuj termin</a>
-			</section>
+            <div class="short-text active-service">
+              Trening medyczny - to jeden z najważniejszych elementów
+              współczesnego leczenia kompleksowego...
+            </div>
+            <div class="full-text">
+              Trening medyczny - to jeden z najważniejszych elementów
+              współczesnego leczenia kompleksowego - metoda indywidualnego
+              treningu fizycznego pacjentów. Odzwierciedla specyfikę konkretnych
+              schorzeń i pozwala prawidłowo ułożyć program treningowy oraz
+              dobrać odpowiednie obciążenie fizyczne. Umożliwia to pracę z
+              osobami z chorobami serca (np. po zawale serca), chorobami
+              ortopedycznymi (bóle pleców, skoliozy, rekonwalescencja po
+              złamaniach, zwichnięciach, naderwania więzadeł krzyżowych),
+              zaburzeniami przemiany materii (otyłość) i innymi. Jest pomostem
+              pomiędzy wychowaniem fizycznym a fizjoterapią.
+            </div>
 
-			<section class="roadmap container">
-				<div class="roadmap__headline headline">
-					<p class="roadmap__headline-upper upper-text">
-						Sekwencja do zarejestrowania
-					</p>
-					<h2 class="roadmap__headline-main main-text">
-						Jak wygląda pierwsza wizyta u fizjoterapeuty?
-					</h2>
-				</div>
+            <button class="read-more-btn">Czytaj więcej</button>
+          </li>
 
-				<div  class="roadmap__block">
-					<div data-aos="fade-up" class="roadmap__block-row glass-card">
-						<div class="roadmap__block-text">
-							<div class="roadmap__block-text-headline card-headline">
-								<h3 class="roadmap__block-text-heading card-heading">
-									Zapisz się przez wniosek rejestracyjny
-								</h3>
-							</div>
-							<p class="roadmap__block-text-desc description">
-								Wprowadź swoje dane osobowe (m.in. imię i nazwisko, numer kontaktowy oraz pocztę albo Instagram). Administrator jak najszybciej skontaktuje się z Tobą dla ustalenia odpowiedniego terminu twojej wizyty. Pamiętaj, aby przed wysłaniem sprawdzać szczegółowo dane osobowe!
-							</p>
-						</div>
+          <!-- Kinesiotaping -->
+          <li class="services__list-item glass-card">
+            <div class="services__list-item-headline card-headline">
+              <h3 class="services__list-item-heading card-heading">
+                Kinesiotaping
+              </h3>
+              <img
+                class="services__list-item-icon"
+                src="./assets/icons/kinesio.png"
+                alt="Massage icon"
+              />
+            </div>
 
-						<div class="roadmap__block-step">
-							<p class="roadmap__block-step-desc">1</p>
-						</div>
+            <div class="short-text active-service">
+              Kinesiotaping - to nowoczesna metoda profilaktyki i leczenia
+              chorób układu mięśniowo-szkieletowego. Polega na nałożeniu na
+              skórę...
+            </div>
+            <div class="full-text">
+              Kinesiotaping - to nowoczesna metoda profilaktyki i leczenia
+              chorób układu mięśniowo-szkieletowego. Polega na nałożeniu na
+              skórę specjalnych elastycznych taśm w obszarze rozwoju procesu
+              patologicznego i lokalizacji bólu. Kinesio taśmy zmniejszają
+              hipertoniczność mięśni, poprawiają mikrokrążenie krwi i płynów
+              limfatycznych, a w efekcie zmniejszają ból i stany zapalne. Taśmy
+              kinesio przyczyniają się także do poprawy ruchomości kręgosłupa i
+              stawów oraz zmniejszają ryzyko kontuzji podczas wysiłku
+              fizycznego.
+            </div>
 
-						<div class="roadmap__block-images">
-							<img
-								src="./assets/img/roadmap_1.jpeg"
-								alt="Submit image"
-								class="roadmap__block-images-image"
-							/>
-						</div>
-					</div>
+            <button class="read-more-btn">Czytaj więcej</button>
+          </li>
 
-					<div data-aos="fade-up" class="roadmap__block-row glass-card">
-						<div class="roadmap__block-text">
-							<div class="roadmap__block-text-headline card-headline">
-								<h3 class="roadmap__block-text-heading card-heading">
-									Konsultacja
-								</h3>
-							</div>
-							<p class="roadmap__block-text-desc description">
-								Konsultacja jest najważniejszą częścią całego procesu leczenia,
-								która obejmuje badanie podmiotowe oraz badanie funkcjonalne w
-								celu oceny i analizy istniejącej dolegliwości
-							</p>
-						</div>
+          <!-- TR – THERAPY -->
+          <li class="services__list-item glass-card">
+            <div class="services__list-item-headline card-headline">
+              <h3 class="services__list-item-heading card-heading">
+                TR - THERAPY
+              </h3>
+              <img
+                class="services__list-item-icon"
+                src="./assets/icons/tr.png"
+                alt="tr icon"
+              />
+            </div>
 
-						<div class="roadmap__block-step">
-							<p class="roadmap__block-step-desc">2</p>
-						</div>
+            <div class="short-text active-service">
+              TR – THERAPY to terapia radiofalowa ukierunkowana, która przenosi
+              fale elektromagnetyczną o...
+            </div>
+            <div class="full-text">
+              TR – THERAPY to terapia radiofalowa ukierunkowana, która przenosi
+              fale elektromagnetyczną o częstotliwości radiowej przez tkanki
+              jednocześnie wywołując ich przegrzanie. Specjalna głowica pozwala
+              szybko zredukować dolegliwości bólowe, zmniejszyć obrzęk oraz
+              przyspieszyć regenerację uszkodzonych tkanek, co pozwala w krótkim
+              czasie powrócić do treningów po przebytym urazie lub kontuzji.
+              Przed podjęciem leczenia z użyciem fali radiowej niezbędna jest
+              konsultacja z fizjoterapeutą oraz wykluczenie przeciwwskazań
+              takich jak: choroba nowotworowa, ciąża, rozrusznik serca,
+              zaburzenia krzepliwości krwi, zmiany skórne oraz implanty w
+              obszarze zabiegowym.
+            </div>
 
-						<div class="roadmap__block-images">
-							<img
-								src="./assets/img/roadmap_2.jpeg"
-								alt="Calendar image"
-								class="roadmap__block-images-image"
-							/>
-						</div>
-					</div>
+            <button class="read-more-btn">Czytaj więcej</button>
+          </li>
+        </ul>
 
-					<div data-aos="fade-up" class="roadmap__block-row glass-card">
-						<div class="roadmap__block-text">
-							<div class="roadmap__block-text-headline card-headline">
-								<h3 class="roadmap__block-text-heading card-heading">
-									Terapia kompleksowa
-								</h3>
-							</div>
-							<p class="roadmap__block-text-desc description">
-								Obejmuje indywidualne podejście do pacjenta z wykorzystywaniem
-								różnorodnych metod fizjoterapeutycznych, które sprzyjają
-								szybszemu gojeniu i lepszej poprawie samopoczucia pod okiem
-								doświadczonego fizjoterapeuty
-							</p>
-						</div>
+        <a class="main__button" href="#contactForm">zarezerwuj termin</a>
+      </section>
 
-						<div class="roadmap__block-step">
-							<p class="roadmap__block-step-desc">3</p>
-						</div>
+      <section class="roadmap container">
+        <div class="roadmap__headline headline">
+          <p class="roadmap__headline-upper upper-text">
+            Sekwencja do zarejestrowania
+          </p>
+          <h2 class="roadmap__headline-main main-text">
+            Jak wygląda pierwsza wizyta u fizjoterapeuty?
+          </h2>
+        </div>
 
-						<div class="roadmap__block-images">
-							<img
-								src="./assets/img/roadmap_3.jpeg"
-								alt="Calendar image"
-								class="roadmap__block-images-image"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
+        <div class="roadmap__block">
+          <div data-aos="fade-up" class="roadmap__block-row glass-card">
+            <div class="roadmap__block-text">
+              <div class="roadmap__block-text-headline card-headline">
+                <h3 class="roadmap__block-text-heading card-heading">
+                  Zapisz się przez wniosek rejestracyjny
+                </h3>
+              </div>
+              <p class="roadmap__block-text-desc description">
+                Wprowadź swoje dane osobowe (m.in. imię i nazwisko, numer
+                kontaktowy oraz pocztę albo Instagram). Administrator jak
+                najszybciej skontaktuje się z Tobą dla ustalenia odpowiedniego
+                terminu twojej wizyty. Pamiętaj, aby przed wysłaniem sprawdzać
+                szczegółowo dane osobowe!
+              </p>
+            </div>
 
-			<section class="testimonials container">
-                <div class="testimonials__headline headline">
-                    <p class="testimonials__upper upper-text">Opinie</p>
-                    <h1 class="testimonials__main main-text">
-                        Opinie i efekty pacjentów po naszych zabiegach
-                    </h1>
-                    <p class="description">
-                        Dziękujemy za wszystkie opinie na temat naszej pracy — są one dla nas ogromną motywacją do dalszego rozwoju i doskonalenia efektów terapeutycznych.
-                    </p>
-                </div>
-				<div class="slider-container">
-					<button class="about__modal-btn slider-btn--prev" aria-label="Poprzedni">&#10094;</button>
-					<div class="slider">
-						<div class="slider-track">
-							<div data-aos="fade-up" class="card">
-								<video height="440" width="240" poster="./assets/img/video-preview1.jpeg" controls>
-									<source src="/assets/videos/review_1.MP4" type="video/mp4" />
-									Your browser does not support the video tag.
-								</video>
-							</div>
-							<div data-aos="fade-up" class="card">
-								<video height="440" width="240" poster="./assets/img/video-preview2.jpeg" controls>
-									<source src="/assets/videos/review_2.mp4" type="video/mp4" />
-									Your browser does not support the video tag.
-								</video>
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review10.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review11.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review12.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review13.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review14.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review15.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review16.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review17.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review18.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review19.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review20.png" alt="Procedure review" />
-							</div>
-							<div data-aos="fade-up" class="card">
-								<img src="./assets/img/review21.PNG" alt="Procedure review" />
-							</div>
-						</div>
-					</div>
-					<button class="about__modal-btn slider-btn--next" aria-label="Następny">&#10095;</button>
-				</div>	
-            </section>
+            <div class="roadmap__block-step">
+              <p class="roadmap__block-step-desc">1</p>
+            </div>
 
-			<section class="contact__info container" id="contactForm">
-				<div data-aos="fade-right" class="contact__info-container">
-					<p class="contact__info-upper upper-text">informacje kontaktowe</p>
-					<h2 class="main-text">Chcesz się umówić?</h2>
-					<form
-						action="https://api.web3forms.com/submit"
-						method="POST"
-						class="contact__info-form"
-					>
-						<input
-							type="hidden"
-							name="access_key"
-							value="e5d2cdbc-ad9e-4e1e-9ca7-8b861ea7ed98"
-						/>
-						<input
-							type="hidden"
-							name="apikey"
-							value="e5d2cdbc-ad9e-4e1e-9ca7-8b861ea7ed98"
-						/>
-						<label class="contact__info-form-label">
-							Imię
-							<input type="text" name="name" placeholder="Adam*" required />
-						</label>
-						<label class="contact__info-form-label">
-							Nazwisko
-							<input
-								type="text"
-								name="surname"
-								placeholder="Kowalski*"
-								required
-							/>
-						</label>
-						<label class="contact__info-form-label">
-							Email
-							<input
-								type="email"
-								name="email"
-								placeholder="physioteca.centrum@gmail.com"
-								required
-							/>
-						</label>
-						<label class="contact__info-form-label">
-							Numer telefonu
-							<input
-								type="tel"
-								name="phone"
-								placeholder="+48-123-456-789*"
-								required
-							/>
-						</label>
-						<label class="contact__info-form-label">
-							Nazwa profilu Instagram
-							<input
-								type="text"
-								name="instagram"
-								placeholder="physioteca_centrum"
-							/>
-						</label>
-						<label class="contact__info-form-label">
-							Zostaw interesujące pytanie
-							<input
-								type="text"
-								name="question"
-								placeholder="Czy w najbliższym tygodniu można się umówić?"
-							/>
-						</label>
-						<input
-							type="hidden"
-							name="redirect"
-							value="https://chubenkofizjo.com/thank_you.html"
-						/>
-						<input type="checkbox" name="botcheck" style="display: none" />
-						<button type="submit" class="main__button">Prześlij</button>
-					</form>
-				</div>
-				<img
-					class="contact__info-img"
-					src="./assets/img/contact-info2.jpg"
-					alt="chiropractor"
-				/>
-			</section>
-		</main>
+            <div class="roadmap__block-images">
+              <img
+                src="./assets/img/roadmap_1.jpeg"
+                alt="Submit image"
+                class="roadmap__block-images-image"
+              />
+            </div>
+          </div>
 
-		<footer class="footer container">
-			<ul class="footer__list">
-				<li class="footer__list-item">
-					<a href="./about.html">Zespół</a>
-				</li>
+          <div data-aos="fade-up" class="roadmap__block-row glass-card">
+            <div class="roadmap__block-text">
+              <div class="roadmap__block-text-headline card-headline">
+                <h3 class="roadmap__block-text-heading card-heading">
+                  Konsultacja
+                </h3>
+              </div>
+              <p class="roadmap__block-text-desc description">
+                Konsultacja jest najważniejszą częścią całego procesu leczenia,
+                która obejmuje badanie podmiotowe oraz badanie funkcjonalne w
+                celu oceny i analizy istniejącej dolegliwości
+              </p>
+            </div>
 
-				<li class="footer__list-item">
-					<a href="./pricing.html">Ceny</a>
-				</li>
+            <div class="roadmap__block-step">
+              <p class="roadmap__block-step-desc">2</p>
+            </div>
 
-			</ul>
-			<a href="./index.html">
-				<img class="logo" src="./assets/icons/logo-footer.svg" alt="Spine Logotype" />
-			</a>
-			<ul class="footer__list">
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/maps.png"
-						alt="maps icon"
-					/>
-					<a href="https://maps.app.goo.gl/KzRTiMDtkX5eBoQL6?g_st=com.google.maps.preview.copy">
-						ul. Baśniowa 3/1, 02-349, Warszawa-Ochota
-					</a>
-				</li>
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/email.png"
-						alt="email icon"
-					/>
-					<a href="mailto:physioteca.centrum@gmail.com">physioteca.centrum@gmail.com</a>
-				</li>
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/insta.png"
-						alt="instagram icon"
-					/>
-					<a href="https://www.instagram.com/physioteca_centrum">Instagram</a>
-				</li>
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/tiktok.png"
-						alt="tiktok icon"
-					/>
-					<a href="https://www.tiktok.com/@chubenko.rehab">Tiktok</a>
-				</li>
-			</ul>
-		</footer>
+            <div class="roadmap__block-images">
+              <img
+                src="./assets/img/roadmap_2.jpeg"
+                alt="Calendar image"
+                class="roadmap__block-images-image"
+              />
+            </div>
+          </div>
 
-		<script defer src="script.js"></script>
-		<script src="https://web3forms.com/client/script.js" async defer></script>
-		<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-		<script>
-		AOS.init({
-			duration: 1000, // animation duration
-			once: true      // only animate once
-		});
-		</script>
+          <div data-aos="fade-up" class="roadmap__block-row glass-card">
+            <div class="roadmap__block-text">
+              <div class="roadmap__block-text-headline card-headline">
+                <h3 class="roadmap__block-text-heading card-heading">
+                  Terapia kompleksowa
+                </h3>
+              </div>
+              <p class="roadmap__block-text-desc description">
+                Obejmuje indywidualne podejście do pacjenta z wykorzystywaniem
+                różnorodnych metod fizjoterapeutycznych, które sprzyjają
+                szybszemu gojeniu i lepszej poprawie samopoczucia pod okiem
+                doświadczonego fizjoterapeuty
+              </p>
+            </div>
 
-	</body>
+            <div class="roadmap__block-step">
+              <p class="roadmap__block-step-desc">3</p>
+            </div>
+
+            <div class="roadmap__block-images">
+              <img
+                src="./assets/img/roadmap_3.jpeg"
+                alt="Calendar image"
+                class="roadmap__block-images-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials container">
+        <div class="testimonials__headline headline">
+          <p class="testimonials__upper upper-text">Opinie</p>
+          <h1 class="testimonials__main main-text">
+            Opinie i efekty pacjentów po naszych zabiegach
+          </h1>
+          <p class="description">
+            Dziękujemy za wszystkie opinie na temat naszej pracy — są one dla
+            nas ogromną motywacją do dalszego rozwoju i doskonalenia efektów
+            terapeutycznych.
+          </p>
+        </div>
+        <div class="slider-container">
+          <button
+            class="about__modal-btn slider-btn--prev"
+            aria-label="Poprzedni"
+          >
+            &#10094;
+          </button>
+          <div class="slider">
+            <div class="slider-track">
+              <div data-aos="fade-up" class="card">
+                <video
+                  height="440"
+                  width="240"
+                  poster="./assets/img/video-preview1.jpeg"
+                  controls
+                >
+                  <source src="/assets/videos/review_1.MP4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div data-aos="fade-up" class="card">
+                <video
+                  height="440"
+                  width="240"
+                  poster="./assets/img/video-preview2.jpeg"
+                  controls
+                >
+                  <source src="/assets/videos/review_2.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review10.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review11.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review12.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review13.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review14.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review15.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review16.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review17.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review18.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review19.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review20.png" alt="Procedure review" />
+              </div>
+              <div data-aos="fade-up" class="card">
+                <img src="./assets/img/review21.PNG" alt="Procedure review" />
+              </div>
+            </div>
+          </div>
+          <button
+            class="about__modal-btn slider-btn--next"
+            aria-label="Następny"
+          >
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <section class="contact__info container" id="contactForm">
+        <div data-aos="fade-right" class="contact__info-container">
+          <p class="contact__info-upper upper-text">informacje kontaktowe</p>
+          <h2 class="main-text">Chcesz się umówić?</h2>
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact__info-form"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="e5d2cdbc-ad9e-4e1e-9ca7-8b861ea7ed98"
+            />
+            <input
+              type="hidden"
+              name="apikey"
+              value="e5d2cdbc-ad9e-4e1e-9ca7-8b861ea7ed98"
+            />
+            <label class="contact__info-form-label">
+              Imię
+              <input type="text" name="name" placeholder="Adam*" required />
+            </label>
+            <label class="contact__info-form-label">
+              Nazwisko
+              <input
+                type="text"
+                name="surname"
+                placeholder="Kowalski*"
+                required
+              />
+            </label>
+            <label class="contact__info-form-label">
+              Email
+              <input
+                type="email"
+                name="email"
+                placeholder="physioteca.centrum@gmail.com"
+                required
+              />
+            </label>
+            <label class="contact__info-form-label">
+              Numer telefonu
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+48-123-456-789*"
+                required
+              />
+            </label>
+            <label class="contact__info-form-label">
+              Nazwa profilu Instagram
+              <input
+                type="text"
+                name="instagram"
+                placeholder="physioteca_centrum"
+              />
+            </label>
+            <label class="contact__info-form-label">
+              Zostaw interesujące pytanie
+              <input
+                type="text"
+                name="question"
+                placeholder="Czy w najbliższym tygodniu można się umówić?"
+              />
+            </label>
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://chubenkofizjo.com/thank_you.html"
+            />
+            <input type="checkbox" name="botcheck" style="display: none" />
+            <button type="submit" class="main__button">Prześlij</button>
+          </form>
+        </div>
+
+        <img
+          class="contact__info-img"
+          src="./assets/img/contact-info2.jpg"
+          alt="chiropractor"
+        />
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="./about.html">Zespół</a>
+        </li>
+
+        <li class="footer__list-item">
+          <a href="./pricing.html">Ceny</a>
+        </li>
+      </ul>
+      <a href="./index.html">
+        <img
+          class="logo"
+          src="./assets/icons/logo-footer.svg"
+          alt="Spine Logotype"
+        />
+      </a>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <img
+            class="footer__list-logo"
+            src="./assets/icons/maps.png"
+            alt="maps icon"
+          />
+          <a
+            href="https://maps.app.goo.gl/KzRTiMDtkX5eBoQL6?g_st=com.google.maps.preview.copy"
+          >
+            ul. Baśniowa 3/1, 02-349, Warszawa-Ochota
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <img
+            class="footer__list-logo"
+            src="./assets/icons/email.png"
+            alt="email icon"
+          />
+          <a href="mailto:physioteca.centrum@gmail.com"
+            >physioteca.centrum@gmail.com</a
+          >
+        </li>
+
+        <li class="footer__list-item">
+          <img
+            class="footer__list-logo"
+            src="./assets/icons/phone.png"
+            alt="phone icon"
+          />
+          <a href="tel:+48730313213">+48 730 313 213</a>
+        </li>
+        <li class="footer__list-item">
+          <img
+            class="footer__list-logo"
+            src="./assets/icons/insta.png"
+            alt="instagram icon"
+          />
+          <a href="https://www.instagram.com/physioteca_centrum">Instagram</a>
+        </li>
+      </ul>
+    </footer>
+
+    <script defer src="script.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration
+        once: true, // only animate once
+      });
+    </script>
+  </body>
 </html>
