@@ -359,17 +359,19 @@ document.getElementById("aboutModal").addEventListener("click", function (e) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const languageSelect = document.getElementById("languageSelect");
-  const backButton = document.querySelector(".main__button");
+  const backButton = document.querySelector(".thank_you_main__button");
 
   function updateContent(lang) {
-    if (document.querySelector(".headline h1")) {
+    if (document.querySelector(".thank_you_headline h1")) {
       const thankYouText = lang === "pl" ? "Dziękuję" : "Дякуємо";
       const contactSoonText =
         lang === "pl"
           ? "Wkrótce skontaktujemy się z Tobą 😃"
           : "Незабаром ми зв'яжемося з вами 😃";
-      document.querySelector(".headline h1").textContent = thankYouText;
-      document.querySelector(".headline p").textContent = contactSoonText;
+      document.querySelector(".thank_you_headline h1").textContent =
+        thankYouText;
+      document.querySelector(".thank_you_headline p").textContent =
+        contactSoonText;
     }
     const backButtonText =
       lang === "pl"
