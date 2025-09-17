@@ -1,832 +1,1160 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Ceny</title>
-		<link rel="stylesheet" href="sass/style.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="icon" sizes="192x192" href="/assets/icons/favicon-16x16.png" />
-		<link rel="icon" sizes="256x256" href="/assets/icons/favicon-32x32.png" />
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="/assets/icons/apple-touch-icon.png"
-		/>
-	</head>
-	<body>
-		<header class="header glass-card">
-			<a href="./index.html">
-				<img class="logo" src="./assets/icons/logo.svg" alt="Spine Logotype" />
-			</a>
-			<nav>
-				<ul class="header__list" id="myHeaderList">
-					<li class="header__list-item">
-						<a href="./about.html">Zespół</a>
-					</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ceny</title>
+    <link rel="stylesheet" href="sass/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" sizes="192x192" href="/assets/icons/favicon-16x16.png" />
+    <link rel="icon" sizes="256x256" href="/assets/icons/favicon-32x32.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/apple-touch-icon.png"
+    />
+  </head>
+  <body>
+    <header class="header glass-card">
+      <a href="./index.html">
+        <img class="logo" src="./assets/icons/logo.svg" alt="Spine Logotype" />
+      </a>
+      <nav>
+        <ul class="header__list" id="myHeaderList">
+          <li class="header__list-item">
+            <a href="./about.html">Zespół</a>
+          </li>
 
-					<li class="header__list-item">
-						<a href="./pricing.html">Ceny</a>
-					</li>
+          <li class="header__list-item">
+            <a href="./pricing.html">Ceny</a>
+          </li>
 
-					<select id="languageSelect">
-						<option value="pl">🇵🇱</option>
-						<option value="ua">🇺🇦</option>
-					</select>
-					<li class="header__list-menu burger">
-						<img src="./assets/icons/burger.png" alt="menu button" />
-					</li>
-				</ul>
+          <select id="languageSelect">
+            <option value="pl">🇵🇱</option>
+            <option value="ua">🇺🇦</option>
+          </select>
+          <li class="header__list-menu burger">
+            <img src="./assets/icons/burger.png" alt="menu button" />
+          </li>
+        </ul>
 
-				<ul class="dropdown-menu">
-					<li class="header__list-item">
-						<a href="./about.html">Zespół</a>
-					</li>
+        <ul class="dropdown-menu">
+          <li class="header__list-item">
+            <a href="./about.html">Zespół</a>
+          </li>
 
-					<li class="header__list-item">
-						<a href="./pricing.html">Ceny</a>
-					</li>
+          <li class="header__list-item">
+            <a href="./pricing.html">Ceny</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-				</ul>
-			</nav>
-		</header>
+    <main>
+      <section class="pricing container">
+        <div class="pricing__headline headline">
+          <p class="pricing__upper upper-text">zaInwestuj w swoje zdrowie</p>
+          <h1 class="pricing__main main-text">Wybierz usługę</h1>
+          <div class="pricing__options glass-card">
+            <p class="description">Liczba zabiegów</p>
+            <div class="quantity-selection">
+              <button
+                class="quantity-btn active"
+                type="button"
+                data-quantity="1"
+              >
+                1
+              </button>
+              <button class="quantity-btn" type="button" data-quantity="5">
+                5
+              </button>
+              <button class="quantity-btn" type="button" data-quantity="10">
+                10
+              </button>
+            </div>
+            <div class="pricing__options-discount"></div>
+          </div>
+        </div>
 
-		<main>
-			<section class="pricing container">
-				<div class="pricing__headline headline">
-					<p class="pricing__upper upper-text">
-						zaInwestuj w swoje zdrowie
-					</p>
-					<h1 class="pricing__main main-text">Wybierz usługę</h1>
-					<div class="pricing__options glass-card">
-						<p class="description">Liczba zabiegów</p>
-						<div class="quantity-selection">
-							<button
-								class="quantity-btn active"
-								type="button"
-								data-quantity="1"
-							>
-								1
-							</button>
-							<button class="quantity-btn" type="button" data-quantity="5">
-								5
-							</button>
-							<button class="quantity-btn" type="button" data-quantity="10">
-								10
-							</button>
-						</div>
-						<div class="pricing__options-discount">
-							
-							
-						</div>
-					</div>
-				</div>
+        <div class="pricing__section">
+          <div>
+            <div class="pricing__section-headline">
+              <b class="description discount-desc hidden"></b>
+              <h2 class="card-heading line-text">Zabiegi u fizjoterapeuty</h2>
+            </div>
+            <div class="pricing__block">
+              <div class="pricing__block-card glass-card hide-on-multi">
+                <p class="pricing__block-card-upper upper-text">
+                  Konsultacja Fizjoterapeutyczna
+                </p>
+                <div>
+                  <b class="pricing__block-card-price main-text">200 zł</b>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Badanie podmiotowe
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Analiza badań medycznych (RTG, RM, USG)
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Pełna diagnostyka funkcjonalna
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Indywidualny plan leczenia uwzględniający potrzeby pacjenta
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Online wsparcie
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button main__button"
+                >
+                  Wybierz
+                </a>
+              </div>
+              <div class="pricing__block-card glass-card terapia-indywidualna">
+                <p class="pricing__block-card-upper upper-text">
+                  Terapia indywidualna
+                  <button
+                    class="duration-btn active"
+                    type="button"
+                    data-duration="30"
+                    data-price="180"
+                  >
+                    30 min
+                  </button>
+                  <button
+                    id="duration50"
+                    class="duration-btn"
+                    type="button"
+                    data-duration="50"
+                    data-price="240"
+                  >
+                    50 min
+                  </button>
+                </p>
+                <div>
+                  <p class="description old-price hidden">100 zl</p>
+                  <b
+                    id="priceTherapy"
+                    class="pricing__block-card-price main-text"
+                    >180 zł</b
+                  >
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Kinesiotaping
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Suche igłowanie
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Terapia mięśniowo-powięziowa
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    IASTM (Instrument Assisted Soft Tissue Mobilization)
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Działanie na dłuższą perspektywę
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Rehabilitacja po operacjach i kontuzjach
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button main__button"
+                >
+                  Wybierz
+                </a>
+              </div>
 
-				<div class="pricing__section">
-					<div>
-						<div class="pricing__section-headline">
-							<b class="description discount-desc hidden"></b>
-							<h2 class="card-heading line-text">Zabiegi u fizjoterapeuty</h2>
-						</div>
-						<div class="pricing__block">
-							<div class="pricing__block-card glass-card hide-on-multi">
-								<p class="pricing__block-card-upper upper-text">
-									Konsultacja Fizjoterapeutyczna
-								</p>
-								<div>
-									<b class="pricing__block-card-price main-text">200 zł</b>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Badanie podmiotowe
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Analiza badań medycznych (RTG, RM, USG)
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Pełna diagnostyka funkcjonalna
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Indywidualny plan leczenia uwzględniający potrzeby pacjenta
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Online wsparcie
-									</p>
-								</div>
-								<a
-									href="./index.html#contactForm"
-									class="pricing__block-card-button main__button"
-								>
-									Wybierz
-								</a>
-							</div>
-							<div class="pricing__block-card glass-card terapia-indywidualna">	
-								<p class="pricing__block-card-upper upper-text">
-									Terapia indywidualna
-									<button
-										class="duration-btn active"
-										type="button"
-										data-duration="30"
-										data-price="180"
-									>
-										30 min
-									</button>
-									<button
-										id="duration50"
-										class="duration-btn"
-										type="button"
-										data-duration="50"
-										data-price="240"
-									>
-										50 min
-									</button>
-								</p>
-								<div>
-									<p class="description old-price hidden">100 zl</p>
-									<b id="priceTherapy" class="pricing__block-card-price main-text"
-										>180 zł</b
-									>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Kinesiotaping
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Suche igłowanie
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Terapia mięśniowo-powięziowa
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										IASTM (Instrument Assisted Soft Tissue Mobilization)
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Działanie na dłuższą perspektywę
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Rehabilitacja po operacjach i kontuzjach
-									</p>
-								</div>
-								<a
-									href="./index.html#contactForm"
-									class="pricing__block-card-button main__button"
-								>
-									Wybierz
-								</a>
-							</div>
+              <div class="pricing__block-card glass-card">
+                <p class="pricing__block-card-upper upper-text">
+                  Masaż leczniczy
+                  <button
+                    class="duration-btn active"
+                    type="button"
+                    data-duration="40"
+                    data-price="190"
+                  >
+                    40 min
+                  </button>
+                </p>
+                <div>
+                  <p class="description old-price hidden">100 zl</p>
+                  <b class="pricing__block-card-price main-text">190 zł</b>
+                </div>
 
-							<div class="pricing__block-card glass-card">
-								<p class="pricing__block-card-upper upper-text">Masaż leczniczy
-									<button
-										class="duration-btn active"
-										type="button"
-										data-duration="40"
-										data-price="190"
-									>
-										40 min
-									</button>
-								</p>
-								<div>
-									<p class="description old-price hidden">100 zl</p>
-									<b class="pricing__block-card-price main-text">190 zł</b>
-								</div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Autorskie techniki masażu
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Poprawa ogólnego krążenia krwi
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Pobudzenie układu limfatycznego
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Poprawa stanu psychoemocjonalnego
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Zwiększenie elastyczności, ruchomości mięśni i stawów
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Szczegółowe opracowywanie bolesnych obszarów
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button main__button"
+                >
+                  Wybierz
+                </a>
+              </div>
+              <div class="pricing__block-card glass-card">
+                <p class="pricing__block-card-upper upper-text">
+                  Trening medyczny
+                  <button
+                    class="duration-btn active"
+                    type="button"
+                    data-duration="35"
+                    data-price="160"
+                  >
+                    35 min
+                  </button>
+                </p>
+                <div>
+                  <p class="description old-price hidden">100 zl</p>
+                  <b class="pricing__block-card-price main-text">160 zł</b>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Poprawa stanu fizycznego
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Nauka ćwiczeń samopomocy
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Zmniejszenie ryzyka powikłań
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Zwiększenie siły i elastyczności mięśni
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Przywrócenie funkcji organizmu
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button main__button"
+                >
+                  Wybierz
+                </a>
+              </div>
+              <div class="pricing__block-card glass-card hide-on-multi">
+                <p class="pricing__block-card-upper upper-text">TR - Terapia</p>
+                <div>
+                  <p class="description old-price hidden">100 zl</p>
+                  <b class="pricing__block-card-price main-text">120 zł</b>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Regeneracja tkanek miękkich
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Redukcja obrzęku
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Poprawa krążenia limfy
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Ulga w bólu
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Wspomaganie przy rehabilitacji pooperacyjnej
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Odnowa potreningowa
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button main__button"
+                >
+                  Wybierz
+                </a>
+              </div>
+              <div class="pricing__block-card glass-card hide-on-multi">
+                <p class="pricing__block-card-upper upper-text">
+                  Kinesiotaping
+                </p>
+                <b class="pricing__block-card-price main-text">60-100 zł</b>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Wspomaganie aparatu mięśniowo-stawowego
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Poprawa wyników funkcjonalnych
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Kompleksowa pomoc przy obrzękach limfatycznych i
+                    pooperacyjnych
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Redukcja napięcia i bólu
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button main__button"
+                >
+                  Wybierz
+                </a>
+              </div>
+              <div class="pricing__block-card glass-card terapia-indywidualna">
+                <p class="pricing__block-card-upper upper-text">
+                  Aparatowy drenaż limfatyczny
+                  <button
+                    class="duration-btn dur-btn active"
+                    type="button"
+                    data-duration="30"
+                    data-price="110"
+                  >
+                    30 min
+                  </button>
+                  <button
+                    class="duration-btn dur-btn"
+                    type="button"
+                    data-duration="50"
+                    data-price="140"
+                  >
+                    50 min
+                  </button>
+                </p>
+                <div>
+                  <p class="description old-price hidden">100 zl</p>
+                  <b
+                    class="pricing__block-card-price pricing__block-card-price main-text"
+                    >110 zł</b
+                  >
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Skuteczne zmniejszanie obrzęków limfatycznych
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Przyspieszenie regeneracji organizmu po wysiłku fizycznym
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Relaksacja i wsparcie układu odpornościowego
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/check-mark.png"
+                    alt="check-mark"
+                  />
+                  <p class="pricing__block-card-features-desc description">
+                    Zmniejszenie uczucia ciężkości i napięcia mięśni
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button main__button"
+                  >Wybierz</a
+                >
+              </div>
+            </div>
+          </div>
 
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Autorskie techniki masażu
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Poprawa ogólnego krążenia krwi
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Pobudzenie układu limfatycznego
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Poprawa stanu psychoemocjonalnego
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Zwiększenie elastyczności, ruchomości mięśni i stawów
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Szczegółowe opracowywanie bolesnych obszarów
-									</p>
-								</div>
-								<a
-									href="./index.html#contactForm"
-									class="pricing__block-card-button main__button"
-								>
-									Wybierz
-								</a>
-							</div>
-							<div class="pricing__block-card glass-card">
-								<p class="pricing__block-card-upper upper-text">Trening medyczny
-									<button
-										class="duration-btn active"
-										type="button"
-										data-duration="35"
-										data-price="160"
-									>
-										35 min
-									</button>
-								</p>
-								<div>
-									<p class="description old-price hidden">100 zl</p>
-									<b class="pricing__block-card-price main-text">160 zł</b>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Poprawa stanu fizycznego
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Nauka ćwiczeń samopomocy
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Zmniejszenie ryzyka powikłań
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Zwiększenie siły i elastyczności mięśni
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Przywrócenie funkcji organizmu
-									</p>
-								</div>
-								<a
-									href="./index.html#contactForm"
-									class="pricing__block-card-button main__button"
-								>
-									Wybierz
-								</a>
-							</div>
-							<div class="pricing__block-card glass-card hide-on-multi">
-								<p class="pricing__block-card-upper upper-text">TR - Terapia</p>
-								<div>
-									<p class="description old-price hidden">100 zl</p>
-									<b class="pricing__block-card-price main-text">120 zł</b>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Regeneracja tkanek miękkich
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Redukcja obrzęku
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Poprawa krążenia limfy
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Ulga w bólu
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Wspomaganie przy rehabilitacji pooperacyjnej
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Odnowa potreningowa
-									</p>
-								</div>
-								<a
-									href="./index.html#contactForm"
-									class="pricing__block-card-button main__button"
-								>
-									Wybierz
-								</a>
-							</div>
-							<div class="pricing__block-card glass-card hide-on-multi">
-								<p class="pricing__block-card-upper upper-text">Kinesiotaping</p>
-								<b class="pricing__block-card-price main-text">60-100 zł</b>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Wspomaganie aparatu mięśniowo-stawowego
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Poprawa wyników funkcjonalnych
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Kompleksowa pomoc przy obrzękach limfatycznych i pooperacyjnych
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/check-mark.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc description">
-										Redukcja napięcia i bólu
-									</p>
-								</div>
-								<a
-									href="./index.html#contactForm"
-									class="pricing__block-card-button main__button"
-								>
-									Wybierz
-								</a>
-							</div>
-							<div class="pricing__block-card glass-card terapia-indywidualna">
-								<p class="pricing__block-card-upper upper-text">
-									Aparatowy drenaż limfatyczny
-									<button class="duration-btn dur-btn active" type="button" data-duration="30" data-price="110">30 min</button>
-									<button class="duration-btn dur-btn" type="button" data-duration="50" data-price="140">50 min</button>
-								</p>
-								<div>
-									<p class="description old-price hidden">100 zl</p>
-									<b class="pricing__block-card-price pricing__block-card-price main-text">110 zł</b>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/check-mark.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc description">Skuteczne zmniejszanie obrzęków limfatycznych</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/check-mark.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc description">Przyspieszenie regeneracji organizmu po wysiłku fizycznym</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/check-mark.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc description">Relaksacja i wsparcie układu odpornościowego</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/check-mark.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc description">Zmniejszenie uczucia ciężkości i napięcia mięśni</p>
-								</div>
-								<a href="./index.html#contactForm" class="pricing__block-card-button main__button">Wybierz</a>
-							</div>
-						</div>
-					</div>
-					
-					<div>
-						<div class="pricing__section-headline">
-							<b class="description discount-desc-masaj hidden"></b>
-							<h2 class="card-heading line-text">Rodzaje masażu</h2>
-						</div>
-						<div class="pricing__block pricing__block-massage">
-							<div class="pricing__block-card glass-card terapia-indywidualna">
-								<p class="pricing__block-card-upper upper-text">
-									Masaż klasyczny
-									<button class="duration-btn dur-btn-maj active" type="button" data-duration="30" data-price="160">30 min</button>
-									<button class="duration-btn dur-btn-maj" type="button" data-duration="50" data-price="180">50 min</button>
-								</p>
-								<div>
-									<p class="description old-price hidden">100 zł</p>
-									<b id="priceTherapy" class="pricing__block-card-price pricing__block-card-price-masaj main-text">160 zł</b>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Wybór dla osób, które chcą utrzymać ciało w dobrej kondycji</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Redukcja napięcia mięśniowego</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Poprawa ogólnego samopoczucia</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Stymulacja krążenia krwi</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Delikatne wsparcie układu odpornościowego</p>
-								</div>
-								<a href="./index.html#contactForm" class="pricing__block-card-button-masaj main__button">Wybierz</a>
-							</div>
+          <div>
+            <div class="pricing__section-headline">
+              <b class="description discount-desc-masaj hidden"></b>
+              <h2 class="card-heading line-text">Rodzaje masażu</h2>
+            </div>
+            <div class="pricing__block pricing__block-massage">
+              <div class="pricing__block-card glass-card terapia-indywidualna">
+                <p class="pricing__block-card-upper upper-text">
+                  Masaż klasyczny
+                  <button
+                    class="duration-btn dur-btn-maj active"
+                    type="button"
+                    data-duration="30"
+                    data-price="160"
+                  >
+                    30 min
+                  </button>
+                  <button
+                    class="duration-btn dur-btn-maj"
+                    type="button"
+                    data-duration="50"
+                    data-price="180"
+                  >
+                    50 min
+                  </button>
+                </p>
+                <div>
+                  <p class="description old-price hidden">100 zł</p>
+                  <b
+                    id="priceTherapy"
+                    class="pricing__block-card-price pricing__block-card-price-masaj main-text"
+                    >160 zł</b
+                  >
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Wybór dla osób, które chcą utrzymać ciało w dobrej kondycji
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Redukcja napięcia mięśniowego
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Poprawa ogólnego samopoczucia
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Stymulacja krążenia krwi
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Delikatne wsparcie układu odpornościowego
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button-masaj main__button"
+                  >Wybierz</a
+                >
+              </div>
 
-							<div class="pricing__block-card glass-card terapia-indywidualna">
-								<p class="pricing__block-card-upper upper-text">
-									Masaż leczniczy
-									<button class="duration-btn dur-btn-maj active" type="button" data-duration="30" data-price="160">30 min</button>
-									<button class="duration-btn dur-btn-maj" type="button" data-duration="50" data-price="190">50 min</button>
-									<button class="duration-btn dur-btn-maj" type="button" data-duration="90" data-price="230">90 min</button>
-								</p>
-								<div>
-									<p class="description old-price hidden">100 zł</p>
-									<b id="priceTherapy" class="pricing__block-card-price pricing__block-card-price-masaj main-text">150 zł</b>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/green-check.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc-masaj description">
-										Poprawa ogólnego krążenia krwi
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/green-check.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc-masaj description">
-										Pobudzenie układu limfatycznego
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/green-check.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc-masaj description">
-										Poprawa stanu psychoemocjonalnego
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/green-check.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc-masaj description">
-										Zwiększenie elastyczności, ruchomości mięśni i stawów
-									</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img
-										class="pricing__block-card-features-icon"
-										src="./assets/icons/green-check.png"
-										alt="check-mark"
-									/>
-									<p class="pricing__block-card-features-desc-masaj description">
-										Szczegółowe opracowywanie bolesnych obszarów
-									</p>
-								</div>
-								<a
-									href="./index.html#contactForm"
-									class="pricing__block-card-button-masaj main__button"
-								>
-									Wybierz
-								</a>
-							</div>
-							
-							<div class="pricing__block-card glass-card terapia-indywidualna">
-								<p class="pricing__block-card-upper upper-text">
-									Masaż relaksacyjny
-									<button class="duration-btn dur-btn-maj active" type="button" data-duration="60" data-price="170">60 min</button>
-									<button class="duration-btn dur-btn-maj" type="button" data-duration="90" data-price="200">90 min</button>
-								</p>
-								<div>
-									<p class="description old-price hidden">100 zł</p>
-									<b id="priceTherapy" class="pricing__block-card-price pricing__block-card-price-masaj main-text">170 zł</b>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Redukcja stresu i napięcia nerwowego</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Głęboki relaks ciała i umysłu</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Poprawa jakości snu</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Delikatne rozluźnienie mięśni</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Odprężenie po intensywnym tygodniu</p>
-								</div>
-								<a href="./index.html#contactForm" class="pricing__block-card-button-masaj main__button">Wybierz</a>
-							</div>
+              <div class="pricing__block-card glass-card terapia-indywidualna">
+                <p class="pricing__block-card-upper upper-text">
+                  Masaż leczniczy
+                  <button
+                    class="duration-btn dur-btn-maj active"
+                    type="button"
+                    data-duration="30"
+                    data-price="160"
+                  >
+                    30 min
+                  </button>
+                  <button
+                    class="duration-btn dur-btn-maj"
+                    type="button"
+                    data-duration="50"
+                    data-price="190"
+                  >
+                    50 min
+                  </button>
+                  <button
+                    class="duration-btn dur-btn-maj"
+                    type="button"
+                    data-duration="90"
+                    data-price="230"
+                  >
+                    90 min
+                  </button>
+                </p>
+                <div>
+                  <p class="description old-price hidden">100 zł</p>
+                  <b
+                    id="priceTherapy"
+                    class="pricing__block-card-price pricing__block-card-price-masaj main-text"
+                    >150 zł</b
+                  >
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Poprawa ogólnego krążenia krwi
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Pobudzenie układu limfatycznego
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Poprawa stanu psychoemocjonalnego
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Zwiększenie elastyczności, ruchomości mięśni i stawów
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Szczegółowe opracowywanie bolesnych obszarów
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button-masaj main__button"
+                >
+                  Wybierz
+                </a>
+              </div>
 
-							<div class="pricing__block-card glass-card terapia-indywidualna">
-								<p class="pricing__block-card-upper upper-text">
-									Masaż profilaktyczny
-									<button class="duration-btn dur-btn-maj active" type="button" data-duration="30" data-price="150">30 min</button>
-									<button class="duration-btn dur-btn-maj" type="button" data-duration="50" data-price="170">50 min</button>
-								</p>
-								<div>
-									<p class="description old-price hidden">100 zł</p>
-									<b id="priceTherapy" class="pricing__block-card-price pricing__block-card-price-masaj main-text">150 zł</b>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Masaż między klasycznym a leczniczym, wykonywany regularnie</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Zalecany raz w miesiącu dla utrzymania zdrowia</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Często stosowany po serii masaży leczniczych</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Poprawa elastyczności tkanek</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Przeciwdziałanie nawrotom dolegliwości bólowych</p>
-								</div>
-								<a href="./index.html#contactForm" class="pricing__block-card-button-masaj main__button">Wybierz</a>
-							</div>
+              <div class="pricing__block-card glass-card terapia-indywidualna">
+                <p class="pricing__block-card-upper upper-text">
+                  Masaż relaksacyjny
+                  <button
+                    class="duration-btn dur-btn-maj active"
+                    type="button"
+                    data-duration="60"
+                    data-price="170"
+                  >
+                    60 min
+                  </button>
+                  <button
+                    class="duration-btn dur-btn-maj"
+                    type="button"
+                    data-duration="90"
+                    data-price="200"
+                  >
+                    90 min
+                  </button>
+                </p>
+                <div>
+                  <p class="description old-price hidden">100 zł</p>
+                  <b
+                    id="priceTherapy"
+                    class="pricing__block-card-price pricing__block-card-price-masaj main-text"
+                    >170 zł</b
+                  >
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Redukcja stresu i napięcia nerwowego
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Głęboki relaks ciała i umysłu
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Poprawa jakości snu
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Delikatne rozluźnienie mięśni
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Odprężenie po intensywnym tygodniu
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button-masaj main__button"
+                  >Wybierz</a
+                >
+              </div>
 
-							<div class="pricing__block-card glass-card terapia-indywidualna">
-								<p class="pricing__block-card-upper upper-text">
-									Masaż sportowy
-									<button class="duration-btn dur-btn-maj active" type="button" data-duration="40" data-price="180">40 min</button>
-								</p>
-								<div>
-									<p class="description old-price hidden">100 zł</p>
-									<b id="priceTherapy" class="pricing__block-card-price pricing__block-card-price-masaj main-text">180 zł</b>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Szybka terapia dla osób aktywnych fizycznie</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Przygotowanie mięśni przed treningiem</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Regeneracja po wysiłku</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Redukcja ryzyka kontuzji</p>
-								</div>
-								<div class="pricing__block-card-features card-headline">
-									<img class="pricing__block-card-features-icon" src="./assets/icons/green-check.png" alt="check-mark" />
-									<p class="pricing__block-card-features-desc-masaj description">Poprawa wydolności mięśni</p>
-								</div>
-								<a href="./index.html#contactForm" class="pricing__block-card-button-masaj main__button">Wybierz</a>
-							</div>
+              <div class="pricing__block-card glass-card terapia-indywidualna">
+                <p class="pricing__block-card-upper upper-text">
+                  Masaż profilaktyczny
+                  <button
+                    class="duration-btn dur-btn-maj active"
+                    type="button"
+                    data-duration="30"
+                    data-price="150"
+                  >
+                    30 min
+                  </button>
+                  <button
+                    class="duration-btn dur-btn-maj"
+                    type="button"
+                    data-duration="50"
+                    data-price="170"
+                  >
+                    50 min
+                  </button>
+                </p>
+                <div>
+                  <p class="description old-price hidden">100 zł</p>
+                  <b
+                    id="priceTherapy"
+                    class="pricing__block-card-price pricing__block-card-price-masaj main-text"
+                    >150 zł</b
+                  >
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Masaż między klasycznym a leczniczym, wykonywany regularnie
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Zalecany raz w miesiącu dla utrzymania zdrowia
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Często stosowany po serii masaży leczniczych
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Poprawa elastyczności tkanek
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Przeciwdziałanie nawrotom dolegliwości bólowych
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button-masaj main__button"
+                  >Wybierz</a
+                >
+              </div>
 
-						</div>
-					</div>
+              <div class="pricing__block-card glass-card terapia-indywidualna">
+                <p class="pricing__block-card-upper upper-text">
+                  Masaż sportowy
+                  <button
+                    class="duration-btn dur-btn-maj active"
+                    type="button"
+                    data-duration="40"
+                    data-price="180"
+                  >
+                    40 min
+                  </button>
+                </p>
+                <div>
+                  <p class="description old-price hidden">100 zł</p>
+                  <b
+                    id="priceTherapy"
+                    class="pricing__block-card-price pricing__block-card-price-masaj main-text"
+                    >180 zł</b
+                  >
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Szybka terapia dla osób aktywnych fizycznie
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Przygotowanie mięśni przed treningiem
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Regeneracja po wysiłku
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Redukcja ryzyka kontuzji
+                  </p>
+                </div>
+                <div class="pricing__block-card-features card-headline">
+                  <img
+                    class="pricing__block-card-features-icon"
+                    src="./assets/icons/green-check.png"
+                    alt="check-mark"
+                  />
+                  <p
+                    class="pricing__block-card-features-desc-masaj description"
+                  >
+                    Poprawa wydolności mięśni
+                  </p>
+                </div>
+                <a
+                  href="./index.html#contactForm"
+                  class="pricing__block-card-button-masaj main__button"
+                  >Wybierz</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-				</div>
-			</section>
-		</main>
+    <footer class="footer container">
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a href="./about.html">Zespół</a>
+        </li>
 
-		<footer class="footer container">
-			<ul class="footer__list">
-				<li class="footer__list-item">
-					<a href="./about.html">Zespół</a>
-				</li>
+        <li class="footer__list-item">
+          <a href="./pricing.html">Ceny</a>
+        </li>
+      </ul>
+      <a href="./index.html">
+        <img
+          class="logo"
+          src="./assets/icons/logo-footer.svg"
+          alt="Spine Logotype"
+        />
+      </a>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <img
+            class="footer__list-logo"
+            src="./assets/icons/maps.png"
+            alt="maps icon"
+          />
+          <a
+            href="https://maps.app.goo.gl/KzRTiMDtkX5eBoQL6?g_st=com.google.maps.preview.copy"
+          >
+            ul. Baśniowa 3/1, 02-349, Warszawa-Ochota
+          </a>
+        </li>
+        <li class="footer__list-item">
+          <img
+            class="footer__list-logo"
+            src="./assets/icons/email.png"
+            alt="email icon"
+          />
+          <a href="mailto:physioteca.centrum@gmail.com"
+            >physioteca.centrum@gmail.com</a
+          >
+        </li>
 
-				<li class="footer__list-item">
-					<a href="./pricing.html">Ceny</a>
-				</li>
+        <li class="footer__list-item">
+          <img
+            class="footer__list-logo"
+            src="./assets/icons/phone.png"
+            alt="phone icon"
+          />
+          <a href="tel:+48730313213">+48 730 313 213</a>
+        </li>
+        <li class="footer__list-item">
+          <img
+            class="footer__list-logo"
+            src="./assets/icons/insta.png"
+            alt="instagram icon"
+          />
+          <a href="https://www.instagram.com/physioteca_centrum">Instagram</a>
+        </li>
+      </ul>
+    </footer>
 
-			</ul>
-			<a href="./index.html">
-				<img class="logo" src="./assets/icons/logo-footer.svg" alt="Spine Logotype" />
-			</a>
-			<ul class="footer__list">
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/maps.png"
-						alt="maps icon"
-					/>
-					<a href="https://maps.app.goo.gl/KzRTiMDtkX5eBoQL6?g_st=com.google.maps.preview.copy">
-						ul. Baśniowa 3/1, 02-349, Warszawa-Ochota
-					</a>
-				</li>
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/email.png"
-						alt="email icon"
-					/>
-					<a href="mailto:physioteca.centrum@gmail.com">physioteca.centrum@gmail.com</a>
-				</li>
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/insta.png"
-						alt="instagram icon"
-					/>
-					<a href="https://www.instagram.com/chubenko.rehab/">Instagram</a>
-				</li>
-				<li class="footer__list-item">
-					<img
-						class="footer__list-logo"
-						src="./assets/icons/tiktok.png"
-						alt="tiktok icon"
-					/>
-					<a href="https://www.tiktok.com/@chubenko.rehab">Tiktok</a>
-				</li>
-			</ul>
-		</footer>
-
-		<script src="script.js"></script>
-	</body>
+    <script src="script.js"></script>
+  </body>
 </html>
